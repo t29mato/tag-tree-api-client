@@ -76,6 +76,12 @@ export interface DatabaseAttributes {
      * @type {string}
      * @memberof DatabaseAttributes
      */
+    sample_count?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DatabaseAttributes
+     */
     paper_count?: string;
     /**
      * 
@@ -83,12 +89,6 @@ export interface DatabaseAttributes {
      * @memberof DatabaseAttributes
      */
     figure_count?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof DatabaseAttributes
-     */
-    sample_count?: string;
     /**
      * 
      * @type {string}
@@ -1041,13 +1041,13 @@ export interface PaperAttributes {
      * @type {string}
      * @memberof PaperAttributes
      */
-    figure_count?: string;
+    sample_count?: string;
     /**
      * 
      * @type {string}
      * @memberof PaperAttributes
      */
-    sample_count?: string;
+    figure_count?: string;
     /**
      * 
      * @type {string}
@@ -1526,10 +1526,10 @@ export interface SynthesisMethodTagTreeNodeRelationships {
 }
 
 /**
- * ApiApi - axios parameter creator
+ * StarrydataApi - axios parameter creator
  * @export
  */
-export const ApiApiAxiosParamCreator = function (configuration?: Configuration) {
+export const StarrydataApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          * 
@@ -2548,11 +2548,11 @@ export const ApiApiAxiosParamCreator = function (configuration?: Configuration) 
 };
 
 /**
- * ApiApi - functional programming interface
+ * StarrydataApi - functional programming interface
  * @export
  */
-export const ApiApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = ApiApiAxiosParamCreator(configuration)
+export const StarrydataApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = StarrydataApiAxiosParamCreator(configuration)
     return {
         /**
          * 
@@ -2838,11 +2838,11 @@ export const ApiApiFp = function(configuration?: Configuration) {
 };
 
 /**
- * ApiApi - factory interface
+ * StarrydataApi - factory interface
  * @export
  */
-export const ApiApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = ApiApiFp(configuration)
+export const StarrydataApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = StarrydataApiFp(configuration)
     return {
         /**
          * 
@@ -3105,21 +3105,21 @@ export const ApiApiFactory = function (configuration?: Configuration, basePath?:
 };
 
 /**
- * ApiApi - object-oriented interface
+ * StarrydataApi - object-oriented interface
  * @export
- * @class ApiApi
+ * @class StarrydataApi
  * @extends {BaseAPI}
  */
-export class ApiApi extends BaseAPI {
+export class StarrydataApi extends BaseAPI {
     /**
      * 
      * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public createApiDatabases(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return ApiApiFp(this.configuration).createApiDatabases(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).createApiDatabases(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3127,10 +3127,10 @@ export class ApiApi extends BaseAPI {
      * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public createApiFabricationProcesses(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return ApiApiFp(this.configuration).createApiFabricationProcesses(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).createApiFabricationProcesses(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3138,10 +3138,10 @@ export class ApiApi extends BaseAPI {
      * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public createApiFigures(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return ApiApiFp(this.configuration).createApiFigures(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).createApiFigures(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3149,10 +3149,10 @@ export class ApiApi extends BaseAPI {
      * @param {NewPaper} [newPaper] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public createApiPapers(newPaper?: NewPaper, options?: any) {
-        return ApiApiFp(this.configuration).createApiPapers(newPaper, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).createApiPapers(newPaper, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3160,10 +3160,10 @@ export class ApiApi extends BaseAPI {
      * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public createApiSamples(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return ApiApiFp(this.configuration).createApiSamples(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).createApiSamples(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3171,10 +3171,10 @@ export class ApiApi extends BaseAPI {
      * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public createApiSynthesisMethodTagTreeNodes(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return ApiApiFp(this.configuration).createApiSynthesisMethodTagTreeNodes(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).createApiSynthesisMethodTagTreeNodes(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3182,10 +3182,10 @@ export class ApiApi extends BaseAPI {
      * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public createApiSynthesisMethodTags(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return ApiApiFp(this.configuration).createApiSynthesisMethodTags(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).createApiSynthesisMethodTags(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3193,10 +3193,10 @@ export class ApiApi extends BaseAPI {
      * @param {string} id A unique integer value identifying this fabrication process.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public destroyApiFabricationProcessesId(id: string, options?: any) {
-        return ApiApiFp(this.configuration).destroyApiFabricationProcessesId(id, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).destroyApiFabricationProcessesId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3204,10 +3204,10 @@ export class ApiApi extends BaseAPI {
      * @param {string} id A unique integer value identifying this synthesis method tag tree node.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public destroyApiSynthesisMethodTagTreeNodesId(id: string, options?: any) {
-        return ApiApiFp(this.configuration).destroyApiSynthesisMethodTagTreeNodesId(id, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).destroyApiSynthesisMethodTagTreeNodesId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3215,10 +3215,10 @@ export class ApiApi extends BaseAPI {
      * @param {string} id A unique integer value identifying this synthesis method tag.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public destroyApiSynthesisMethodTagsId(id: string, options?: any) {
-        return ApiApiFp(this.configuration).destroyApiSynthesisMethodTagsId(id, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).destroyApiSynthesisMethodTagsId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3231,10 +3231,10 @@ export class ApiApi extends BaseAPI {
      * @param {string} [filterSearch] A search term.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public listApiDatabases(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return ApiApiFp(this.configuration).listApiDatabases(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).listApiDatabases(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3247,10 +3247,10 @@ export class ApiApi extends BaseAPI {
      * @param {string} [filterSearch] A search term.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public listApiFabricationProcesses(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return ApiApiFp(this.configuration).listApiFabricationProcesses(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).listApiFabricationProcesses(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3263,10 +3263,10 @@ export class ApiApi extends BaseAPI {
      * @param {string} [filterSearch] A search term.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public listApiFigures(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return ApiApiFp(this.configuration).listApiFigures(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).listApiFigures(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3279,10 +3279,10 @@ export class ApiApi extends BaseAPI {
      * @param {string} [filterSearch] A search term.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public listApiPapers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return ApiApiFp(this.configuration).listApiPapers(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).listApiPapers(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3295,10 +3295,10 @@ export class ApiApi extends BaseAPI {
      * @param {string} [filterSearch] A search term.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public listApiSamples(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return ApiApiFp(this.configuration).listApiSamples(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).listApiSamples(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3311,10 +3311,10 @@ export class ApiApi extends BaseAPI {
      * @param {string} [filterSearch] A search term.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public listApiSynthesisMethodTagTreeNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return ApiApiFp(this.configuration).listApiSynthesisMethodTagTreeNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).listApiSynthesisMethodTagTreeNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3327,10 +3327,10 @@ export class ApiApi extends BaseAPI {
      * @param {string} [filterSearch] A search term.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public listApiSynthesisMethodTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return ApiApiFp(this.configuration).listApiSynthesisMethodTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).listApiSynthesisMethodTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3339,10 +3339,10 @@ export class ApiApi extends BaseAPI {
      * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public partialUpdateApiFabricationProcessesId(id: string, uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return ApiApiFp(this.configuration).partialUpdateApiFabricationProcessesId(id, uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).partialUpdateApiFabricationProcessesId(id, uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3351,10 +3351,10 @@ export class ApiApi extends BaseAPI {
      * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public partialUpdateApiSynthesisMethodTagTreeNodesId(id: string, uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return ApiApiFp(this.configuration).partialUpdateApiSynthesisMethodTagTreeNodesId(id, uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).partialUpdateApiSynthesisMethodTagTreeNodesId(id, uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3363,10 +3363,10 @@ export class ApiApi extends BaseAPI {
      * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public partialUpdateApiSynthesisMethodTagsId(id: string, uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return ApiApiFp(this.configuration).partialUpdateApiSynthesisMethodTagsId(id, uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).partialUpdateApiSynthesisMethodTagsId(id, uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3378,10 +3378,10 @@ export class ApiApi extends BaseAPI {
      * @param {string} [filterSearch] A search term.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public retrieveApiFabricationProcessesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
-        return ApiApiFp(this.configuration).retrieveApiFabricationProcessesId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).retrieveApiFabricationProcessesId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3393,10 +3393,10 @@ export class ApiApi extends BaseAPI {
      * @param {string} [filterSearch] A search term.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public retrieveApiSynthesisMethodTagTreeNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
-        return ApiApiFp(this.configuration).retrieveApiSynthesisMethodTagTreeNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).retrieveApiSynthesisMethodTagTreeNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3408,10 +3408,10 @@ export class ApiApi extends BaseAPI {
      * @param {string} [filterSearch] A search term.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof ApiApi
+     * @memberof StarrydataApi
      */
     public retrieveApiSynthesisMethodTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
-        return ApiApiFp(this.configuration).retrieveApiSynthesisMethodTagsId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+        return StarrydataApiFp(this.configuration).retrieveApiSynthesisMethodTagsId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
