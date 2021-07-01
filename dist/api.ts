@@ -22,6 +22,506 @@ import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObj
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
 
 /**
+ * 
+ * @export
+ * @interface ApiDatabasesData
+ */
+export interface ApiDatabasesData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiDatabasesData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiDatabasesData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof ApiDatabasesData
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {ApiDatabasesDataAttributes}
+     * @memberof ApiDatabasesData
+     */
+    attributes?: ApiDatabasesDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiDatabasesDataAttributes
+ */
+export interface ApiDatabasesDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiDatabasesDataAttributes
+     */
+    name: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiDatabasesDataLinks
+ */
+export interface ApiDatabasesDataLinks {
+    /**
+     * 
+     * @type {Link}
+     * @memberof ApiDatabasesDataLinks
+     */
+    self?: Link;
+}
+/**
+ * 
+ * @export
+ * @interface ApiFabricationProcessesData
+ */
+export interface ApiFabricationProcessesData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiFabricationProcessesData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiFabricationProcessesData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof ApiFabricationProcessesData
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {ApiFabricationProcessesDataAttributes}
+     * @memberof ApiFabricationProcessesData
+     */
+    attributes?: ApiFabricationProcessesDataAttributes;
+    /**
+     * 
+     * @type {ApiFabricationProcessesDataRelationships}
+     * @memberof ApiFabricationProcessesData
+     */
+    relationships?: ApiFabricationProcessesDataRelationships;
+}
+/**
+ * 
+ * @export
+ * @interface ApiFabricationProcessesDataAttributes
+ */
+export interface ApiFabricationProcessesDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiFabricationProcessesDataAttributes
+     */
+    name_ja: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiFabricationProcessesDataRelationships
+ */
+export interface ApiFabricationProcessesDataRelationships {
+    /**
+     * 
+     * @type {Reltoone}
+     * @memberof ApiFabricationProcessesDataRelationships
+     */
+    parent_id?: Reltoone;
+}
+/**
+ * 
+ * @export
+ * @interface ApiFabricationProcessesIdData
+ */
+export interface ApiFabricationProcessesIdData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiFabricationProcessesIdData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiFabricationProcessesIdData
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof ApiFabricationProcessesIdData
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {ApiFabricationProcessesIdDataAttributes}
+     * @memberof ApiFabricationProcessesIdData
+     */
+    attributes?: ApiFabricationProcessesIdDataAttributes;
+    /**
+     * 
+     * @type {ApiFabricationProcessesDataRelationships}
+     * @memberof ApiFabricationProcessesIdData
+     */
+    relationships?: ApiFabricationProcessesDataRelationships;
+}
+/**
+ * 
+ * @export
+ * @interface ApiFabricationProcessesIdDataAttributes
+ */
+export interface ApiFabricationProcessesIdDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiFabricationProcessesIdDataAttributes
+     */
+    name_ja?: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiFiguresData
+ */
+export interface ApiFiguresData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiFiguresData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiFiguresData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof ApiFiguresData
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {ApiFiguresDataAttributes}
+     * @memberof ApiFiguresData
+     */
+    attributes?: ApiFiguresDataAttributes;
+    /**
+     * 
+     * @type {ApiFiguresDataRelationships}
+     * @memberof ApiFiguresData
+     */
+    relationships?: ApiFiguresDataRelationships;
+}
+/**
+ * 
+ * @export
+ * @interface ApiFiguresDataAttributes
+ */
+export interface ApiFiguresDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiFiguresDataAttributes
+     */
+    title: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiFiguresDataRelationships
+ */
+export interface ApiFiguresDataRelationships {
+    /**
+     * 
+     * @type {Reltomany}
+     * @memberof ApiFiguresDataRelationships
+     */
+    paper?: Reltomany;
+}
+/**
+ * 
+ * @export
+ * @interface ApiPapersData
+ */
+export interface ApiPapersData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiPapersData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiPapersData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof ApiPapersData
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {ApiPapersDataAttributes}
+     * @memberof ApiPapersData
+     */
+    attributes?: ApiPapersDataAttributes;
+    /**
+     * 
+     * @type {ApiPapersDataRelationships}
+     * @memberof ApiPapersData
+     */
+    relationships?: ApiPapersDataRelationships;
+}
+/**
+ * 
+ * @export
+ * @interface ApiPapersDataAttributes
+ */
+export interface ApiPapersDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiPapersDataAttributes
+     */
+    title: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiPapersDataAttributes
+     */
+    authors: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiPapersDataAttributes
+     */
+    identifier: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiPapersDataAttributes
+     */
+    DOI: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiPapersDataAttributes
+     */
+    container_title?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiPapersDataAttributes
+     */
+    publisher?: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiPapersDataRelationships
+ */
+export interface ApiPapersDataRelationships {
+    /**
+     * 
+     * @type {Reltomany}
+     * @memberof ApiPapersDataRelationships
+     */
+    database?: Reltomany;
+}
+/**
+ * 
+ * @export
+ * @interface ApiSamplesData
+ */
+export interface ApiSamplesData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiSamplesData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiSamplesData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof ApiSamplesData
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {ApiDatabasesDataAttributes}
+     * @memberof ApiSamplesData
+     */
+    attributes?: ApiDatabasesDataAttributes;
+    /**
+     * 
+     * @type {ApiFiguresDataRelationships}
+     * @memberof ApiSamplesData
+     */
+    relationships?: ApiFiguresDataRelationships;
+}
+/**
+ * 
+ * @export
+ * @interface ApiSynthesisMethodTagTreeNodesData
+ */
+export interface ApiSynthesisMethodTagTreeNodesData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiSynthesisMethodTagTreeNodesData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiSynthesisMethodTagTreeNodesData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof ApiSynthesisMethodTagTreeNodesData
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {ApiDatabasesDataAttributes}
+     * @memberof ApiSynthesisMethodTagTreeNodesData
+     */
+    attributes?: ApiDatabasesDataAttributes;
+    /**
+     * 
+     * @type {ApiSynthesisMethodTagTreeNodesDataRelationships}
+     * @memberof ApiSynthesisMethodTagTreeNodesData
+     */
+    relationships?: ApiSynthesisMethodTagTreeNodesDataRelationships;
+}
+/**
+ * 
+ * @export
+ * @interface ApiSynthesisMethodTagTreeNodesDataRelationships
+ */
+export interface ApiSynthesisMethodTagTreeNodesDataRelationships {
+    /**
+     * 
+     * @type {Reltoone}
+     * @memberof ApiSynthesisMethodTagTreeNodesDataRelationships
+     */
+    synthesis_method_tag?: Reltoone;
+    /**
+     * 
+     * @type {Reltoone}
+     * @memberof ApiSynthesisMethodTagTreeNodesDataRelationships
+     */
+    parent?: Reltoone;
+}
+/**
+ * 
+ * @export
+ * @interface ApiSynthesisMethodTagTreeNodesIdData
+ */
+export interface ApiSynthesisMethodTagTreeNodesIdData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiSynthesisMethodTagTreeNodesIdData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiSynthesisMethodTagTreeNodesIdData
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof ApiSynthesisMethodTagTreeNodesIdData
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {ApiSynthesisMethodTagsIdDataAttributes}
+     * @memberof ApiSynthesisMethodTagTreeNodesIdData
+     */
+    attributes?: ApiSynthesisMethodTagsIdDataAttributes;
+    /**
+     * 
+     * @type {ApiSynthesisMethodTagTreeNodesDataRelationships}
+     * @memberof ApiSynthesisMethodTagTreeNodesIdData
+     */
+    relationships?: ApiSynthesisMethodTagTreeNodesDataRelationships;
+}
+/**
+ * 
+ * @export
+ * @interface ApiSynthesisMethodTagsIdData
+ */
+export interface ApiSynthesisMethodTagsIdData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiSynthesisMethodTagsIdData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiSynthesisMethodTagsIdData
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof ApiSynthesisMethodTagsIdData
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {ApiSynthesisMethodTagsIdDataAttributes}
+     * @memberof ApiSynthesisMethodTagsIdData
+     */
+    attributes?: ApiSynthesisMethodTagsIdDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiSynthesisMethodTagsIdDataAttributes
+ */
+export interface ApiSynthesisMethodTagsIdDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiSynthesisMethodTagsIdDataAttributes
+     */
+    name?: string;
+}
+/**
  * @type Data
  * The document\'s `primary data` is a representation of the resource or collection of resources targeted by a request.
  * @export
@@ -48,10 +548,10 @@ export interface Database {
     id: string;
     /**
      * 
-     * @type {DatabaseLinks}
+     * @type {ApiDatabasesDataLinks}
      * @memberof Database
      */
-    links?: DatabaseLinks;
+    links?: ApiDatabasesDataLinks;
     /**
      * 
      * @type {DatabaseAttributes}
@@ -82,32 +582,19 @@ export interface DatabaseAttributes {
      * @type {string}
      * @memberof DatabaseAttributes
      */
-    paper_count?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof DatabaseAttributes
-     */
     figure_count?: string;
     /**
      * 
      * @type {string}
      * @memberof DatabaseAttributes
      */
-    name: string;
-}
-/**
- * 
- * @export
- * @interface DatabaseLinks
- */
-export interface DatabaseLinks {
+    paper_count?: string;
     /**
      * 
-     * @type {Link}
-     * @memberof DatabaseLinks
+     * @type {string}
+     * @memberof DatabaseAttributes
      */
-    self?: Link;
+    name: string;
 }
 /**
  * singular item
@@ -161,10 +648,10 @@ export interface FabricationProcess {
     id: string;
     /**
      * 
-     * @type {DatabaseLinks}
+     * @type {ApiDatabasesDataLinks}
      * @memberof FabricationProcess
      */
-    links?: DatabaseLinks;
+    links?: ApiDatabasesDataLinks;
     /**
      * 
      * @type {FabricationProcessAttributes}
@@ -173,10 +660,10 @@ export interface FabricationProcess {
     attributes?: FabricationProcessAttributes;
     /**
      * 
-     * @type {FabricationProcessRelationships}
+     * @type {ApiFabricationProcessesDataRelationships}
      * @memberof FabricationProcess
      */
-    relationships?: FabricationProcessRelationships;
+    relationships?: ApiFabricationProcessesDataRelationships;
 }
 /**
  * 
@@ -196,19 +683,6 @@ export interface FabricationProcessAttributes {
      * @memberof FabricationProcessAttributes
      */
     name_ja: string;
-}
-/**
- * 
- * @export
- * @interface FabricationProcessRelationships
- */
-export interface FabricationProcessRelationships {
-    /**
-     * 
-     * @type {Reltoone}
-     * @memberof FabricationProcessRelationships
-     */
-    parent_id?: Reltoone;
 }
 /**
  * 
@@ -261,10 +735,10 @@ export interface Figure {
     id: string;
     /**
      * 
-     * @type {DatabaseLinks}
+     * @type {ApiDatabasesDataLinks}
      * @memberof Figure
      */
-    links?: DatabaseLinks;
+    links?: ApiDatabasesDataLinks;
     /**
      * 
      * @type {FigureAttributes}
@@ -273,10 +747,10 @@ export interface Figure {
     attributes?: FigureAttributes;
     /**
      * 
-     * @type {FigureRelationships}
+     * @type {ApiFiguresDataRelationships}
      * @memberof Figure
      */
-    relationships?: FigureRelationships;
+    relationships?: ApiFiguresDataRelationships;
 }
 /**
  * 
@@ -296,19 +770,6 @@ export interface FigureAttributes {
      * @memberof FigureAttributes
      */
     title: string;
-}
-/**
- * 
- * @export
- * @interface FigureRelationships
- */
-export interface FigureRelationships {
-    /**
-     * 
-     * @type {Reltomany}
-     * @memberof FigureRelationships
-     */
-    paper?: Reltomany;
 }
 /**
  * 
@@ -334,6 +795,136 @@ export interface Info {
      * @memberof Info
      */
     jsonapi?: Jsonapi;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject
+ */
+export interface InlineObject {
+    /**
+     * 
+     * @type {ApiDatabasesData}
+     * @memberof InlineObject
+     */
+    data: ApiDatabasesData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject1
+ */
+export interface InlineObject1 {
+    /**
+     * 
+     * @type {ApiPapersData}
+     * @memberof InlineObject1
+     */
+    data: ApiPapersData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject2
+ */
+export interface InlineObject2 {
+    /**
+     * 
+     * @type {ApiFiguresData}
+     * @memberof InlineObject2
+     */
+    data: ApiFiguresData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject3
+ */
+export interface InlineObject3 {
+    /**
+     * 
+     * @type {ApiSamplesData}
+     * @memberof InlineObject3
+     */
+    data: ApiSamplesData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject4
+ */
+export interface InlineObject4 {
+    /**
+     * 
+     * @type {ApiFabricationProcessesData}
+     * @memberof InlineObject4
+     */
+    data: ApiFabricationProcessesData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject5
+ */
+export interface InlineObject5 {
+    /**
+     * 
+     * @type {ApiFabricationProcessesIdData}
+     * @memberof InlineObject5
+     */
+    data: ApiFabricationProcessesIdData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject6
+ */
+export interface InlineObject6 {
+    /**
+     * 
+     * @type {ApiDatabasesData}
+     * @memberof InlineObject6
+     */
+    data: ApiDatabasesData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject7
+ */
+export interface InlineObject7 {
+    /**
+     * 
+     * @type {ApiSynthesisMethodTagsIdData}
+     * @memberof InlineObject7
+     */
+    data: ApiSynthesisMethodTagsIdData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject8
+ */
+export interface InlineObject8 {
+    /**
+     * 
+     * @type {ApiSynthesisMethodTagTreeNodesData}
+     * @memberof InlineObject8
+     */
+    data: ApiSynthesisMethodTagTreeNodesData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject9
+ */
+export interface InlineObject9 {
+    /**
+     * 
+     * @type {ApiSynthesisMethodTagTreeNodesIdData}
+     * @memberof InlineObject9
+     */
+    data: ApiSynthesisMethodTagTreeNodesIdData;
 }
 /**
  * 
@@ -903,49 +1494,6 @@ export interface ModelError {
 /**
  * 
  * @export
- * @interface NewPaper
- */
-export interface NewPaper {
-    /**
-     * 
-     * @type {string}
-     * @memberof NewPaper
-     */
-    title?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NewPaper
-     */
-    authors?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NewPaper
-     */
-    identifier?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NewPaper
-     */
-    DOI?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof NewPaper
-     */
-    container_title?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof NewPaper
-     */
-    publisher?: string;
-}
-/**
- * 
- * @export
  * @interface Onlymeta
  */
 export interface Onlymeta {
@@ -1007,10 +1555,10 @@ export interface Paper {
     id: string;
     /**
      * 
-     * @type {DatabaseLinks}
+     * @type {ApiDatabasesDataLinks}
      * @memberof Paper
      */
-    links?: DatabaseLinks;
+    links?: ApiDatabasesDataLinks;
     /**
      * 
      * @type {PaperAttributes}
@@ -1019,10 +1567,10 @@ export interface Paper {
     attributes?: PaperAttributes;
     /**
      * 
-     * @type {PaperRelationships}
+     * @type {ApiPapersDataRelationships}
      * @memberof Paper
      */
-    relationships?: PaperRelationships;
+    relationships?: ApiPapersDataRelationships;
 }
 /**
  * 
@@ -1041,13 +1589,13 @@ export interface PaperAttributes {
      * @type {string}
      * @memberof PaperAttributes
      */
-    sample_count?: string;
+    figure_count?: string;
     /**
      * 
      * @type {string}
      * @memberof PaperAttributes
      */
-    figure_count?: string;
+    sample_count?: string;
     /**
      * 
      * @type {string}
@@ -1084,19 +1632,6 @@ export interface PaperAttributes {
      * @memberof PaperAttributes
      */
     publisher?: string;
-}
-/**
- * 
- * @export
- * @interface PaperRelationships
- */
-export interface PaperRelationships {
-    /**
-     * 
-     * @type {Reltomany}
-     * @memberof PaperRelationships
-     */
-    database?: Reltomany;
 }
 /**
  * singular item being [created](https://jsonapi.org/format/#crud-creating). `id` is optional and may be ignored if supplied and created by the system.
@@ -1364,10 +1899,10 @@ export interface Sample {
     id: string;
     /**
      * 
-     * @type {DatabaseLinks}
+     * @type {ApiDatabasesDataLinks}
      * @memberof Sample
      */
-    links?: DatabaseLinks;
+    links?: ApiDatabasesDataLinks;
     /**
      * 
      * @type {SampleAttributes}
@@ -1376,10 +1911,10 @@ export interface Sample {
     attributes?: SampleAttributes;
     /**
      * 
-     * @type {FigureRelationships}
+     * @type {ApiFiguresDataRelationships}
      * @memberof Sample
      */
-    relationships?: FigureRelationships;
+    relationships?: ApiFiguresDataRelationships;
 }
 /**
  * 
@@ -1457,10 +1992,10 @@ export interface SynthesisMethodTag {
     id: string;
     /**
      * 
-     * @type {DatabaseLinks}
+     * @type {ApiDatabasesDataLinks}
      * @memberof SynthesisMethodTag
      */
-    links?: DatabaseLinks;
+    links?: ApiDatabasesDataLinks;
     /**
      * 
      * @type {SampleAttributes}
@@ -1488,10 +2023,10 @@ export interface SynthesisMethodTagTreeNode {
     id: string;
     /**
      * 
-     * @type {DatabaseLinks}
+     * @type {ApiDatabasesDataLinks}
      * @memberof SynthesisMethodTagTreeNode
      */
-    links?: DatabaseLinks;
+    links?: ApiDatabasesDataLinks;
     /**
      * 
      * @type {SampleAttributes}
@@ -1500,29 +2035,10 @@ export interface SynthesisMethodTagTreeNode {
     attributes?: SampleAttributes;
     /**
      * 
-     * @type {SynthesisMethodTagTreeNodeRelationships}
+     * @type {ApiSynthesisMethodTagTreeNodesDataRelationships}
      * @memberof SynthesisMethodTagTreeNode
      */
-    relationships?: SynthesisMethodTagTreeNodeRelationships;
-}
-/**
- * 
- * @export
- * @interface SynthesisMethodTagTreeNodeRelationships
- */
-export interface SynthesisMethodTagTreeNodeRelationships {
-    /**
-     * 
-     * @type {Reltoone}
-     * @memberof SynthesisMethodTagTreeNodeRelationships
-     */
-    synthesis_method_tag?: Reltoone;
-    /**
-     * 
-     * @type {Reltoone}
-     * @memberof SynthesisMethodTagTreeNodeRelationships
-     */
-    parent?: Reltoone;
+    relationships?: ApiSynthesisMethodTagTreeNodesDataRelationships;
 }
 
 /**
@@ -1533,11 +2049,11 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
     return {
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject} [inlineObject] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiDatabases: async (uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options: any = {}): Promise<RequestArgs> => {
+        createApiDatabases: async (inlineObject?: InlineObject, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/databases`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1557,7 +2073,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(uNKNOWNBASETYPE, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -1566,11 +2082,11 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject4} [inlineObject4] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiFabricationProcesses: async (uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options: any = {}): Promise<RequestArgs> => {
+        createApiFabricationProcesses: async (inlineObject4?: InlineObject4, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/fabrication_processes`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1590,7 +2106,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(uNKNOWNBASETYPE, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject4, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -1599,11 +2115,11 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject2} [inlineObject2] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiFigures: async (uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options: any = {}): Promise<RequestArgs> => {
+        createApiFigures: async (inlineObject2?: InlineObject2, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/figures`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1623,7 +2139,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(uNKNOWNBASETYPE, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject2, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -1632,11 +2148,11 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {NewPaper} [newPaper] 
+         * @param {InlineObject1} [inlineObject1] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiPapers: async (newPaper?: NewPaper, options: any = {}): Promise<RequestArgs> => {
+        createApiPapers: async (inlineObject1?: InlineObject1, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/papers`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1656,7 +2172,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(newPaper, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject1, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -1665,11 +2181,11 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject3} [inlineObject3] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiSamples: async (uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options: any = {}): Promise<RequestArgs> => {
+        createApiSamples: async (inlineObject3?: InlineObject3, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/samples`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1689,7 +2205,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(uNKNOWNBASETYPE, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject3, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -1698,12 +2214,12 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject8} [inlineObject8] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiSynthesisMethodTagTreeNodes: async (uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/synthesis_method_tag_tree_nodes/`;
+        createApiSynthesisMethodTagTreeNodes: async (inlineObject8?: InlineObject8, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/synthesis_method_tag_tree_nodes`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1722,7 +2238,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(uNKNOWNBASETYPE, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject8, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -1731,12 +2247,12 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject6} [inlineObject6] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiSynthesisMethodTags: async (uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/synthesis_method_tags/`;
+        createApiSynthesisMethodTags: async (inlineObject6?: InlineObject6, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/synthesis_method_tags`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -1755,7 +2271,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(uNKNOWNBASETYPE, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject6, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -2168,7 +2684,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
          * @throws {RequiredError}
          */
         listApiSynthesisMethodTagTreeNodes: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/synthesis_method_tag_tree_nodes/`;
+            const localVarPath = `/api/synthesis_method_tag_tree_nodes`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2227,7 +2743,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
          * @throws {RequiredError}
          */
         listApiSynthesisMethodTags: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/synthesis_method_tags/`;
+            const localVarPath = `/api/synthesis_method_tags`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2277,11 +2793,11 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         /**
          * 
          * @param {string} id A unique integer value identifying this fabrication process.
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject5} [inlineObject5] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateApiFabricationProcessesId: async (id: string, uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options: any = {}): Promise<RequestArgs> => {
+        partialUpdateApiFabricationProcessesId: async (id: string, inlineObject5?: InlineObject5, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('partialUpdateApiFabricationProcessesId', 'id', id)
             const localVarPath = `/api/fabrication_processes/{id}`
@@ -2304,7 +2820,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(uNKNOWNBASETYPE, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject5, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -2314,11 +2830,11 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         /**
          * 
          * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject9} [inlineObject9] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateApiSynthesisMethodTagTreeNodesId: async (id: string, uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options: any = {}): Promise<RequestArgs> => {
+        partialUpdateApiSynthesisMethodTagTreeNodesId: async (id: string, inlineObject9?: InlineObject9, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('partialUpdateApiSynthesisMethodTagTreeNodesId', 'id', id)
             const localVarPath = `/api/synthesis_method_tag_tree_nodes/{id}`
@@ -2341,7 +2857,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(uNKNOWNBASETYPE, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject9, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -2351,11 +2867,11 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         /**
          * 
          * @param {string} id A unique integer value identifying this synthesis method tag.
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject7} [inlineObject7] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateApiSynthesisMethodTagsId: async (id: string, uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options: any = {}): Promise<RequestArgs> => {
+        partialUpdateApiSynthesisMethodTagsId: async (id: string, inlineObject7?: InlineObject7, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('partialUpdateApiSynthesisMethodTagsId', 'id', id)
             const localVarPath = `/api/synthesis_method_tags/{id}`
@@ -2378,7 +2894,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(uNKNOWNBASETYPE, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject7, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -2556,72 +3072,72 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject} [inlineObject] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createApiDatabases(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse201>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiDatabases(uNKNOWNBASETYPE, options);
+        async createApiDatabases(inlineObject?: InlineObject, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse201>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiDatabases(inlineObject, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject4} [inlineObject4] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createApiFabricationProcesses(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2014>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiFabricationProcesses(uNKNOWNBASETYPE, options);
+        async createApiFabricationProcesses(inlineObject4?: InlineObject4, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2014>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiFabricationProcesses(inlineObject4, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject2} [inlineObject2] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createApiFigures(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2012>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiFigures(uNKNOWNBASETYPE, options);
+        async createApiFigures(inlineObject2?: InlineObject2, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2012>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiFigures(inlineObject2, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {NewPaper} [newPaper] 
+         * @param {InlineObject1} [inlineObject1] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createApiPapers(newPaper?: NewPaper, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2011>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiPapers(newPaper, options);
+        async createApiPapers(inlineObject1?: InlineObject1, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2011>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiPapers(inlineObject1, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject3} [inlineObject3] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createApiSamples(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2013>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiSamples(uNKNOWNBASETYPE, options);
+        async createApiSamples(inlineObject3?: InlineObject3, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2013>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiSamples(inlineObject3, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject8} [inlineObject8] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createApiSynthesisMethodTagTreeNodes(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiSynthesisMethodTagTreeNodes(uNKNOWNBASETYPE, options);
+        async createApiSynthesisMethodTagTreeNodes(inlineObject8?: InlineObject8, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiSynthesisMethodTagTreeNodes(inlineObject8, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject6} [inlineObject6] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createApiSynthesisMethodTags(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiSynthesisMethodTags(uNKNOWNBASETYPE, options);
+        async createApiSynthesisMethodTags(inlineObject6?: InlineObject6, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiSynthesisMethodTags(inlineObject6, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -2762,34 +3278,34 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} id A unique integer value identifying this fabrication process.
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject5} [inlineObject5] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async partialUpdateApiFabricationProcessesId(id: string, uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2014>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiFabricationProcessesId(id, uNKNOWNBASETYPE, options);
+        async partialUpdateApiFabricationProcessesId(id: string, inlineObject5?: InlineObject5, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2014>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiFabricationProcessesId(id, inlineObject5, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
          * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject9} [inlineObject9] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async partialUpdateApiSynthesisMethodTagTreeNodesId(id: string, uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiSynthesisMethodTagTreeNodesId(id, uNKNOWNBASETYPE, options);
+        async partialUpdateApiSynthesisMethodTagTreeNodesId(id: string, inlineObject9?: InlineObject9, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiSynthesisMethodTagTreeNodesId(id, inlineObject9, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
          * @param {string} id A unique integer value identifying this synthesis method tag.
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject7} [inlineObject7] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async partialUpdateApiSynthesisMethodTagsId(id: string, uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiSynthesisMethodTagsId(id, uNKNOWNBASETYPE, options);
+        async partialUpdateApiSynthesisMethodTagsId(id: string, inlineObject7?: InlineObject7, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiSynthesisMethodTagsId(id, inlineObject7, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -2846,66 +3362,66 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
     return {
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject} [inlineObject] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiDatabases(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): AxiosPromise<InlineResponse201> {
-            return localVarFp.createApiDatabases(uNKNOWNBASETYPE, options).then((request) => request(axios, basePath));
+        createApiDatabases(inlineObject?: InlineObject, options?: any): AxiosPromise<InlineResponse201> {
+            return localVarFp.createApiDatabases(inlineObject, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject4} [inlineObject4] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiFabricationProcesses(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): AxiosPromise<InlineResponse2014> {
-            return localVarFp.createApiFabricationProcesses(uNKNOWNBASETYPE, options).then((request) => request(axios, basePath));
+        createApiFabricationProcesses(inlineObject4?: InlineObject4, options?: any): AxiosPromise<InlineResponse2014> {
+            return localVarFp.createApiFabricationProcesses(inlineObject4, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject2} [inlineObject2] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiFigures(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): AxiosPromise<InlineResponse2012> {
-            return localVarFp.createApiFigures(uNKNOWNBASETYPE, options).then((request) => request(axios, basePath));
+        createApiFigures(inlineObject2?: InlineObject2, options?: any): AxiosPromise<InlineResponse2012> {
+            return localVarFp.createApiFigures(inlineObject2, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {NewPaper} [newPaper] 
+         * @param {InlineObject1} [inlineObject1] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiPapers(newPaper?: NewPaper, options?: any): AxiosPromise<InlineResponse2011> {
-            return localVarFp.createApiPapers(newPaper, options).then((request) => request(axios, basePath));
+        createApiPapers(inlineObject1?: InlineObject1, options?: any): AxiosPromise<InlineResponse2011> {
+            return localVarFp.createApiPapers(inlineObject1, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject3} [inlineObject3] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiSamples(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): AxiosPromise<InlineResponse2013> {
-            return localVarFp.createApiSamples(uNKNOWNBASETYPE, options).then((request) => request(axios, basePath));
+        createApiSamples(inlineObject3?: InlineObject3, options?: any): AxiosPromise<InlineResponse2013> {
+            return localVarFp.createApiSamples(inlineObject3, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject8} [inlineObject8] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiSynthesisMethodTagTreeNodes(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): AxiosPromise<InlineResponse2016> {
-            return localVarFp.createApiSynthesisMethodTagTreeNodes(uNKNOWNBASETYPE, options).then((request) => request(axios, basePath));
+        createApiSynthesisMethodTagTreeNodes(inlineObject8?: InlineObject8, options?: any): AxiosPromise<InlineResponse2016> {
+            return localVarFp.createApiSynthesisMethodTagTreeNodes(inlineObject8, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject6} [inlineObject6] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiSynthesisMethodTags(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): AxiosPromise<InlineResponse2015> {
-            return localVarFp.createApiSynthesisMethodTags(uNKNOWNBASETYPE, options).then((request) => request(axios, basePath));
+        createApiSynthesisMethodTags(inlineObject6?: InlineObject6, options?: any): AxiosPromise<InlineResponse2015> {
+            return localVarFp.createApiSynthesisMethodTags(inlineObject6, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3035,32 +3551,32 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
         /**
          * 
          * @param {string} id A unique integer value identifying this fabrication process.
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject5} [inlineObject5] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateApiFabricationProcessesId(id: string, uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): AxiosPromise<InlineResponse2014> {
-            return localVarFp.partialUpdateApiFabricationProcessesId(id, uNKNOWNBASETYPE, options).then((request) => request(axios, basePath));
+        partialUpdateApiFabricationProcessesId(id: string, inlineObject5?: InlineObject5, options?: any): AxiosPromise<InlineResponse2014> {
+            return localVarFp.partialUpdateApiFabricationProcessesId(id, inlineObject5, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject9} [inlineObject9] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateApiSynthesisMethodTagTreeNodesId(id: string, uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): AxiosPromise<InlineResponse2016> {
-            return localVarFp.partialUpdateApiSynthesisMethodTagTreeNodesId(id, uNKNOWNBASETYPE, options).then((request) => request(axios, basePath));
+        partialUpdateApiSynthesisMethodTagTreeNodesId(id: string, inlineObject9?: InlineObject9, options?: any): AxiosPromise<InlineResponse2016> {
+            return localVarFp.partialUpdateApiSynthesisMethodTagTreeNodesId(id, inlineObject9, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @param {string} id A unique integer value identifying this synthesis method tag.
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject7} [inlineObject7] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateApiSynthesisMethodTagsId(id: string, uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): AxiosPromise<InlineResponse2015> {
-            return localVarFp.partialUpdateApiSynthesisMethodTagsId(id, uNKNOWNBASETYPE, options).then((request) => request(axios, basePath));
+        partialUpdateApiSynthesisMethodTagsId(id: string, inlineObject7?: InlineObject7, options?: any): AxiosPromise<InlineResponse2015> {
+            return localVarFp.partialUpdateApiSynthesisMethodTagsId(id, inlineObject7, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3113,79 +3629,79 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
 export class StarrydataApi extends BaseAPI {
     /**
      * 
-     * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+     * @param {InlineObject} [inlineObject] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public createApiDatabases(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiDatabases(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+    public createApiDatabases(inlineObject?: InlineObject, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiDatabases(inlineObject, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+     * @param {InlineObject4} [inlineObject4] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public createApiFabricationProcesses(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiFabricationProcesses(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+    public createApiFabricationProcesses(inlineObject4?: InlineObject4, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiFabricationProcesses(inlineObject4, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+     * @param {InlineObject2} [inlineObject2] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public createApiFigures(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiFigures(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+    public createApiFigures(inlineObject2?: InlineObject2, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiFigures(inlineObject2, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {NewPaper} [newPaper] 
+     * @param {InlineObject1} [inlineObject1] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public createApiPapers(newPaper?: NewPaper, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiPapers(newPaper, options).then((request) => request(this.axios, this.basePath));
+    public createApiPapers(inlineObject1?: InlineObject1, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiPapers(inlineObject1, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+     * @param {InlineObject3} [inlineObject3] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public createApiSamples(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiSamples(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+    public createApiSamples(inlineObject3?: InlineObject3, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiSamples(inlineObject3, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+     * @param {InlineObject8} [inlineObject8] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public createApiSynthesisMethodTagTreeNodes(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiSynthesisMethodTagTreeNodes(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+    public createApiSynthesisMethodTagTreeNodes(inlineObject8?: InlineObject8, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiSynthesisMethodTagTreeNodes(inlineObject8, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+     * @param {InlineObject6} [inlineObject6] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public createApiSynthesisMethodTags(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiSynthesisMethodTags(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+    public createApiSynthesisMethodTags(inlineObject6?: InlineObject6, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiSynthesisMethodTags(inlineObject6, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3336,37 +3852,37 @@ export class StarrydataApi extends BaseAPI {
     /**
      * 
      * @param {string} id A unique integer value identifying this fabrication process.
-     * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+     * @param {InlineObject5} [inlineObject5] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public partialUpdateApiFabricationProcessesId(id: string, uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return StarrydataApiFp(this.configuration).partialUpdateApiFabricationProcessesId(id, uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+    public partialUpdateApiFabricationProcessesId(id: string, inlineObject5?: InlineObject5, options?: any) {
+        return StarrydataApiFp(this.configuration).partialUpdateApiFabricationProcessesId(id, inlineObject5, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
      * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-     * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+     * @param {InlineObject9} [inlineObject9] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public partialUpdateApiSynthesisMethodTagTreeNodesId(id: string, uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return StarrydataApiFp(this.configuration).partialUpdateApiSynthesisMethodTagTreeNodesId(id, uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+    public partialUpdateApiSynthesisMethodTagTreeNodesId(id: string, inlineObject9?: InlineObject9, options?: any) {
+        return StarrydataApiFp(this.configuration).partialUpdateApiSynthesisMethodTagTreeNodesId(id, inlineObject9, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
      * @param {string} id A unique integer value identifying this synthesis method tag.
-     * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+     * @param {InlineObject7} [inlineObject7] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public partialUpdateApiSynthesisMethodTagsId(id: string, uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return StarrydataApiFp(this.configuration).partialUpdateApiSynthesisMethodTagsId(id, uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+    public partialUpdateApiSynthesisMethodTagsId(id: string, inlineObject7?: InlineObject7, options?: any) {
+        return StarrydataApiFp(this.configuration).partialUpdateApiSynthesisMethodTagsId(id, inlineObject7, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
