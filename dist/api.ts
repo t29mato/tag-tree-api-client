@@ -1706,7 +1706,7 @@ export interface Relationship {
      * @type {RelationshipToOne | Set}
      * @memberof Relationship
      */
-    data?: RelationshipToOne | Set;
+    data?: RelationshipToOne | Set<any>;
     /**
      * Non-standard meta-information that can not be represented as an attribute or relationship.
      * @type {{ [key: string]: object; }}
