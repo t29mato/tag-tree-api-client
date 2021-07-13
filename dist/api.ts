@@ -1371,22 +1371,10 @@ export interface InlineResponse2006 {
 export interface InlineResponse2007 {
     /**
      * 
-     * @type {Array<PolymerTagTree>}
+     * @type {PolymerTagTree}
      * @memberof InlineResponse2007
      */
-    data: Array<PolymerTagTree>;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2007
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2007
-     */
-    links?: any & Pagination;
+    data: PolymerTagTree;
     /**
      * 
      * @type {Jsonapi}
@@ -3314,45 +3302,6 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
          * 
          * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
          * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiPolymerTagTree: async (include?: string, fields?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/polymer_tag_tree`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (include !== undefined) {
-                localVarQueryParameter['include'] = include;
-            }
-
-            if (fields !== undefined) {
-                localVarQueryParameter['fields'] = fields;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
          * @param {number} [pageNumber] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [sort] Which field to use when ordering the results.
@@ -3878,6 +3827,35 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        retrieveApiPolymerTagTree: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/polymer_tag_tree`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {string} id A unique integer value identifying this polymer node.
          * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
          * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
@@ -4264,17 +4242,6 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * 
          * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
          * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listApiPolymerTagTree(include?: string, fields?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiPolymerTagTree(include, fields, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
          * @param {number} [pageNumber] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [sort] Which field to use when ordering the results.
@@ -4412,6 +4379,15 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          */
         async retrieveApiPolymerNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2005>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiPolymerNodesId(id, include, fields, sort, filterSearch, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async retrieveApiPolymerTagTree(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiPolymerTagTree(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4666,16 +4642,6 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * 
          * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
          * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiPolymerTagTree(include?: string, fields?: string, options?: any): AxiosPromise<InlineResponse2007> {
-            return localVarFp.listApiPolymerTagTree(include, fields, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
          * @param {number} [pageNumber] A page number within the paginated result set.
          * @param {number} [pageSize] Number of results to return per page.
          * @param {string} [sort] Which field to use when ordering the results.
@@ -4803,6 +4769,14 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          */
         retrieveApiPolymerNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2005> {
             return localVarFp.retrieveApiPolymerNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        retrieveApiPolymerTagTree(options?: any): AxiosPromise<InlineResponse2007> {
+            return localVarFp.retrieveApiPolymerTagTree(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -5091,18 +5065,6 @@ export class StarrydataApi extends BaseAPI {
      * 
      * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
      * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public listApiPolymerTagTree(include?: string, fields?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).listApiPolymerTagTree(include, fields, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
      * @param {number} [pageNumber] A page number within the paginated result set.
      * @param {number} [pageSize] Number of results to return per page.
      * @param {string} [sort] Which field to use when ordering the results.
@@ -5251,6 +5213,16 @@ export class StarrydataApi extends BaseAPI {
      */
     public retrieveApiPolymerNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
         return StarrydataApiFp(this.configuration).retrieveApiPolymerNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public retrieveApiPolymerTagTree(options?: any) {
+        return StarrydataApiFp(this.configuration).retrieveApiPolymerTagTree(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
