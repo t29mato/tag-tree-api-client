@@ -2094,7 +2094,7 @@ export interface PolymerTagTree {
      * @type {PolymerTagTreeAttributes}
      * @memberof PolymerTagTree
      */
-    attributes?: PolymerTagTreeAttributes;
+    attributes: PolymerTagTreeAttributes;
 }
 /**
  * 
