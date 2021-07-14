@@ -367,22 +367,48 @@ export interface ApiPolymerNodesData {
     id?: string;
     /**
      * 
-     * @type {ApiDatabasesDataLinks}
+     * @type {ApiPolymerNodesDataAttributes}
      * @memberof ApiPolymerNodesData
      */
-    links?: ApiDatabasesDataLinks;
+    attributes: ApiPolymerNodesDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiPolymerNodesDataAttributes
+ */
+export interface ApiPolymerNodesDataAttributes {
     /**
      * 
-     * @type {object}
-     * @memberof ApiPolymerNodesData
+     * @type {ApiPolymerNodesDataAttributesPolymerTag}
+     * @memberof ApiPolymerNodesDataAttributes
      */
-    attributes?: object;
+    polymer_tag: ApiPolymerNodesDataAttributesPolymerTag;
     /**
      * 
-     * @type {ApiPolymerTagsIdDataRelationships}
-     * @memberof ApiPolymerNodesData
+     * @type {ApiPolymerNodesDataAttributesPolymerTag}
+     * @memberof ApiPolymerNodesDataAttributes
      */
-    relationships?: ApiPolymerTagsIdDataRelationships;
+    parent: ApiPolymerNodesDataAttributesPolymerTag;
+}
+/**
+ * 
+ * @export
+ * @interface ApiPolymerNodesDataAttributesPolymerTag
+ */
+export interface ApiPolymerNodesDataAttributesPolymerTag {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiPolymerNodesDataAttributesPolymerTag
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiPolymerNodesDataAttributesPolymerTag
+     */
+    id: string;
 }
 /**
  * 
