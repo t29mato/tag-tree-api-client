@@ -3853,11 +3853,15 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
+         * @param {string} id 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveApiPolymerTagTree: async (options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/polymer_tag_tree`;
+        retrieveApiPolymerTagTreeId: async (id: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('retrieveApiPolymerTagTreeId', 'id', id)
+            const localVarPath = `/api/polymer_tag_tree/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -4409,11 +4413,12 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} id 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveApiPolymerTagTree(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiPolymerTagTree(options);
+        async retrieveApiPolymerTagTreeId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiPolymerTagTreeId(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4798,11 +4803,12 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
         },
         /**
          * 
+         * @param {string} id 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveApiPolymerTagTree(options?: any): AxiosPromise<InlineResponse2007> {
-            return localVarFp.retrieveApiPolymerTagTree(options).then((request) => request(axios, basePath));
+        retrieveApiPolymerTagTreeId(id: string, options?: any): AxiosPromise<InlineResponse2007> {
+            return localVarFp.retrieveApiPolymerTagTreeId(id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -5243,12 +5249,13 @@ export class StarrydataApi extends BaseAPI {
 
     /**
      * 
+     * @param {string} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public retrieveApiPolymerTagTree(options?: any) {
-        return StarrydataApiFp(this.configuration).retrieveApiPolymerTagTree(options).then((request) => request(this.axios, this.basePath));
+    public retrieveApiPolymerTagTreeId(id: string, options?: any) {
+        return StarrydataApiFp(this.configuration).retrieveApiPolymerTagTreeId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
