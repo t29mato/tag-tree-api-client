@@ -2145,7 +2145,13 @@ export interface PolymerTagTreeAttributes {
      * @type {string}
      * @memberof PolymerTagTreeAttributes
      */
-    tag_id: string;
+    polymer_tag_id: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof PolymerTagTreeAttributes
+     */
+    parent_node_id: string;
     /**
      * 
      * @type {Array<PolymerTagTreeAttributes>}
