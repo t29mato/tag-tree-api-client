@@ -1271,13 +1271,13 @@ export interface InlineResponse2004 {
      * @type {any & Pagination}
      * @memberof InlineResponse2004
      */
-    links?: any & Pagination;
+    links: any & Pagination;
     /**
      * 
      * @type {Meta}
      * @memberof InlineResponse2004
      */
-    meta?: Meta;
+    meta: Meta;
 }
 /**
  * 
@@ -1698,7 +1698,7 @@ export interface MetaPagination {
      * @type {number}
      * @memberof MetaPagination
      */
-    pages?: number;
+    pages: number;
     /**
      * 
      * @type {number}
