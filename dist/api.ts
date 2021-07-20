@@ -1201,6 +1201,31 @@ export interface InlineResponse2001 {
 /**
  * 
  * @export
+ * @interface InlineResponse20010
+ */
+export interface InlineResponse20010 {
+    /**
+     * 
+     * @type {Array<SynthesisMethodTagTreeNode>}
+     * @memberof InlineResponse20010
+     */
+    data: Array<SynthesisMethodTagTreeNode>;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse20010
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse20010
+     */
+    links?: any & Pagination;
+}
+/**
+ * 
+ * @export
  * @interface InlineResponse2002
  */
 export interface InlineResponse2002 {
@@ -1261,12 +1286,6 @@ export interface InlineResponse2004 {
      */
     data: Array<PolymerTag>;
     /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2004
-     */
-    included?: Set<Resource>;
-    /**
      * Link members related to primary data
      * @type {any & Pagination}
      * @memberof InlineResponse2004
@@ -1287,22 +1306,10 @@ export interface InlineResponse2004 {
 export interface InlineResponse2005 {
     /**
      * 
-     * @type {Array<PolymerNode>}
+     * @type {PolymerTag}
      * @memberof InlineResponse2005
      */
-    data: Array<PolymerNode>;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2005
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2005
-     */
-    links?: any & Pagination;
+    data: PolymerTag;
 }
 /**
  * 
@@ -1312,10 +1319,22 @@ export interface InlineResponse2005 {
 export interface InlineResponse2006 {
     /**
      * 
-     * @type {PolymerTagTree}
+     * @type {Array<PolymerNode>}
      * @memberof InlineResponse2006
      */
-    data: PolymerTagTree;
+    data: Array<PolymerNode>;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse2006
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse2006
+     */
+    links?: any & Pagination;
 }
 /**
  * 
@@ -1325,22 +1344,10 @@ export interface InlineResponse2006 {
 export interface InlineResponse2007 {
     /**
      * 
-     * @type {Array<FabricationProcess>}
+     * @type {PolymerTagTree}
      * @memberof InlineResponse2007
      */
-    data: Array<FabricationProcess>;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2007
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2007
-     */
-    links?: any & Pagination;
+    data: PolymerTagTree;
 }
 /**
  * 
@@ -1350,10 +1357,10 @@ export interface InlineResponse2007 {
 export interface InlineResponse2008 {
     /**
      * 
-     * @type {Array<SynthesisMethodTag>}
+     * @type {Array<FabricationProcess>}
      * @memberof InlineResponse2008
      */
-    data: Array<SynthesisMethodTag>;
+    data: Array<FabricationProcess>;
     /**
      * 
      * @type {Set<Resource>}
@@ -1375,10 +1382,10 @@ export interface InlineResponse2008 {
 export interface InlineResponse2009 {
     /**
      * 
-     * @type {Array<SynthesisMethodTagTreeNode>}
+     * @type {Array<SynthesisMethodTag>}
      * @memberof InlineResponse2009
      */
-    data: Array<SynthesisMethodTagTreeNode>;
+    data: Array<SynthesisMethodTag>;
     /**
      * 
      * @type {Set<Resource>}
@@ -1983,6 +1990,12 @@ export interface PolymerTag {
      * @memberof PolymerTag
      */
     attributes?: PolymerTagAttributes;
+    /**
+     * 
+     * @type {PolymerTagRelationships}
+     * @memberof PolymerTag
+     */
+    relationships?: PolymerTagRelationships;
 }
 /**
  * 
@@ -2002,6 +2015,51 @@ export interface PolymerTagAttributes {
      * @memberof PolymerTagAttributes
      */
     name: string;
+}
+/**
+ * 
+ * @export
+ * @interface PolymerTagRelationships
+ */
+export interface PolymerTagRelationships {
+    /**
+     * 
+     * @type {PolymerTagRelationshipsNodes}
+     * @memberof PolymerTagRelationships
+     */
+    nodes: PolymerTagRelationshipsNodes;
+}
+/**
+ * 
+ * @export
+ * @interface PolymerTagRelationshipsNodes
+ */
+export interface PolymerTagRelationshipsNodes {
+    /**
+     * 
+     * @type {PolymerTagRelationshipsNodesMeta}
+     * @memberof PolymerTagRelationshipsNodes
+     */
+    meta: PolymerTagRelationshipsNodesMeta;
+    /**
+     * 
+     * @type {Array<ApiPolymerNodesDataAttributesPolymerTag>}
+     * @memberof PolymerTagRelationshipsNodes
+     */
+    data: Array<ApiPolymerNodesDataAttributesPolymerTag>;
+}
+/**
+ * 
+ * @export
+ * @interface PolymerTagRelationshipsNodesMeta
+ */
+export interface PolymerTagRelationshipsNodesMeta {
+    /**
+     * 
+     * @type {number}
+     * @memberof PolymerTagRelationshipsNodesMeta
+     */
+    count: number;
 }
 /**
  * 
@@ -4106,7 +4164,7 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listApiFabricationProcesses(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
+        async listApiFabricationProcesses(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2008>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listApiFabricationProcesses(include, fields, pageNumber, pageSize, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -4151,7 +4209,7 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listApiPolymerNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2005>> {
+        async listApiPolymerNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2006>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listApiPolymerNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -4196,7 +4254,7 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listApiSynthesisMethodTagTreeNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2009>> {
+        async listApiSynthesisMethodTagTreeNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20010>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listApiSynthesisMethodTagTreeNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -4211,7 +4269,7 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listApiSynthesisMethodTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2008>> {
+        async listApiSynthesisMethodTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2009>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listApiSynthesisMethodTags(include, fields, pageNumber, pageSize, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -4304,7 +4362,7 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveApiPolymerTagTreeId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2006>> {
+        async retrieveApiPolymerTagTreeId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiPolymerTagTreeId(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -4318,7 +4376,7 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveApiPolymerTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2014>> {
+        async retrieveApiPolymerTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2005>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiPolymerTagsId(id, include, fields, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -4511,7 +4569,7 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApiFabricationProcesses(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2007> {
+        listApiFabricationProcesses(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2008> {
             return localVarFp.listApiFabricationProcesses(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
@@ -4553,7 +4611,7 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApiPolymerNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2005> {
+        listApiPolymerNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2006> {
             return localVarFp.listApiPolymerNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
@@ -4595,7 +4653,7 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApiSynthesisMethodTagTreeNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2009> {
+        listApiSynthesisMethodTagTreeNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse20010> {
             return localVarFp.listApiSynthesisMethodTagTreeNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
@@ -4609,7 +4667,7 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApiSynthesisMethodTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2008> {
+        listApiSynthesisMethodTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2009> {
             return localVarFp.listApiSynthesisMethodTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
@@ -4694,7 +4752,7 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveApiPolymerTagTreeId(id: string, options?: any): AxiosPromise<InlineResponse2006> {
+        retrieveApiPolymerTagTreeId(id: string, options?: any): AxiosPromise<InlineResponse2007> {
             return localVarFp.retrieveApiPolymerTagTreeId(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -4707,7 +4765,7 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveApiPolymerTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2014> {
+        retrieveApiPolymerTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2005> {
             return localVarFp.retrieveApiPolymerTagsId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
