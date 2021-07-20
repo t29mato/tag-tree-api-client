@@ -898,17 +898,11 @@ export interface Failure {
      */
     errors: Set<ModelError>;
     /**
-     * Non-standard meta-information that can not be represented as an attribute or relationship.
-     * @type {{ [key: string]: object; }}
-     * @memberof Failure
-     */
-    meta?: { [key: string]: object; };
-    /**
      * 
-     * @type {Jsonapi}
+     * @type {Meta}
      * @memberof Failure
      */
-    jsonapi?: Jsonapi;
+    meta?: Meta;
     /**
      * 
      * @type {{ [key: string]: Link; }}
@@ -971,31 +965,6 @@ export interface FigureAttributes {
      * @memberof FigureAttributes
      */
     title: string;
-}
-/**
- * 
- * @export
- * @interface Info
- */
-export interface Info {
-    /**
-     * Non-standard meta-information that can not be represented as an attribute or relationship.
-     * @type {{ [key: string]: object; }}
-     * @memberof Info
-     */
-    meta: { [key: string]: object; };
-    /**
-     * 
-     * @type {{ [key: string]: Link; }}
-     * @memberof Info
-     */
-    links?: { [key: string]: Link; };
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof Info
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1203,12 +1172,6 @@ export interface InlineResponse200 {
      * @memberof InlineResponse200
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse200
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1234,12 +1197,6 @@ export interface InlineResponse2001 {
      * @memberof InlineResponse2001
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2001
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1265,12 +1222,6 @@ export interface InlineResponse2002 {
      * @memberof InlineResponse2002
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2002
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1296,12 +1247,6 @@ export interface InlineResponse2003 {
      * @memberof InlineResponse2003
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2003
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1329,10 +1274,10 @@ export interface InlineResponse2004 {
     links?: any & Pagination;
     /**
      * 
-     * @type {Jsonapi}
+     * @type {Meta}
      * @memberof InlineResponse2004
      */
-    jsonapi?: Jsonapi;
+    meta?: Meta;
 }
 /**
  * 
@@ -1358,12 +1303,6 @@ export interface InlineResponse2005 {
      * @memberof InlineResponse2005
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2005
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1377,12 +1316,6 @@ export interface InlineResponse2006 {
      * @memberof InlineResponse2006
      */
     data: PolymerTagTree;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2006
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1408,12 +1341,6 @@ export interface InlineResponse2007 {
      * @memberof InlineResponse2007
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2007
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1439,12 +1366,6 @@ export interface InlineResponse2008 {
      * @memberof InlineResponse2008
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2008
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1470,12 +1391,6 @@ export interface InlineResponse2009 {
      * @memberof InlineResponse2009
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2009
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1501,12 +1416,6 @@ export interface InlineResponse201 {
      * @memberof InlineResponse201
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse201
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1532,12 +1441,6 @@ export interface InlineResponse2011 {
      * @memberof InlineResponse2011
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2011
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1563,12 +1466,6 @@ export interface InlineResponse2012 {
      * @memberof InlineResponse2012
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2012
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1594,12 +1491,6 @@ export interface InlineResponse2013 {
      * @memberof InlineResponse2013
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2013
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1625,12 +1516,6 @@ export interface InlineResponse2014 {
      * @memberof InlineResponse2014
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2014
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1656,12 +1541,6 @@ export interface InlineResponse2015 {
      * @memberof InlineResponse2015
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2015
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1687,12 +1566,6 @@ export interface InlineResponse2016 {
      * @memberof InlineResponse2016
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2016
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1718,12 +1591,6 @@ export interface InlineResponse2017 {
      * @memberof InlineResponse2017
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2017
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1749,37 +1616,6 @@ export interface InlineResponse2018 {
      * @memberof InlineResponse2018
      */
     links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof InlineResponse2018
-     */
-    jsonapi?: Jsonapi;
-}
-/**
- * @type JSONAPIresponse
- * @export
- */
-export type JSONAPIresponse = Failure | Info | Success;
-
-/**
- * An object describing the server\'s implementation
- * @export
- * @interface Jsonapi
- */
-export interface Jsonapi {
-    /**
-     * 
-     * @type {string}
-     * @memberof Jsonapi
-     */
-    version?: string;
-    /**
-     * Non-standard meta-information that can not be represented as an attribute or relationship.
-     * @type {{ [key: string]: object; }}
-     * @memberof Jsonapi
-     */
-    meta?: { [key: string]: object; };
 }
 /**
  * @type Link
@@ -1801,11 +1637,11 @@ export interface LinkOneOf {
      */
     href: string;
     /**
-     * Non-standard meta-information that can not be represented as an attribute or relationship.
-     * @type {{ [key: string]: object; }}
+     * 
+     * @type {Meta}
      * @memberof LinkOneOf
      */
-    meta?: { [key: string]: object; };
+    meta?: Meta;
 }
 /**
  * The `type` and `id` to non-empty members.
@@ -1826,11 +1662,49 @@ export interface Linkage {
      */
     id: string;
     /**
-     * Non-standard meta-information that can not be represented as an attribute or relationship.
-     * @type {{ [key: string]: object; }}
+     * 
+     * @type {Meta}
      * @memberof Linkage
      */
-    meta?: { [key: string]: object; };
+    meta?: Meta;
+}
+/**
+ * 
+ * @export
+ * @interface Meta
+ */
+export interface Meta {
+    /**
+     * 
+     * @type {MetaPagination}
+     * @memberof Meta
+     */
+    pagination: MetaPagination;
+}
+/**
+ * 
+ * @export
+ * @interface MetaPagination
+ */
+export interface MetaPagination {
+    /**
+     * 
+     * @type {number}
+     * @memberof MetaPagination
+     */
+    page: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof MetaPagination
+     */
+    pages?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof MetaPagination
+     */
+    count: number;
 }
 /**
  * 
@@ -1881,11 +1755,11 @@ export interface ModelError {
      */
     source?: ErrorSource;
     /**
-     * Non-standard meta-information that can not be represented as an attribute or relationship.
-     * @type {{ [key: string]: object; }}
+     * 
+     * @type {Meta}
      * @memberof ModelError
      */
-    meta?: { [key: string]: object; };
+    meta?: Meta;
 }
 /**
  * 
@@ -1894,11 +1768,11 @@ export interface ModelError {
  */
 export interface Onlymeta {
     /**
-     * Non-standard meta-information that can not be represented as an attribute or relationship.
-     * @type {{ [key: string]: object; }}
+     * 
+     * @type {Meta}
      * @memberof Onlymeta
      */
-    meta?: { [key: string]: object; };
+    meta?: Meta;
 }
 /**
  * 
@@ -2253,11 +2127,11 @@ export interface PostResource {
      */
     links?: { [key: string]: Link; };
     /**
-     * Non-standard meta-information that can not be represented as an attribute or relationship.
-     * @type {{ [key: string]: object; }}
+     * 
+     * @type {Meta}
      * @memberof PostResource
      */
-    meta?: { [key: string]: object; };
+    meta?: Meta;
 }
 /**
  * A single relationship description
@@ -2278,11 +2152,11 @@ export interface Relationship {
      */
     data?: RelationshipToOne | Set<any>;
     /**
-     * Non-standard meta-information that can not be represented as an attribute or relationship.
-     * @type {{ [key: string]: object; }}
+     * 
+     * @type {Meta}
      * @memberof Relationship
      */
-    meta?: { [key: string]: object; };
+    meta?: Meta;
 }
 /**
  * A resource object **MAY** contain references to other resource objects (`relationships`). Relationships may be to-one or to-many. Relationships can be specified by including a member in a resource\'s links object.
@@ -2324,11 +2198,11 @@ export interface RelationshipToOne {
      */
     id: string;
     /**
-     * Non-standard meta-information that can not be represented as an attribute or relationship.
-     * @type {{ [key: string]: object; }}
+     * 
+     * @type {Meta}
      * @memberof RelationshipToOne
      */
-    meta?: { [key: string]: object; };
+    meta?: Meta;
 }
 /**
  * A multiple relationship
@@ -2349,11 +2223,11 @@ export interface Reltomany {
      */
     data?: Set<Linkage>;
     /**
-     * Non-standard meta-information that can not be represented as an attribute or relationship.
-     * @type {{ [key: string]: object; }}
+     * 
+     * @type {Meta}
      * @memberof Reltomany
      */
-    meta?: { [key: string]: object; };
+    meta?: Meta;
 }
 /**
  * A multiple relationship, data only.
@@ -2387,11 +2261,11 @@ export interface Reltoone {
      */
     data?: RelationshipToOne;
     /**
-     * Non-standard meta-information that can not be represented as an attribute or relationship.
-     * @type {{ [key: string]: object; }}
+     * 
+     * @type {Meta}
      * @memberof Reltoone
      */
-    meta?: { [key: string]: object; };
+    meta?: Meta;
 }
 /**
  * A singular relationship, data only.
@@ -2443,11 +2317,11 @@ export interface Resource {
      */
     links?: { [key: string]: Link; };
     /**
-     * Non-standard meta-information that can not be represented as an attribute or relationship.
-     * @type {{ [key: string]: object; }}
+     * 
+     * @type {Meta}
      * @memberof Resource
      */
-    meta?: { [key: string]: object; };
+    meta?: Meta;
 }
 /**
  * 
@@ -2504,43 +2378,6 @@ export interface SampleAttributes {
      * @memberof SampleAttributes
      */
     name: string;
-}
-/**
- * 
- * @export
- * @interface Success
- */
-export interface Success {
-    /**
-     * 
-     * @type {Data}
-     * @memberof Success
-     */
-    data: Data;
-    /**
-     * To reduce the number of HTTP requests, servers **MAY** allow responses that include related resources along with the requested primary resources. Such responses are called `compound documents`.
-     * @type {Set<Resource>}
-     * @memberof Success
-     */
-    included?: Set<Resource>;
-    /**
-     * Non-standard meta-information that can not be represented as an attribute or relationship.
-     * @type {{ [key: string]: object; }}
-     * @memberof Success
-     */
-    meta?: { [key: string]: object; };
-    /**
-     * Link members related to the primary data.
-     * @type {any & Pagination}
-     * @memberof Success
-     */
-    links?: any & Pagination;
-    /**
-     * 
-     * @type {Jsonapi}
-     * @memberof Success
-     */
-    jsonapi?: Jsonapi;
 }
 /**
  * 
