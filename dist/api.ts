@@ -1989,7 +1989,7 @@ export interface PolymerTag {
      * @type {PolymerTagAttributes}
      * @memberof PolymerTag
      */
-    attributes?: PolymerTagAttributes;
+    attributes: PolymerTagAttributes;
     /**
      * 
      * @type {PolymerTagRelationships}
