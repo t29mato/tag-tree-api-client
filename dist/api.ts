@@ -257,6 +257,125 @@ export interface ApiFiguresDataRelationships {
 /**
  * 
  * @export
+ * @interface ApiNodesData
+ */
+export interface ApiNodesData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiNodesData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiNodesData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiNodesDataAttributes}
+     * @memberof ApiNodesData
+     */
+    attributes: ApiNodesDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiNodesDataAttributes
+ */
+export interface ApiNodesDataAttributes {
+    /**
+     * 
+     * @type {ApiNodesDataAttributesTag}
+     * @memberof ApiNodesDataAttributes
+     */
+    tag: ApiNodesDataAttributesTag;
+    /**
+     * 
+     * @type {ApiNodesDataAttributesTag}
+     * @memberof ApiNodesDataAttributes
+     */
+    parent: ApiNodesDataAttributesTag;
+}
+/**
+ * 
+ * @export
+ * @interface ApiNodesDataAttributesTag
+ */
+export interface ApiNodesDataAttributesTag {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiNodesDataAttributesTag
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiNodesDataAttributesTag
+     */
+    id: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiNodesIdData
+ */
+export interface ApiNodesIdData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiNodesIdData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiNodesIdData
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof ApiNodesIdData
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {object}
+     * @memberof ApiNodesIdData
+     */
+    attributes?: object;
+    /**
+     * 
+     * @type {ApiNodesIdDataRelationships}
+     * @memberof ApiNodesIdData
+     */
+    relationships?: ApiNodesIdDataRelationships;
+}
+/**
+ * 
+ * @export
+ * @interface ApiNodesIdDataRelationships
+ */
+export interface ApiNodesIdDataRelationships {
+    /**
+     * 
+     * @type {Reltoone}
+     * @memberof ApiNodesIdDataRelationships
+     */
+    tag?: Reltoone;
+    /**
+     * 
+     * @type {Reltoone}
+     * @memberof ApiNodesIdDataRelationships
+     */
+    parent?: Reltoone;
+}
+/**
+ * 
+ * @export
  * @interface ApiPapersData
  */
 export interface ApiPapersData {
@@ -346,207 +465,6 @@ export interface ApiPapersDataRelationships {
      * @memberof ApiPapersDataRelationships
      */
     database?: Reltomany;
-}
-/**
- * 
- * @export
- * @interface ApiPolymerNodesData
- */
-export interface ApiPolymerNodesData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiPolymerNodesData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiPolymerNodesData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiPolymerNodesDataAttributes}
-     * @memberof ApiPolymerNodesData
-     */
-    attributes: ApiPolymerNodesDataAttributes;
-}
-/**
- * 
- * @export
- * @interface ApiPolymerNodesDataAttributes
- */
-export interface ApiPolymerNodesDataAttributes {
-    /**
-     * 
-     * @type {ApiPolymerNodesDataAttributesPolymerTag}
-     * @memberof ApiPolymerNodesDataAttributes
-     */
-    polymer_tag: ApiPolymerNodesDataAttributesPolymerTag;
-    /**
-     * 
-     * @type {ApiPolymerNodesDataAttributesPolymerTag}
-     * @memberof ApiPolymerNodesDataAttributes
-     */
-    parent: ApiPolymerNodesDataAttributesPolymerTag;
-}
-/**
- * 
- * @export
- * @interface ApiPolymerNodesDataAttributesPolymerTag
- */
-export interface ApiPolymerNodesDataAttributesPolymerTag {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiPolymerNodesDataAttributesPolymerTag
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiPolymerNodesDataAttributesPolymerTag
-     */
-    id: string;
-}
-/**
- * 
- * @export
- * @interface ApiPolymerNodesIdData
- */
-export interface ApiPolymerNodesIdData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiPolymerNodesIdData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiPolymerNodesIdData
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof ApiPolymerNodesIdData
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {object}
-     * @memberof ApiPolymerNodesIdData
-     */
-    attributes?: object;
-    /**
-     * 
-     * @type {ApiPolymerNodesIdDataRelationships}
-     * @memberof ApiPolymerNodesIdData
-     */
-    relationships?: ApiPolymerNodesIdDataRelationships;
-}
-/**
- * 
- * @export
- * @interface ApiPolymerNodesIdDataRelationships
- */
-export interface ApiPolymerNodesIdDataRelationships {
-    /**
-     * 
-     * @type {Reltoone}
-     * @memberof ApiPolymerNodesIdDataRelationships
-     */
-    polymer_tag?: Reltoone;
-    /**
-     * 
-     * @type {Reltoone}
-     * @memberof ApiPolymerNodesIdDataRelationships
-     */
-    parent?: Reltoone;
-}
-/**
- * 
- * @export
- * @interface ApiPolymerTagsData
- */
-export interface ApiPolymerTagsData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiPolymerTagsData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiPolymerTagsData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof ApiPolymerTagsData
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {ApiPolymerTagsDataAttributes}
-     * @memberof ApiPolymerTagsData
-     */
-    attributes?: ApiPolymerTagsDataAttributes;
-}
-/**
- * 
- * @export
- * @interface ApiPolymerTagsDataAttributes
- */
-export interface ApiPolymerTagsDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiPolymerTagsDataAttributes
-     */
-    name: string;
-}
-/**
- * 
- * @export
- * @interface ApiPolymerTagsIdData
- */
-export interface ApiPolymerTagsIdData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiPolymerTagsIdData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiPolymerTagsIdData
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiPolymerTagsIdDataAttributes}
-     * @memberof ApiPolymerTagsIdData
-     */
-    attributes?: ApiPolymerTagsIdDataAttributes;
-}
-/**
- * 
- * @export
- * @interface ApiPolymerTagsIdDataAttributes
- */
-export interface ApiPolymerTagsIdDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiPolymerTagsIdDataAttributes
-     */
-    name?: string;
 }
 /**
  * 
@@ -721,6 +639,100 @@ export interface ApiSynthesisMethodTagsIdDataAttributes {
      * @memberof ApiSynthesisMethodTagsIdDataAttributes
      */
     name?: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTagsData
+ */
+export interface ApiTagsData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiTagsData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiTagsData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof ApiTagsData
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {ApiTagsDataAttributes}
+     * @memberof ApiTagsData
+     */
+    attributes?: ApiTagsDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTagsDataAttributes
+ */
+export interface ApiTagsDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTagsDataAttributes
+     */
+    name_ja: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTagsDataAttributes
+     */
+    name_en?: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTagsIdData
+ */
+export interface ApiTagsIdData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiTagsIdData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiTagsIdData
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagsIdDataAttributes}
+     * @memberof ApiTagsIdData
+     */
+    attributes?: ApiTagsIdDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTagsIdDataAttributes
+ */
+export interface ApiTagsIdDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTagsIdDataAttributes
+     */
+    name_ja?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTagsIdDataAttributes
+     */
+    name_en?: string;
 }
 /**
  * @type Data
@@ -1078,10 +1090,10 @@ export interface InlineObject3 {
 export interface InlineObject4 {
     /**
      * 
-     * @type {ApiPolymerTagsData}
+     * @type {ApiTagsData}
      * @memberof InlineObject4
      */
-    data: ApiPolymerTagsData;
+    data: ApiTagsData;
 }
 /**
  * 
@@ -1091,10 +1103,10 @@ export interface InlineObject4 {
 export interface InlineObject5 {
     /**
      * 
-     * @type {ApiPolymerTagsIdData}
+     * @type {ApiTagsIdData}
      * @memberof InlineObject5
      */
-    data: ApiPolymerTagsIdData;
+    data: ApiTagsIdData;
 }
 /**
  * 
@@ -1104,10 +1116,10 @@ export interface InlineObject5 {
 export interface InlineObject6 {
     /**
      * 
-     * @type {ApiPolymerNodesData}
+     * @type {ApiNodesData}
      * @memberof InlineObject6
      */
-    data: ApiPolymerNodesData;
+    data: ApiNodesData;
 }
 /**
  * 
@@ -1117,10 +1129,10 @@ export interface InlineObject6 {
 export interface InlineObject7 {
     /**
      * 
-     * @type {ApiPolymerNodesIdData}
+     * @type {ApiNodesIdData}
      * @memberof InlineObject7
      */
-    data: ApiPolymerNodesIdData;
+    data: ApiNodesIdData;
 }
 /**
  * 
@@ -1281,10 +1293,10 @@ export interface InlineResponse2003 {
 export interface InlineResponse2004 {
     /**
      * 
-     * @type {Array<PolymerTag>}
+     * @type {Array<Tag>}
      * @memberof InlineResponse2004
      */
-    data: Array<PolymerTag>;
+    data: Array<Tag>;
     /**
      * Link members related to primary data
      * @type {any & Pagination}
@@ -1306,10 +1318,10 @@ export interface InlineResponse2004 {
 export interface InlineResponse2005 {
     /**
      * 
-     * @type {PolymerTag}
+     * @type {Tag}
      * @memberof InlineResponse2005
      */
-    data: PolymerTag;
+    data: Tag;
 }
 /**
  * 
@@ -1319,10 +1331,10 @@ export interface InlineResponse2005 {
 export interface InlineResponse2006 {
     /**
      * 
-     * @type {Array<PolymerNode>}
+     * @type {Array<Node>}
      * @memberof InlineResponse2006
      */
-    data: Array<PolymerNode>;
+    data: Array<Node>;
     /**
      * 
      * @type {Set<Resource>}
@@ -1344,10 +1356,10 @@ export interface InlineResponse2006 {
 export interface InlineResponse2007 {
     /**
      * 
-     * @type {PolymerTagTree}
+     * @type {TagTree}
      * @memberof InlineResponse2007
      */
-    data: PolymerTagTree;
+    data: TagTree;
 }
 /**
  * 
@@ -1507,10 +1519,10 @@ export interface InlineResponse2013 {
 export interface InlineResponse2014 {
     /**
      * 
-     * @type {PolymerTag}
+     * @type {Tag}
      * @memberof InlineResponse2014
      */
-    data: PolymerTag;
+    data: Tag;
     /**
      * 
      * @type {Set<Resource>}
@@ -1532,10 +1544,10 @@ export interface InlineResponse2014 {
 export interface InlineResponse2015 {
     /**
      * 
-     * @type {PolymerNode}
+     * @type {Node}
      * @memberof InlineResponse2015
      */
-    data: PolymerNode;
+    data: Node;
     /**
      * 
      * @type {Set<Resource>}
@@ -1771,6 +1783,56 @@ export interface ModelError {
 /**
  * 
  * @export
+ * @interface Node
+ */
+export interface Node {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof Node
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof Node
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof Node
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {NodeAttributes}
+     * @memberof Node
+     */
+    attributes?: NodeAttributes;
+    /**
+     * 
+     * @type {ApiNodesIdDataRelationships}
+     * @memberof Node
+     */
+    relationships?: ApiNodesIdDataRelationships;
+}
+/**
+ * 
+ * @export
+ * @interface NodeAttributes
+ */
+export interface NodeAttributes {
+    /**
+     * 
+     * @type {number}
+     * @memberof NodeAttributes
+     */
+    id?: number;
+}
+/**
+ * 
+ * @export
  * @interface Onlymeta
  */
 export interface Onlymeta {
@@ -1909,231 +1971,6 @@ export interface PaperAttributes {
      * @memberof PaperAttributes
      */
     publisher?: string;
-}
-/**
- * 
- * @export
- * @interface PolymerNode
- */
-export interface PolymerNode {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof PolymerNode
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof PolymerNode
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof PolymerNode
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {PolymerNodeAttributes}
-     * @memberof PolymerNode
-     */
-    attributes?: PolymerNodeAttributes;
-    /**
-     * 
-     * @type {ApiPolymerNodesIdDataRelationships}
-     * @memberof PolymerNode
-     */
-    relationships?: ApiPolymerNodesIdDataRelationships;
-}
-/**
- * 
- * @export
- * @interface PolymerNodeAttributes
- */
-export interface PolymerNodeAttributes {
-    /**
-     * 
-     * @type {number}
-     * @memberof PolymerNodeAttributes
-     */
-    id?: number;
-}
-/**
- * 
- * @export
- * @interface PolymerTag
- */
-export interface PolymerTag {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof PolymerTag
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof PolymerTag
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof PolymerTag
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {PolymerTagAttributes}
-     * @memberof PolymerTag
-     */
-    attributes: PolymerTagAttributes;
-    /**
-     * 
-     * @type {PolymerTagRelationships}
-     * @memberof PolymerTag
-     */
-    relationships?: PolymerTagRelationships;
-}
-/**
- * 
- * @export
- * @interface PolymerTagAttributes
- */
-export interface PolymerTagAttributes {
-    /**
-     * 
-     * @type {number}
-     * @memberof PolymerTagAttributes
-     */
-    id?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PolymerTagAttributes
-     */
-    name: string;
-}
-/**
- * 
- * @export
- * @interface PolymerTagRelationships
- */
-export interface PolymerTagRelationships {
-    /**
-     * 
-     * @type {PolymerTagRelationshipsNodes}
-     * @memberof PolymerTagRelationships
-     */
-    nodes: PolymerTagRelationshipsNodes;
-}
-/**
- * 
- * @export
- * @interface PolymerTagRelationshipsNodes
- */
-export interface PolymerTagRelationshipsNodes {
-    /**
-     * 
-     * @type {PolymerTagRelationshipsNodesMeta}
-     * @memberof PolymerTagRelationshipsNodes
-     */
-    meta: PolymerTagRelationshipsNodesMeta;
-    /**
-     * 
-     * @type {Array<ApiPolymerNodesDataAttributesPolymerTag>}
-     * @memberof PolymerTagRelationshipsNodes
-     */
-    data: Array<ApiPolymerNodesDataAttributesPolymerTag>;
-}
-/**
- * 
- * @export
- * @interface PolymerTagRelationshipsNodesMeta
- */
-export interface PolymerTagRelationshipsNodesMeta {
-    /**
-     * 
-     * @type {number}
-     * @memberof PolymerTagRelationshipsNodesMeta
-     */
-    count: number;
-}
-/**
- * 
- * @export
- * @interface PolymerTagTree
- */
-export interface PolymerTagTree {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof PolymerTagTree
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof PolymerTagTree
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof PolymerTagTree
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {PolymerTagTreeAttributes}
-     * @memberof PolymerTagTree
-     */
-    attributes: PolymerTagTreeAttributes;
-}
-/**
- * 
- * @export
- * @interface PolymerTagTreeAttributes
- */
-export interface PolymerTagTreeAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof PolymerTagTreeAttributes
-     */
-    name: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PolymerTagTreeAttributes
-     */
-    node_id: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PolymerTagTreeAttributes
-     */
-    polymer_tag_id: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PolymerTagTreeAttributes
-     */
-    parent_node_id: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof PolymerTagTreeAttributes
-     */
-    tree_level: number;
-    /**
-     * 
-     * @type {Array<PolymerTagTreeAttributes>}
-     * @memberof PolymerTagTreeAttributes
-     */
-    children: Array<PolymerTagTreeAttributes>;
 }
 /**
  * singular item being [created](https://jsonapi.org/format/#crud-creating). `id` is optional and may be ignored if supplied and created by the system.
@@ -2505,6 +2342,193 @@ export interface SynthesisMethodTagTreeNode {
      */
     relationships?: ApiSynthesisMethodTagTreeNodesDataRelationships;
 }
+/**
+ * 
+ * @export
+ * @interface Tag
+ */
+export interface Tag {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof Tag
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof Tag
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof Tag
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {TagAttributes}
+     * @memberof Tag
+     */
+    attributes: TagAttributes;
+    /**
+     * 
+     * @type {TagRelationships}
+     * @memberof Tag
+     */
+    relationships?: TagRelationships;
+}
+/**
+ * 
+ * @export
+ * @interface TagAttributes
+ */
+export interface TagAttributes {
+    /**
+     * 
+     * @type {number}
+     * @memberof TagAttributes
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof TagAttributes
+     */
+    name_ja: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TagAttributes
+     */
+    name_en?: string;
+}
+/**
+ * 
+ * @export
+ * @interface TagRelationships
+ */
+export interface TagRelationships {
+    /**
+     * 
+     * @type {TagRelationshipsNodes}
+     * @memberof TagRelationships
+     */
+    nodes: TagRelationshipsNodes;
+}
+/**
+ * 
+ * @export
+ * @interface TagRelationshipsNodes
+ */
+export interface TagRelationshipsNodes {
+    /**
+     * 
+     * @type {TagRelationshipsNodesMeta}
+     * @memberof TagRelationshipsNodes
+     */
+    meta: TagRelationshipsNodesMeta;
+    /**
+     * 
+     * @type {Array<ApiNodesDataAttributesTag>}
+     * @memberof TagRelationshipsNodes
+     */
+    data: Array<ApiNodesDataAttributesTag>;
+}
+/**
+ * 
+ * @export
+ * @interface TagRelationshipsNodesMeta
+ */
+export interface TagRelationshipsNodesMeta {
+    /**
+     * 
+     * @type {number}
+     * @memberof TagRelationshipsNodesMeta
+     */
+    count: number;
+}
+/**
+ * 
+ * @export
+ * @interface TagTree
+ */
+export interface TagTree {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof TagTree
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof TagTree
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof TagTree
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {TagTreeAttributes}
+     * @memberof TagTree
+     */
+    attributes: TagTreeAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface TagTreeAttributes
+ */
+export interface TagTreeAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof TagTreeAttributes
+     */
+    name_ja: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TagTreeAttributes
+     */
+    name_en?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TagTreeAttributes
+     */
+    tree_id: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TagTreeAttributes
+     */
+    tag_id: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TagTreeAttributes
+     */
+    parent_tree_id: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof TagTreeAttributes
+     */
+    tree_level: number;
+    /**
+     * 
+     * @type {Array<TagTreeAttributes>}
+     * @memberof TagTreeAttributes
+     */
+    children: Array<TagTreeAttributes>;
+}
 
 /**
  * StarrydataApi - axios parameter creator
@@ -2613,45 +2637,12 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {InlineObject1} [inlineObject1] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiPapers: async (inlineObject1?: InlineObject1, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/papers`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject1, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {InlineObject6} [inlineObject6] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiPolymerNodes: async (inlineObject6?: InlineObject6, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/polymer_nodes`;
+        createApiNodes: async (inlineObject6?: InlineObject6, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/nodes`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2679,12 +2670,12 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {InlineObject4} [inlineObject4] 
+         * @param {InlineObject1} [inlineObject1] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiPolymerTags: async (inlineObject4?: InlineObject4, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/polymer_tags`;
+        createApiPapers: async (inlineObject1?: InlineObject1, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/papers`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2703,7 +2694,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject4, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject1, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -2811,6 +2802,39 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
+         * @param {InlineObject4} [inlineObject4] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createApiTags: async (inlineObject4?: InlineObject4, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/tags`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject4, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {string} id A unique integer value identifying this fabrication process.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2844,47 +2868,14 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this polymer node.
+         * @param {string} id A unique integer value identifying this node.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyApiPolymerNodesId: async (id: string, options: any = {}): Promise<RequestArgs> => {
+        destroyApiNodesId: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
-            assertParamExists('destroyApiPolymerNodesId', 'id', id)
-            const localVarPath = `/api/polymer_nodes/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this polymer node.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        destroyApiPolymerTagsId: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('destroyApiPolymerTagsId', 'id', id)
-            const localVarPath = `/api/polymer_tags/{id}`
+            assertParamExists('destroyApiNodesId', 'id', id)
+            const localVarPath = `/api/nodes/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2951,6 +2942,39 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('destroyApiSynthesisMethodTagsId', 'id', id)
             const localVarPath = `/api/synthesis_method_tags/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this node.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyApiTagsId: async (id: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('destroyApiTagsId', 'id', id)
+            const localVarPath = `/api/tags/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -3162,126 +3186,67 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
+        listApiNodes: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/nodes`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (include !== undefined) {
+                localVarQueryParameter['include'] = include;
+            }
+
+            if (fields !== undefined) {
+                localVarQueryParameter['fields'] = fields;
+            }
+
+            if (pageNumber !== undefined) {
+                localVarQueryParameter['page[number]'] = pageNumber;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page[size]'] = pageSize;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (filterSearch !== undefined) {
+                localVarQueryParameter['filter[search]'] = filterSearch;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {number} [pageNumber] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
         listApiPapers: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/papers`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (include !== undefined) {
-                localVarQueryParameter['include'] = include;
-            }
-
-            if (fields !== undefined) {
-                localVarQueryParameter['fields'] = fields;
-            }
-
-            if (pageNumber !== undefined) {
-                localVarQueryParameter['page[number]'] = pageNumber;
-            }
-
-            if (pageSize !== undefined) {
-                localVarQueryParameter['page[size]'] = pageSize;
-            }
-
-            if (sort !== undefined) {
-                localVarQueryParameter['sort'] = sort;
-            }
-
-            if (filterSearch !== undefined) {
-                localVarQueryParameter['filter[search]'] = filterSearch;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiPolymerNodes: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/polymer_nodes`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (include !== undefined) {
-                localVarQueryParameter['include'] = include;
-            }
-
-            if (fields !== undefined) {
-                localVarQueryParameter['fields'] = fields;
-            }
-
-            if (pageNumber !== undefined) {
-                localVarQueryParameter['page[number]'] = pageNumber;
-            }
-
-            if (pageSize !== undefined) {
-                localVarQueryParameter['page[size]'] = pageSize;
-            }
-
-            if (sort !== undefined) {
-                localVarQueryParameter['sort'] = sort;
-            }
-
-            if (filterSearch !== undefined) {
-                localVarQueryParameter['filter[search]'] = filterSearch;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiPolymerTags: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/polymer_tags`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3507,6 +3472,65 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {number} [pageNumber] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listApiTags: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/tags`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (include !== undefined) {
+                localVarQueryParameter['include'] = include;
+            }
+
+            if (fields !== undefined) {
+                localVarQueryParameter['fields'] = fields;
+            }
+
+            if (pageNumber !== undefined) {
+                localVarQueryParameter['page[number]'] = pageNumber;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page[size]'] = pageSize;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (filterSearch !== undefined) {
+                localVarQueryParameter['filter[search]'] = filterSearch;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {string} id A unique integer value identifying this fabrication process.
          * @param {InlineObject9} [inlineObject9] 
          * @param {*} [options] Override http request option.
@@ -3544,15 +3568,15 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this polymer node.
+         * @param {string} id A unique integer value identifying this node.
          * @param {InlineObject7} [inlineObject7] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateApiPolymerNodesId: async (id: string, inlineObject7?: InlineObject7, options: any = {}): Promise<RequestArgs> => {
+        partialUpdateApiNodesId: async (id: string, inlineObject7?: InlineObject7, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
-            assertParamExists('partialUpdateApiPolymerNodesId', 'id', id)
-            const localVarPath = `/api/polymer_nodes/{id}`
+            assertParamExists('partialUpdateApiNodesId', 'id', id)
+            const localVarPath = `/api/nodes/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -3573,43 +3597,6 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
             localVarRequestOptions.data = serializeDataIfNeeded(inlineObject7, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this polymer tag.
-         * @param {InlineObject5} [inlineObject5] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        partialUpdateApiPolymerTagsId: async (id: string, inlineObject5?: InlineObject5, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('partialUpdateApiPolymerTagsId', 'id', id)
-            const localVarPath = `/api/polymer_tags/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject5, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -3692,6 +3679,43 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
+         * @param {string} id A unique integer value identifying this tag.
+         * @param {InlineObject5} [inlineObject5] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        partialUpdateApiTagsId: async (id: string, inlineObject5?: InlineObject5, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('partialUpdateApiTagsId', 'id', id)
+            const localVarPath = `/api/tags/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject5, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {string} id A unique integer value identifying this fabrication process.
          * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
          * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
@@ -3745,7 +3769,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this polymer node.
+         * @param {string} id A unique integer value identifying this node.
          * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
          * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
          * @param {string} [sort] Which field to use when ordering the results.
@@ -3753,96 +3777,10 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveApiPolymerNodesId: async (id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
+        retrieveApiNodesId: async (id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
-            assertParamExists('retrieveApiPolymerNodesId', 'id', id)
-            const localVarPath = `/api/polymer_nodes/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (include !== undefined) {
-                localVarQueryParameter['include'] = include;
-            }
-
-            if (fields !== undefined) {
-                localVarQueryParameter['fields'] = fields;
-            }
-
-            if (sort !== undefined) {
-                localVarQueryParameter['sort'] = sort;
-            }
-
-            if (filterSearch !== undefined) {
-                localVarQueryParameter['filter[search]'] = filterSearch;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} id 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        retrieveApiPolymerTagTreeId: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('retrieveApiPolymerTagTreeId', 'id', id)
-            const localVarPath = `/api/polymer_tag_tree/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this polymer tag.
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        retrieveApiPolymerTagsId: async (id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('retrieveApiPolymerTagsId', 'id', id)
-            const localVarPath = `/api/polymer_tags/{id}`
+            assertParamExists('retrieveApiNodesId', 'id', id)
+            const localVarPath = `/api/nodes/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -3988,6 +3926,92 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        retrieveApiTagTreeId: async (id: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('retrieveApiTagTreeId', 'id', id)
+            const localVarPath = `/api/tag_tree/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this tag.
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        retrieveApiTagsId: async (id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('retrieveApiTagsId', 'id', id)
+            const localVarPath = `/api/tags/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (include !== undefined) {
+                localVarQueryParameter['include'] = include;
+            }
+
+            if (fields !== undefined) {
+                localVarQueryParameter['fields'] = fields;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (filterSearch !== undefined) {
+                localVarQueryParameter['filter[search]'] = filterSearch;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -4030,32 +4054,22 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {InlineObject6} [inlineObject6] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createApiNodes(inlineObject6?: InlineObject6, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiNodes(inlineObject6, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {InlineObject1} [inlineObject1] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         async createApiPapers(inlineObject1?: InlineObject1, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2011>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.createApiPapers(inlineObject1, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {InlineObject6} [inlineObject6] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createApiPolymerNodes(inlineObject6?: InlineObject6, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiPolymerNodes(inlineObject6, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {InlineObject4} [inlineObject4] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createApiPolymerTags(inlineObject4?: InlineObject4, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2014>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiPolymerTags(inlineObject4, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4090,6 +4104,16 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {InlineObject4} [inlineObject4] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createApiTags(inlineObject4?: InlineObject4, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2014>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiTags(inlineObject4, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {string} id A unique integer value identifying this fabrication process.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4100,22 +4124,12 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this polymer node.
+         * @param {string} id A unique integer value identifying this node.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async destroyApiPolymerNodesId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.destroyApiPolymerNodesId(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this polymer node.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async destroyApiPolymerTagsId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.destroyApiPolymerTagsId(id, options);
+        async destroyApiNodesId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.destroyApiNodesId(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4136,6 +4150,16 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          */
         async destroyApiSynthesisMethodTagsId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.destroyApiSynthesisMethodTagsId(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this node.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async destroyApiTagsId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.destroyApiTagsId(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4194,38 +4218,23 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
+        async listApiNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2006>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {number} [pageNumber] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
         async listApiPapers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2001>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listApiPapers(include, fields, pageNumber, pageSize, sort, filterSearch, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listApiPolymerNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2006>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiPolymerNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listApiPolymerTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiPolymerTags(include, fields, pageNumber, pageSize, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4275,6 +4284,21 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {number} [pageNumber] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {string} id A unique integer value identifying this fabrication process.
          * @param {InlineObject9} [inlineObject9] 
          * @param {*} [options] Override http request option.
@@ -4286,24 +4310,13 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this polymer node.
+         * @param {string} id A unique integer value identifying this node.
          * @param {InlineObject7} [inlineObject7] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async partialUpdateApiPolymerNodesId(id: string, inlineObject7?: InlineObject7, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiPolymerNodesId(id, inlineObject7, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this polymer tag.
-         * @param {InlineObject5} [inlineObject5] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async partialUpdateApiPolymerTagsId(id: string, inlineObject5?: InlineObject5, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2014>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiPolymerTagsId(id, inlineObject5, options);
+        async partialUpdateApiNodesId(id: string, inlineObject7?: InlineObject7, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiNodesId(id, inlineObject7, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4330,6 +4343,17 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {string} id A unique integer value identifying this tag.
+         * @param {InlineObject5} [inlineObject5] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async partialUpdateApiTagsId(id: string, inlineObject5?: InlineObject5, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2014>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiTagsId(id, inlineObject5, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {string} id A unique integer value identifying this fabrication process.
          * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
          * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
@@ -4344,7 +4368,7 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this polymer node.
+         * @param {string} id A unique integer value identifying this node.
          * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
          * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
          * @param {string} [sort] Which field to use when ordering the results.
@@ -4352,32 +4376,8 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveApiPolymerNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiPolymerNodesId(id, include, fields, sort, filterSearch, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} id 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async retrieveApiPolymerTagTreeId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiPolymerTagTreeId(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this polymer tag.
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async retrieveApiPolymerTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2005>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiPolymerTagsId(id, include, fields, sort, filterSearch, options);
+        async retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiNodesId(id, include, fields, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4406,6 +4406,30 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          */
         async retrieveApiSynthesisMethodTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2017>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiSynthesisMethodTagsId(id, include, fields, sort, filterSearch, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async retrieveApiTagTreeId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiTagTreeId(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this tag.
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async retrieveApiTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2005>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiTagsId(id, include, fields, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -4447,30 +4471,21 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
         },
         /**
          * 
+         * @param {InlineObject6} [inlineObject6] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createApiNodes(inlineObject6?: InlineObject6, options?: any): AxiosPromise<InlineResponse2015> {
+            return localVarFp.createApiNodes(inlineObject6, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {InlineObject1} [inlineObject1] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         createApiPapers(inlineObject1?: InlineObject1, options?: any): AxiosPromise<InlineResponse2011> {
             return localVarFp.createApiPapers(inlineObject1, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {InlineObject6} [inlineObject6] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiPolymerNodes(inlineObject6?: InlineObject6, options?: any): AxiosPromise<InlineResponse2015> {
-            return localVarFp.createApiPolymerNodes(inlineObject6, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {InlineObject4} [inlineObject4] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiPolymerTags(inlineObject4?: InlineObject4, options?: any): AxiosPromise<InlineResponse2014> {
-            return localVarFp.createApiPolymerTags(inlineObject4, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4501,6 +4516,15 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
         },
         /**
          * 
+         * @param {InlineObject4} [inlineObject4] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createApiTags(inlineObject4?: InlineObject4, options?: any): AxiosPromise<InlineResponse2014> {
+            return localVarFp.createApiTags(inlineObject4, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {string} id A unique integer value identifying this fabrication process.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4510,21 +4534,12 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this polymer node.
+         * @param {string} id A unique integer value identifying this node.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyApiPolymerNodesId(id: string, options?: any): AxiosPromise<Onlymeta> {
-            return localVarFp.destroyApiPolymerNodesId(id, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this polymer node.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        destroyApiPolymerTagsId(id: string, options?: any): AxiosPromise<Onlymeta> {
-            return localVarFp.destroyApiPolymerTagsId(id, options).then((request) => request(axios, basePath));
+        destroyApiNodesId(id: string, options?: any): AxiosPromise<Onlymeta> {
+            return localVarFp.destroyApiNodesId(id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4543,6 +4558,15 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          */
         destroyApiSynthesisMethodTagsId(id: string, options?: any): AxiosPromise<Onlymeta> {
             return localVarFp.destroyApiSynthesisMethodTagsId(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this node.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyApiTagsId(id: string, options?: any): AxiosPromise<Onlymeta> {
+            return localVarFp.destroyApiTagsId(id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4597,36 +4621,22 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
+        listApiNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2006> {
+            return localVarFp.listApiNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {number} [pageNumber] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
         listApiPapers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2001> {
             return localVarFp.listApiPapers(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiPolymerNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2006> {
-            return localVarFp.listApiPolymerNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiPolymerTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2004> {
-            return localVarFp.listApiPolymerTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4672,6 +4682,20 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
         },
         /**
          * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {number} [pageNumber] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2004> {
+            return localVarFp.listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {string} id A unique integer value identifying this fabrication process.
          * @param {InlineObject9} [inlineObject9] 
          * @param {*} [options] Override http request option.
@@ -4682,23 +4706,13 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this polymer node.
+         * @param {string} id A unique integer value identifying this node.
          * @param {InlineObject7} [inlineObject7] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateApiPolymerNodesId(id: string, inlineObject7?: InlineObject7, options?: any): AxiosPromise<InlineResponse2015> {
-            return localVarFp.partialUpdateApiPolymerNodesId(id, inlineObject7, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this polymer tag.
-         * @param {InlineObject5} [inlineObject5] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        partialUpdateApiPolymerTagsId(id: string, inlineObject5?: InlineObject5, options?: any): AxiosPromise<InlineResponse2014> {
-            return localVarFp.partialUpdateApiPolymerTagsId(id, inlineObject5, options).then((request) => request(axios, basePath));
+        partialUpdateApiNodesId(id: string, inlineObject7?: InlineObject7, options?: any): AxiosPromise<InlineResponse2015> {
+            return localVarFp.partialUpdateApiNodesId(id, inlineObject7, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4722,6 +4736,16 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
         },
         /**
          * 
+         * @param {string} id A unique integer value identifying this tag.
+         * @param {InlineObject5} [inlineObject5] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        partialUpdateApiTagsId(id: string, inlineObject5?: InlineObject5, options?: any): AxiosPromise<InlineResponse2014> {
+            return localVarFp.partialUpdateApiTagsId(id, inlineObject5, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {string} id A unique integer value identifying this fabrication process.
          * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
          * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
@@ -4735,7 +4759,7 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this polymer node.
+         * @param {string} id A unique integer value identifying this node.
          * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
          * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
          * @param {string} [sort] Which field to use when ordering the results.
@@ -4743,30 +4767,8 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveApiPolymerNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2015> {
-            return localVarFp.retrieveApiPolymerNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} id 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        retrieveApiPolymerTagTreeId(id: string, options?: any): AxiosPromise<InlineResponse2007> {
-            return localVarFp.retrieveApiPolymerTagTreeId(id, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this polymer tag.
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        retrieveApiPolymerTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2005> {
-            return localVarFp.retrieveApiPolymerTagsId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
+        retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2015> {
+            return localVarFp.retrieveApiNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4793,6 +4795,28 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          */
         retrieveApiSynthesisMethodTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2017> {
             return localVarFp.retrieveApiSynthesisMethodTagsId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        retrieveApiTagTreeId(id: string, options?: any): AxiosPromise<InlineResponse2007> {
+            return localVarFp.retrieveApiTagTreeId(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this tag.
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        retrieveApiTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2005> {
+            return localVarFp.retrieveApiTagsId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -4839,6 +4863,17 @@ export class StarrydataApi extends BaseAPI {
 
     /**
      * 
+     * @param {InlineObject6} [inlineObject6] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public createApiNodes(inlineObject6?: InlineObject6, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiNodes(inlineObject6, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {InlineObject1} [inlineObject1] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4846,28 +4881,6 @@ export class StarrydataApi extends BaseAPI {
      */
     public createApiPapers(inlineObject1?: InlineObject1, options?: any) {
         return StarrydataApiFp(this.configuration).createApiPapers(inlineObject1, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {InlineObject6} [inlineObject6] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public createApiPolymerNodes(inlineObject6?: InlineObject6, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiPolymerNodes(inlineObject6, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {InlineObject4} [inlineObject4] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public createApiPolymerTags(inlineObject4?: InlineObject4, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiPolymerTags(inlineObject4, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4905,6 +4918,17 @@ export class StarrydataApi extends BaseAPI {
 
     /**
      * 
+     * @param {InlineObject4} [inlineObject4] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public createApiTags(inlineObject4?: InlineObject4, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiTags(inlineObject4, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {string} id A unique integer value identifying this fabrication process.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4916,24 +4940,13 @@ export class StarrydataApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} id A unique integer value identifying this polymer node.
+     * @param {string} id A unique integer value identifying this node.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public destroyApiPolymerNodesId(id: string, options?: any) {
-        return StarrydataApiFp(this.configuration).destroyApiPolymerNodesId(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} id A unique integer value identifying this polymer node.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public destroyApiPolymerTagsId(id: string, options?: any) {
-        return StarrydataApiFp(this.configuration).destroyApiPolymerTagsId(id, options).then((request) => request(this.axios, this.basePath));
+    public destroyApiNodesId(id: string, options?: any) {
+        return StarrydataApiFp(this.configuration).destroyApiNodesId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4956,6 +4969,17 @@ export class StarrydataApi extends BaseAPI {
      */
     public destroyApiSynthesisMethodTagsId(id: string, options?: any) {
         return StarrydataApiFp(this.configuration).destroyApiSynthesisMethodTagsId(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id A unique integer value identifying this node.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public destroyApiTagsId(id: string, options?: any) {
+        return StarrydataApiFp(this.configuration).destroyApiTagsId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5018,40 +5042,24 @@ export class StarrydataApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
+    public listApiNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
+        return StarrydataApiFp(this.configuration).listApiNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+     * @param {number} [pageNumber] A page number within the paginated result set.
+     * @param {number} [pageSize] Number of results to return per page.
+     * @param {string} [sort] Which field to use when ordering the results.
+     * @param {string} [filterSearch] A search term.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
     public listApiPapers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
         return StarrydataApiFp(this.configuration).listApiPapers(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-     * @param {number} [pageNumber] A page number within the paginated result set.
-     * @param {number} [pageSize] Number of results to return per page.
-     * @param {string} [sort] Which field to use when ordering the results.
-     * @param {string} [filterSearch] A search term.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public listApiPolymerNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).listApiPolymerNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-     * @param {number} [pageNumber] A page number within the paginated result set.
-     * @param {number} [pageSize] Number of results to return per page.
-     * @param {string} [sort] Which field to use when ordering the results.
-     * @param {string} [filterSearch] A search term.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public listApiPolymerTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).listApiPolymerTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5104,6 +5112,22 @@ export class StarrydataApi extends BaseAPI {
 
     /**
      * 
+     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+     * @param {number} [pageNumber] A page number within the paginated result set.
+     * @param {number} [pageSize] Number of results to return per page.
+     * @param {string} [sort] Which field to use when ordering the results.
+     * @param {string} [filterSearch] A search term.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
+        return StarrydataApiFp(this.configuration).listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {string} id A unique integer value identifying this fabrication process.
      * @param {InlineObject9} [inlineObject9] 
      * @param {*} [options] Override http request option.
@@ -5116,26 +5140,14 @@ export class StarrydataApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} id A unique integer value identifying this polymer node.
+     * @param {string} id A unique integer value identifying this node.
      * @param {InlineObject7} [inlineObject7] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public partialUpdateApiPolymerNodesId(id: string, inlineObject7?: InlineObject7, options?: any) {
-        return StarrydataApiFp(this.configuration).partialUpdateApiPolymerNodesId(id, inlineObject7, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} id A unique integer value identifying this polymer tag.
-     * @param {InlineObject5} [inlineObject5] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public partialUpdateApiPolymerTagsId(id: string, inlineObject5?: InlineObject5, options?: any) {
-        return StarrydataApiFp(this.configuration).partialUpdateApiPolymerTagsId(id, inlineObject5, options).then((request) => request(this.axios, this.basePath));
+    public partialUpdateApiNodesId(id: string, inlineObject7?: InlineObject7, options?: any) {
+        return StarrydataApiFp(this.configuration).partialUpdateApiNodesId(id, inlineObject7, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5164,6 +5176,18 @@ export class StarrydataApi extends BaseAPI {
 
     /**
      * 
+     * @param {string} id A unique integer value identifying this tag.
+     * @param {InlineObject5} [inlineObject5] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public partialUpdateApiTagsId(id: string, inlineObject5?: InlineObject5, options?: any) {
+        return StarrydataApiFp(this.configuration).partialUpdateApiTagsId(id, inlineObject5, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {string} id A unique integer value identifying this fabrication process.
      * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
      * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
@@ -5179,7 +5203,7 @@ export class StarrydataApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} id A unique integer value identifying this polymer node.
+     * @param {string} id A unique integer value identifying this node.
      * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
      * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
      * @param {string} [sort] Which field to use when ordering the results.
@@ -5188,34 +5212,8 @@ export class StarrydataApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public retrieveApiPolymerNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).retrieveApiPolymerNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} id 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public retrieveApiPolymerTagTreeId(id: string, options?: any) {
-        return StarrydataApiFp(this.configuration).retrieveApiPolymerTagTreeId(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} id A unique integer value identifying this polymer tag.
-     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-     * @param {string} [sort] Which field to use when ordering the results.
-     * @param {string} [filterSearch] A search term.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public retrieveApiPolymerTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).retrieveApiPolymerTagsId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+    public retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
+        return StarrydataApiFp(this.configuration).retrieveApiNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5246,6 +5244,32 @@ export class StarrydataApi extends BaseAPI {
      */
     public retrieveApiSynthesisMethodTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
         return StarrydataApiFp(this.configuration).retrieveApiSynthesisMethodTagsId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public retrieveApiTagTreeId(id: string, options?: any) {
+        return StarrydataApiFp(this.configuration).retrieveApiTagTreeId(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id A unique integer value identifying this tag.
+     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+     * @param {string} [sort] Which field to use when ordering the results.
+     * @param {string} [filterSearch] A search term.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public retrieveApiTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
+        return StarrydataApiFp(this.configuration).retrieveApiTagsId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
