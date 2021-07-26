@@ -2503,7 +2503,7 @@ export interface TagTreeAttributes {
      * @type {string}
      * @memberof TagTreeAttributes
      */
-    tree_id: string;
+    node_id: string;
     /**
      * 
      * @type {string}
@@ -2515,7 +2515,7 @@ export interface TagTreeAttributes {
      * @type {string}
      * @memberof TagTreeAttributes
      */
-    parent_tree_id: string;
+    parent_node_id: string;
     /**
      * 
      * @type {number}
