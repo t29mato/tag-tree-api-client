@@ -81,119 +81,6 @@ export interface ApiDatabasesDataLinks {
 /**
  * 
  * @export
- * @interface ApiFabricationProcessesData
- */
-export interface ApiFabricationProcessesData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiFabricationProcessesData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiFabricationProcessesData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof ApiFabricationProcessesData
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {ApiFabricationProcessesDataAttributes}
-     * @memberof ApiFabricationProcessesData
-     */
-    attributes?: ApiFabricationProcessesDataAttributes;
-    /**
-     * 
-     * @type {ApiFabricationProcessesDataRelationships}
-     * @memberof ApiFabricationProcessesData
-     */
-    relationships?: ApiFabricationProcessesDataRelationships;
-}
-/**
- * 
- * @export
- * @interface ApiFabricationProcessesDataAttributes
- */
-export interface ApiFabricationProcessesDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiFabricationProcessesDataAttributes
-     */
-    name_ja: string;
-}
-/**
- * 
- * @export
- * @interface ApiFabricationProcessesDataRelationships
- */
-export interface ApiFabricationProcessesDataRelationships {
-    /**
-     * 
-     * @type {Reltoone}
-     * @memberof ApiFabricationProcessesDataRelationships
-     */
-    parent_id?: Reltoone;
-}
-/**
- * 
- * @export
- * @interface ApiFabricationProcessesIdData
- */
-export interface ApiFabricationProcessesIdData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiFabricationProcessesIdData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiFabricationProcessesIdData
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof ApiFabricationProcessesIdData
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {ApiFabricationProcessesIdDataAttributes}
-     * @memberof ApiFabricationProcessesIdData
-     */
-    attributes?: ApiFabricationProcessesIdDataAttributes;
-    /**
-     * 
-     * @type {ApiFabricationProcessesDataRelationships}
-     * @memberof ApiFabricationProcessesIdData
-     */
-    relationships?: ApiFabricationProcessesDataRelationships;
-}
-/**
- * 
- * @export
- * @interface ApiFabricationProcessesIdDataAttributes
- */
-export interface ApiFabricationProcessesIdDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiFabricationProcessesIdDataAttributes
-     */
-    name_ja?: string;
-}
-/**
- * 
- * @export
  * @interface ApiFiguresData
  */
 export interface ApiFiguresData {
@@ -506,143 +393,6 @@ export interface ApiSamplesData {
 /**
  * 
  * @export
- * @interface ApiSynthesisMethodTagTreeNodesData
- */
-export interface ApiSynthesisMethodTagTreeNodesData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiSynthesisMethodTagTreeNodesData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiSynthesisMethodTagTreeNodesData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof ApiSynthesisMethodTagTreeNodesData
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {ApiDatabasesDataAttributes}
-     * @memberof ApiSynthesisMethodTagTreeNodesData
-     */
-    attributes?: ApiDatabasesDataAttributes;
-    /**
-     * 
-     * @type {ApiSynthesisMethodTagTreeNodesDataRelationships}
-     * @memberof ApiSynthesisMethodTagTreeNodesData
-     */
-    relationships?: ApiSynthesisMethodTagTreeNodesDataRelationships;
-}
-/**
- * 
- * @export
- * @interface ApiSynthesisMethodTagTreeNodesDataRelationships
- */
-export interface ApiSynthesisMethodTagTreeNodesDataRelationships {
-    /**
-     * 
-     * @type {Reltoone}
-     * @memberof ApiSynthesisMethodTagTreeNodesDataRelationships
-     */
-    synthesis_method_tag?: Reltoone;
-    /**
-     * 
-     * @type {Reltoone}
-     * @memberof ApiSynthesisMethodTagTreeNodesDataRelationships
-     */
-    parent?: Reltoone;
-}
-/**
- * 
- * @export
- * @interface ApiSynthesisMethodTagTreeNodesIdData
- */
-export interface ApiSynthesisMethodTagTreeNodesIdData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiSynthesisMethodTagTreeNodesIdData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiSynthesisMethodTagTreeNodesIdData
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof ApiSynthesisMethodTagTreeNodesIdData
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {ApiSynthesisMethodTagsIdDataAttributes}
-     * @memberof ApiSynthesisMethodTagTreeNodesIdData
-     */
-    attributes?: ApiSynthesisMethodTagsIdDataAttributes;
-    /**
-     * 
-     * @type {ApiSynthesisMethodTagTreeNodesDataRelationships}
-     * @memberof ApiSynthesisMethodTagTreeNodesIdData
-     */
-    relationships?: ApiSynthesisMethodTagTreeNodesDataRelationships;
-}
-/**
- * 
- * @export
- * @interface ApiSynthesisMethodTagsIdData
- */
-export interface ApiSynthesisMethodTagsIdData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiSynthesisMethodTagsIdData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiSynthesisMethodTagsIdData
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof ApiSynthesisMethodTagsIdData
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {ApiSynthesisMethodTagsIdDataAttributes}
-     * @memberof ApiSynthesisMethodTagsIdData
-     */
-    attributes?: ApiSynthesisMethodTagsIdDataAttributes;
-}
-/**
- * 
- * @export
- * @interface ApiSynthesisMethodTagsIdDataAttributes
- */
-export interface ApiSynthesisMethodTagsIdDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiSynthesisMethodTagsIdDataAttributes
-     */
-    name?: string;
-}
-/**
- * 
- * @export
  * @interface ApiTagsData
  */
 export interface ApiTagsData {
@@ -844,62 +594,6 @@ export interface ErrorSource {
 /**
  * 
  * @export
- * @interface FabricationProcess
- */
-export interface FabricationProcess {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof FabricationProcess
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof FabricationProcess
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof FabricationProcess
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {FabricationProcessAttributes}
-     * @memberof FabricationProcess
-     */
-    attributes?: FabricationProcessAttributes;
-    /**
-     * 
-     * @type {ApiFabricationProcessesDataRelationships}
-     * @memberof FabricationProcess
-     */
-    relationships?: ApiFabricationProcessesDataRelationships;
-}
-/**
- * 
- * @export
- * @interface FabricationProcessAttributes
- */
-export interface FabricationProcessAttributes {
-    /**
-     * 
-     * @type {number}
-     * @memberof FabricationProcessAttributes
-     */
-    id?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof FabricationProcessAttributes
-     */
-    name_ja: string;
-}
-/**
- * 
- * @export
  * @interface Failure
  */
 export interface Failure {
@@ -1007,58 +701,6 @@ export interface InlineObject1 {
 /**
  * 
  * @export
- * @interface InlineObject10
- */
-export interface InlineObject10 {
-    /**
-     * 
-     * @type {ApiDatabasesData}
-     * @memberof InlineObject10
-     */
-    data: ApiDatabasesData;
-}
-/**
- * 
- * @export
- * @interface InlineObject11
- */
-export interface InlineObject11 {
-    /**
-     * 
-     * @type {ApiSynthesisMethodTagsIdData}
-     * @memberof InlineObject11
-     */
-    data: ApiSynthesisMethodTagsIdData;
-}
-/**
- * 
- * @export
- * @interface InlineObject12
- */
-export interface InlineObject12 {
-    /**
-     * 
-     * @type {ApiSynthesisMethodTagTreeNodesData}
-     * @memberof InlineObject12
-     */
-    data: ApiSynthesisMethodTagTreeNodesData;
-}
-/**
- * 
- * @export
- * @interface InlineObject13
- */
-export interface InlineObject13 {
-    /**
-     * 
-     * @type {ApiSynthesisMethodTagTreeNodesIdData}
-     * @memberof InlineObject13
-     */
-    data: ApiSynthesisMethodTagTreeNodesIdData;
-}
-/**
- * 
- * @export
  * @interface InlineObject2
  */
 export interface InlineObject2 {
@@ -1137,32 +779,6 @@ export interface InlineObject7 {
 /**
  * 
  * @export
- * @interface InlineObject8
- */
-export interface InlineObject8 {
-    /**
-     * 
-     * @type {ApiFabricationProcessesData}
-     * @memberof InlineObject8
-     */
-    data: ApiFabricationProcessesData;
-}
-/**
- * 
- * @export
- * @interface InlineObject9
- */
-export interface InlineObject9 {
-    /**
-     * 
-     * @type {ApiFabricationProcessesIdData}
-     * @memberof InlineObject9
-     */
-    data: ApiFabricationProcessesIdData;
-}
-/**
- * 
- * @export
  * @interface InlineResponse200
  */
 export interface InlineResponse200 {
@@ -1207,31 +823,6 @@ export interface InlineResponse2001 {
      * Link members related to primary data
      * @type {any & Pagination}
      * @memberof InlineResponse2001
-     */
-    links?: any & Pagination;
-}
-/**
- * 
- * @export
- * @interface InlineResponse20010
- */
-export interface InlineResponse20010 {
-    /**
-     * 
-     * @type {Array<SynthesisMethodTagTreeNode>}
-     * @memberof InlineResponse20010
-     */
-    data: Array<SynthesisMethodTagTreeNode>;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse20010
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse20010
      */
     links?: any & Pagination;
 }
@@ -1360,56 +951,6 @@ export interface InlineResponse2007 {
      * @memberof InlineResponse2007
      */
     data: TagTree;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2008
- */
-export interface InlineResponse2008 {
-    /**
-     * 
-     * @type {Array<FabricationProcess>}
-     * @memberof InlineResponse2008
-     */
-    data: Array<FabricationProcess>;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2008
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2008
-     */
-    links?: any & Pagination;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2009
- */
-export interface InlineResponse2009 {
-    /**
-     * 
-     * @type {Array<SynthesisMethodTag>}
-     * @memberof InlineResponse2009
-     */
-    data: Array<SynthesisMethodTag>;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2009
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2009
-     */
-    links?: any & Pagination;
 }
 /**
  * 
@@ -1558,81 +1099,6 @@ export interface InlineResponse2015 {
      * Link members related to primary data
      * @type {any & Pagination}
      * @memberof InlineResponse2015
-     */
-    links?: any & Pagination;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2016
- */
-export interface InlineResponse2016 {
-    /**
-     * 
-     * @type {FabricationProcess}
-     * @memberof InlineResponse2016
-     */
-    data: FabricationProcess;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2016
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2016
-     */
-    links?: any & Pagination;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2017
- */
-export interface InlineResponse2017 {
-    /**
-     * 
-     * @type {SynthesisMethodTag}
-     * @memberof InlineResponse2017
-     */
-    data: SynthesisMethodTag;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2017
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2017
-     */
-    links?: any & Pagination;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2018
- */
-export interface InlineResponse2018 {
-    /**
-     * 
-     * @type {SynthesisMethodTagTreeNode}
-     * @memberof InlineResponse2018
-     */
-    data: SynthesisMethodTagTreeNode;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2018
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2018
      */
     links?: any & Pagination;
 }
@@ -2277,74 +1743,6 @@ export interface SampleAttributes {
 /**
  * 
  * @export
- * @interface SynthesisMethodTag
- */
-export interface SynthesisMethodTag {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof SynthesisMethodTag
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof SynthesisMethodTag
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof SynthesisMethodTag
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {SampleAttributes}
-     * @memberof SynthesisMethodTag
-     */
-    attributes?: SampleAttributes;
-}
-/**
- * 
- * @export
- * @interface SynthesisMethodTagTreeNode
- */
-export interface SynthesisMethodTagTreeNode {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof SynthesisMethodTagTreeNode
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof SynthesisMethodTagTreeNode
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof SynthesisMethodTagTreeNode
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {SampleAttributes}
-     * @memberof SynthesisMethodTagTreeNode
-     */
-    attributes?: SampleAttributes;
-    /**
-     * 
-     * @type {ApiSynthesisMethodTagTreeNodesDataRelationships}
-     * @memberof SynthesisMethodTagTreeNode
-     */
-    relationships?: ApiSynthesisMethodTagTreeNodesDataRelationships;
-}
-/**
- * 
- * @export
  * @interface Tag
  */
 export interface Tag {
@@ -2571,39 +1969,6 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {InlineObject8} [inlineObject8] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiFabricationProcesses: async (inlineObject8?: InlineObject8, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/fabrication_processes`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject8, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {InlineObject2} [inlineObject2] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2736,72 +2101,6 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {InlineObject12} [inlineObject12] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiSynthesisMethodTagTreeNodes: async (inlineObject12?: InlineObject12, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/synthesis_method_tag_tree_nodes`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject12, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {InlineObject10} [inlineObject10] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiSynthesisMethodTags: async (inlineObject10?: InlineObject10, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/synthesis_method_tags`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject10, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {InlineObject4} [inlineObject4] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2835,39 +2134,6 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this fabrication process.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        destroyApiFabricationProcessesId: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('destroyApiFabricationProcessesId', 'id', id)
-            const localVarPath = `/api/fabrication_processes/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {string} id A unique integer value identifying this node.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2876,72 +2142,6 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('destroyApiNodesId', 'id', id)
             const localVarPath = `/api/nodes/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        destroyApiSynthesisMethodTagTreeNodesId: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('destroyApiSynthesisMethodTagTreeNodesId', 'id', id)
-            const localVarPath = `/api/synthesis_method_tag_tree_nodes/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        destroyApiSynthesisMethodTagsId: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('destroyApiSynthesisMethodTagsId', 'id', id)
-            const localVarPath = `/api/synthesis_method_tags/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -3011,65 +2211,6 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
          */
         listApiDatabases: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/databases`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (include !== undefined) {
-                localVarQueryParameter['include'] = include;
-            }
-
-            if (fields !== undefined) {
-                localVarQueryParameter['fields'] = fields;
-            }
-
-            if (pageNumber !== undefined) {
-                localVarQueryParameter['page[number]'] = pageNumber;
-            }
-
-            if (pageSize !== undefined) {
-                localVarQueryParameter['page[size]'] = pageSize;
-            }
-
-            if (sort !== undefined) {
-                localVarQueryParameter['sort'] = sort;
-            }
-
-            if (filterSearch !== undefined) {
-                localVarQueryParameter['filter[search]'] = filterSearch;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiFabricationProcesses: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/fabrication_processes`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3363,124 +2504,6 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApiSynthesisMethodTagTreeNodes: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/synthesis_method_tag_tree_nodes`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (include !== undefined) {
-                localVarQueryParameter['include'] = include;
-            }
-
-            if (fields !== undefined) {
-                localVarQueryParameter['fields'] = fields;
-            }
-
-            if (pageNumber !== undefined) {
-                localVarQueryParameter['page[number]'] = pageNumber;
-            }
-
-            if (pageSize !== undefined) {
-                localVarQueryParameter['page[size]'] = pageSize;
-            }
-
-            if (sort !== undefined) {
-                localVarQueryParameter['sort'] = sort;
-            }
-
-            if (filterSearch !== undefined) {
-                localVarQueryParameter['filter[search]'] = filterSearch;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiSynthesisMethodTags: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/synthesis_method_tags`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (include !== undefined) {
-                localVarQueryParameter['include'] = include;
-            }
-
-            if (fields !== undefined) {
-                localVarQueryParameter['fields'] = fields;
-            }
-
-            if (pageNumber !== undefined) {
-                localVarQueryParameter['page[number]'] = pageNumber;
-            }
-
-            if (pageSize !== undefined) {
-                localVarQueryParameter['page[size]'] = pageSize;
-            }
-
-            if (sort !== undefined) {
-                localVarQueryParameter['sort'] = sort;
-            }
-
-            if (filterSearch !== undefined) {
-                localVarQueryParameter['filter[search]'] = filterSearch;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
         listApiTags: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/tags`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -3531,43 +2554,6 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this fabrication process.
-         * @param {InlineObject9} [inlineObject9] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        partialUpdateApiFabricationProcessesId: async (id: string, inlineObject9?: InlineObject9, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('partialUpdateApiFabricationProcessesId', 'id', id)
-            const localVarPath = `/api/fabrication_processes/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject9, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {string} id A unique integer value identifying this node.
          * @param {InlineObject7} [inlineObject7] 
          * @param {*} [options] Override http request option.
@@ -3597,80 +2583,6 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
             localVarRequestOptions.data = serializeDataIfNeeded(inlineObject7, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-         * @param {InlineObject13} [inlineObject13] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        partialUpdateApiSynthesisMethodTagTreeNodesId: async (id: string, inlineObject13?: InlineObject13, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('partialUpdateApiSynthesisMethodTagTreeNodesId', 'id', id)
-            const localVarPath = `/api/synthesis_method_tag_tree_nodes/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject13, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag.
-         * @param {InlineObject11} [inlineObject11] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        partialUpdateApiSynthesisMethodTagsId: async (id: string, inlineObject11?: InlineObject11, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('partialUpdateApiSynthesisMethodTagsId', 'id', id)
-            const localVarPath = `/api/synthesis_method_tags/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject11, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -3716,59 +2628,6 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this fabrication process.
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        retrieveApiFabricationProcessesId: async (id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('retrieveApiFabricationProcessesId', 'id', id)
-            const localVarPath = `/api/fabrication_processes/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (include !== undefined) {
-                localVarQueryParameter['include'] = include;
-            }
-
-            if (fields !== undefined) {
-                localVarQueryParameter['fields'] = fields;
-            }
-
-            if (sort !== undefined) {
-                localVarQueryParameter['sort'] = sort;
-            }
-
-            if (filterSearch !== undefined) {
-                localVarQueryParameter['filter[search]'] = filterSearch;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {string} id A unique integer value identifying this node.
          * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
          * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
@@ -3781,112 +2640,6 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('retrieveApiNodesId', 'id', id)
             const localVarPath = `/api/nodes/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (include !== undefined) {
-                localVarQueryParameter['include'] = include;
-            }
-
-            if (fields !== undefined) {
-                localVarQueryParameter['fields'] = fields;
-            }
-
-            if (sort !== undefined) {
-                localVarQueryParameter['sort'] = sort;
-            }
-
-            if (filterSearch !== undefined) {
-                localVarQueryParameter['filter[search]'] = filterSearch;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        retrieveApiSynthesisMethodTagTreeNodesId: async (id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('retrieveApiSynthesisMethodTagTreeNodesId', 'id', id)
-            const localVarPath = `/api/synthesis_method_tag_tree_nodes/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (include !== undefined) {
-                localVarQueryParameter['include'] = include;
-            }
-
-            if (fields !== undefined) {
-                localVarQueryParameter['fields'] = fields;
-            }
-
-            if (sort !== undefined) {
-                localVarQueryParameter['sort'] = sort;
-            }
-
-            if (filterSearch !== undefined) {
-                localVarQueryParameter['filter[search]'] = filterSearch;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag.
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        retrieveApiSynthesisMethodTagsId: async (id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('retrieveApiSynthesisMethodTagsId', 'id', id)
-            const localVarPath = `/api/synthesis_method_tags/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -4034,16 +2787,6 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {InlineObject8} [inlineObject8] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createApiFabricationProcesses(inlineObject8?: InlineObject8, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiFabricationProcesses(inlineObject8, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @param {InlineObject2} [inlineObject2] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4084,26 +2827,6 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {InlineObject12} [inlineObject12] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createApiSynthesisMethodTagTreeNodes(inlineObject12?: InlineObject12, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2018>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiSynthesisMethodTagTreeNodes(inlineObject12, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {InlineObject10} [inlineObject10] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createApiSynthesisMethodTags(inlineObject10?: InlineObject10, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2017>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiSynthesisMethodTags(inlineObject10, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @param {InlineObject4} [inlineObject4] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4114,42 +2837,12 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this fabrication process.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async destroyApiFabricationProcessesId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.destroyApiFabricationProcessesId(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @param {string} id A unique integer value identifying this node.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         async destroyApiNodesId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.destroyApiNodesId(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async destroyApiSynthesisMethodTagTreeNodesId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.destroyApiSynthesisMethodTagTreeNodesId(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async destroyApiSynthesisMethodTagsId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.destroyApiSynthesisMethodTagsId(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4175,21 +2868,6 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          */
         async listApiDatabases(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listApiDatabases(include, fields, pageNumber, pageSize, sort, filterSearch, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listApiFabricationProcesses(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2008>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiFabricationProcesses(include, fields, pageNumber, pageSize, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4263,49 +2941,8 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listApiSynthesisMethodTagTreeNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20010>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiSynthesisMethodTagTreeNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listApiSynthesisMethodTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2009>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiSynthesisMethodTags(include, fields, pageNumber, pageSize, sort, filterSearch, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
         async listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this fabrication process.
-         * @param {InlineObject9} [inlineObject9] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async partialUpdateApiFabricationProcessesId(id: string, inlineObject9?: InlineObject9, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiFabricationProcessesId(id, inlineObject9, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4321,28 +2958,6 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-         * @param {InlineObject13} [inlineObject13] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async partialUpdateApiSynthesisMethodTagTreeNodesId(id: string, inlineObject13?: InlineObject13, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2018>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiSynthesisMethodTagTreeNodesId(id, inlineObject13, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag.
-         * @param {InlineObject11} [inlineObject11] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async partialUpdateApiSynthesisMethodTagsId(id: string, inlineObject11?: InlineObject11, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2017>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiSynthesisMethodTagsId(id, inlineObject11, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @param {string} id A unique integer value identifying this tag.
          * @param {InlineObject5} [inlineObject5] 
          * @param {*} [options] Override http request option.
@@ -4350,20 +2965,6 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          */
         async partialUpdateApiTagsId(id: string, inlineObject5?: InlineObject5, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2014>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiTagsId(id, inlineObject5, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this fabrication process.
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async retrieveApiFabricationProcessesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiFabricationProcessesId(id, include, fields, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4378,34 +2979,6 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          */
         async retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiNodesId(id, include, fields, sort, filterSearch, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async retrieveApiSynthesisMethodTagTreeNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2018>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiSynthesisMethodTagTreeNodesId(id, include, fields, sort, filterSearch, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag.
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async retrieveApiSynthesisMethodTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2017>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiSynthesisMethodTagsId(id, include, fields, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -4453,15 +3026,6 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
         },
         /**
          * 
-         * @param {InlineObject8} [inlineObject8] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiFabricationProcesses(inlineObject8?: InlineObject8, options?: any): AxiosPromise<InlineResponse2016> {
-            return localVarFp.createApiFabricationProcesses(inlineObject8, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @param {InlineObject2} [inlineObject2] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4498,24 +3062,6 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
         },
         /**
          * 
-         * @param {InlineObject12} [inlineObject12] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiSynthesisMethodTagTreeNodes(inlineObject12?: InlineObject12, options?: any): AxiosPromise<InlineResponse2018> {
-            return localVarFp.createApiSynthesisMethodTagTreeNodes(inlineObject12, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {InlineObject10} [inlineObject10] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiSynthesisMethodTags(inlineObject10?: InlineObject10, options?: any): AxiosPromise<InlineResponse2017> {
-            return localVarFp.createApiSynthesisMethodTags(inlineObject10, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @param {InlineObject4} [inlineObject4] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4525,39 +3071,12 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this fabrication process.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        destroyApiFabricationProcessesId(id: string, options?: any): AxiosPromise<Onlymeta> {
-            return localVarFp.destroyApiFabricationProcessesId(id, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @param {string} id A unique integer value identifying this node.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
         destroyApiNodesId(id: string, options?: any): AxiosPromise<Onlymeta> {
             return localVarFp.destroyApiNodesId(id, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        destroyApiSynthesisMethodTagTreeNodesId(id: string, options?: any): AxiosPromise<Onlymeta> {
-            return localVarFp.destroyApiSynthesisMethodTagTreeNodesId(id, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        destroyApiSynthesisMethodTagsId(id: string, options?: any): AxiosPromise<Onlymeta> {
-            return localVarFp.destroyApiSynthesisMethodTagsId(id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4581,20 +3100,6 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          */
         listApiDatabases(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse200> {
             return localVarFp.listApiDatabases(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiFabricationProcesses(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2008> {
-            return localVarFp.listApiFabricationProcesses(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4663,46 +3168,8 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApiSynthesisMethodTagTreeNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse20010> {
-            return localVarFp.listApiSynthesisMethodTagTreeNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiSynthesisMethodTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2009> {
-            return localVarFp.listApiSynthesisMethodTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
         listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2004> {
             return localVarFp.listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this fabrication process.
-         * @param {InlineObject9} [inlineObject9] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        partialUpdateApiFabricationProcessesId(id: string, inlineObject9?: InlineObject9, options?: any): AxiosPromise<InlineResponse2016> {
-            return localVarFp.partialUpdateApiFabricationProcessesId(id, inlineObject9, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4716,26 +3183,6 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
         },
         /**
          * 
-         * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-         * @param {InlineObject13} [inlineObject13] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        partialUpdateApiSynthesisMethodTagTreeNodesId(id: string, inlineObject13?: InlineObject13, options?: any): AxiosPromise<InlineResponse2018> {
-            return localVarFp.partialUpdateApiSynthesisMethodTagTreeNodesId(id, inlineObject13, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag.
-         * @param {InlineObject11} [inlineObject11] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        partialUpdateApiSynthesisMethodTagsId(id: string, inlineObject11?: InlineObject11, options?: any): AxiosPromise<InlineResponse2017> {
-            return localVarFp.partialUpdateApiSynthesisMethodTagsId(id, inlineObject11, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @param {string} id A unique integer value identifying this tag.
          * @param {InlineObject5} [inlineObject5] 
          * @param {*} [options] Override http request option.
@@ -4743,19 +3190,6 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          */
         partialUpdateApiTagsId(id: string, inlineObject5?: InlineObject5, options?: any): AxiosPromise<InlineResponse2014> {
             return localVarFp.partialUpdateApiTagsId(id, inlineObject5, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this fabrication process.
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        retrieveApiFabricationProcessesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2016> {
-            return localVarFp.retrieveApiFabricationProcessesId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4769,32 +3203,6 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          */
         retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2015> {
             return localVarFp.retrieveApiNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        retrieveApiSynthesisMethodTagTreeNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2018> {
-            return localVarFp.retrieveApiSynthesisMethodTagTreeNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} id A unique integer value identifying this synthesis method tag.
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        retrieveApiSynthesisMethodTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2017> {
-            return localVarFp.retrieveApiSynthesisMethodTagsId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -4837,17 +3245,6 @@ export class StarrydataApi extends BaseAPI {
      */
     public createApiDatabases(inlineObject?: InlineObject, options?: any) {
         return StarrydataApiFp(this.configuration).createApiDatabases(inlineObject, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {InlineObject8} [inlineObject8] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public createApiFabricationProcesses(inlineObject8?: InlineObject8, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiFabricationProcesses(inlineObject8, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4896,28 +3293,6 @@ export class StarrydataApi extends BaseAPI {
 
     /**
      * 
-     * @param {InlineObject12} [inlineObject12] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public createApiSynthesisMethodTagTreeNodes(inlineObject12?: InlineObject12, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiSynthesisMethodTagTreeNodes(inlineObject12, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {InlineObject10} [inlineObject10] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public createApiSynthesisMethodTags(inlineObject10?: InlineObject10, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiSynthesisMethodTags(inlineObject10, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
      * @param {InlineObject4} [inlineObject4] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4929,17 +3304,6 @@ export class StarrydataApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} id A unique integer value identifying this fabrication process.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public destroyApiFabricationProcessesId(id: string, options?: any) {
-        return StarrydataApiFp(this.configuration).destroyApiFabricationProcessesId(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
      * @param {string} id A unique integer value identifying this node.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4947,28 +3311,6 @@ export class StarrydataApi extends BaseAPI {
      */
     public destroyApiNodesId(id: string, options?: any) {
         return StarrydataApiFp(this.configuration).destroyApiNodesId(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public destroyApiSynthesisMethodTagTreeNodesId(id: string, options?: any) {
-        return StarrydataApiFp(this.configuration).destroyApiSynthesisMethodTagTreeNodesId(id, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} id A unique integer value identifying this synthesis method tag.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public destroyApiSynthesisMethodTagsId(id: string, options?: any) {
-        return StarrydataApiFp(this.configuration).destroyApiSynthesisMethodTagsId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4996,22 +3338,6 @@ export class StarrydataApi extends BaseAPI {
      */
     public listApiDatabases(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
         return StarrydataApiFp(this.configuration).listApiDatabases(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-     * @param {number} [pageNumber] A page number within the paginated result set.
-     * @param {number} [pageSize] Number of results to return per page.
-     * @param {string} [sort] Which field to use when ordering the results.
-     * @param {string} [filterSearch] A search term.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public listApiFabricationProcesses(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).listApiFabricationProcesses(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5090,52 +3416,8 @@ export class StarrydataApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public listApiSynthesisMethodTagTreeNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).listApiSynthesisMethodTagTreeNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-     * @param {number} [pageNumber] A page number within the paginated result set.
-     * @param {number} [pageSize] Number of results to return per page.
-     * @param {string} [sort] Which field to use when ordering the results.
-     * @param {string} [filterSearch] A search term.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public listApiSynthesisMethodTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).listApiSynthesisMethodTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-     * @param {number} [pageNumber] A page number within the paginated result set.
-     * @param {number} [pageSize] Number of results to return per page.
-     * @param {string} [sort] Which field to use when ordering the results.
-     * @param {string} [filterSearch] A search term.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
     public listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
         return StarrydataApiFp(this.configuration).listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} id A unique integer value identifying this fabrication process.
-     * @param {InlineObject9} [inlineObject9] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public partialUpdateApiFabricationProcessesId(id: string, inlineObject9?: InlineObject9, options?: any) {
-        return StarrydataApiFp(this.configuration).partialUpdateApiFabricationProcessesId(id, inlineObject9, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5152,30 +3434,6 @@ export class StarrydataApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-     * @param {InlineObject13} [inlineObject13] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public partialUpdateApiSynthesisMethodTagTreeNodesId(id: string, inlineObject13?: InlineObject13, options?: any) {
-        return StarrydataApiFp(this.configuration).partialUpdateApiSynthesisMethodTagTreeNodesId(id, inlineObject13, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} id A unique integer value identifying this synthesis method tag.
-     * @param {InlineObject11} [inlineObject11] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public partialUpdateApiSynthesisMethodTagsId(id: string, inlineObject11?: InlineObject11, options?: any) {
-        return StarrydataApiFp(this.configuration).partialUpdateApiSynthesisMethodTagsId(id, inlineObject11, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
      * @param {string} id A unique integer value identifying this tag.
      * @param {InlineObject5} [inlineObject5] 
      * @param {*} [options] Override http request option.
@@ -5184,21 +3442,6 @@ export class StarrydataApi extends BaseAPI {
      */
     public partialUpdateApiTagsId(id: string, inlineObject5?: InlineObject5, options?: any) {
         return StarrydataApiFp(this.configuration).partialUpdateApiTagsId(id, inlineObject5, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} id A unique integer value identifying this fabrication process.
-     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-     * @param {string} [sort] Which field to use when ordering the results.
-     * @param {string} [filterSearch] A search term.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public retrieveApiFabricationProcessesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).retrieveApiFabricationProcessesId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5214,36 +3457,6 @@ export class StarrydataApi extends BaseAPI {
      */
     public retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
         return StarrydataApiFp(this.configuration).retrieveApiNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} id A unique integer value identifying this synthesis method tag tree node.
-     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-     * @param {string} [sort] Which field to use when ordering the results.
-     * @param {string} [filterSearch] A search term.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public retrieveApiSynthesisMethodTagTreeNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).retrieveApiSynthesisMethodTagTreeNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} id A unique integer value identifying this synthesis method tag.
-     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-     * @param {string} [sort] Which field to use when ordering the results.
-     * @param {string} [filterSearch] A search term.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public retrieveApiSynthesisMethodTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).retrieveApiSynthesisMethodTagsId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
