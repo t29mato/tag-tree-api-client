@@ -393,6 +393,100 @@ export interface ApiSamplesData {
 /**
  * 
  * @export
+ * @interface ApiSynonymsData
+ */
+export interface ApiSynonymsData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiSynonymsData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiSynonymsData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiSynonymsDataAttributes}
+     * @memberof ApiSynonymsData
+     */
+    attributes: ApiSynonymsDataAttributes;
+    /**
+     * 
+     * @type {ApiSynonymsDataRelationships}
+     * @memberof ApiSynonymsData
+     */
+    relationships: ApiSynonymsDataRelationships;
+}
+/**
+ * 
+ * @export
+ * @interface ApiSynonymsDataAttributes
+ */
+export interface ApiSynonymsDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiSynonymsDataAttributes
+     */
+    name: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiSynonymsDataAttributes
+     */
+    language: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiSynonymsDataRelationships
+ */
+export interface ApiSynonymsDataRelationships {
+    /**
+     * 
+     * @type {RelationshipToOne}
+     * @memberof ApiSynonymsDataRelationships
+     */
+    tag: RelationshipToOne;
+}
+/**
+ * 
+ * @export
+ * @interface ApiSynonymsIdData
+ */
+export interface ApiSynonymsIdData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiSynonymsIdData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiSynonymsIdData
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiSynonymsDataAttributes}
+     * @memberof ApiSynonymsIdData
+     */
+    attributes: ApiSynonymsDataAttributes;
+    /**
+     * 
+     * @type {ApiSynonymsDataRelationships}
+     * @memberof ApiSynonymsIdData
+     */
+    relationships: ApiSynonymsDataRelationships;
+}
+/**
+ * 
+ * @export
  * @interface ApiTagsData
  */
 export interface ApiTagsData {
@@ -779,6 +873,32 @@ export interface InlineObject7 {
 /**
  * 
  * @export
+ * @interface InlineObject8
+ */
+export interface InlineObject8 {
+    /**
+     * 
+     * @type {ApiSynonymsData}
+     * @memberof InlineObject8
+     */
+    data: ApiSynonymsData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject9
+ */
+export interface InlineObject9 {
+    /**
+     * 
+     * @type {ApiSynonymsIdData}
+     * @memberof InlineObject9
+     */
+    data: ApiSynonymsIdData;
+}
+/**
+ * 
+ * @export
  * @interface InlineResponse200
  */
 export interface InlineResponse200 {
@@ -955,6 +1075,31 @@ export interface InlineResponse2007 {
 /**
  * 
  * @export
+ * @interface InlineResponse2008
+ */
+export interface InlineResponse2008 {
+    /**
+     * 
+     * @type {Array<Synonym>}
+     * @memberof InlineResponse2008
+     */
+    data: Array<Synonym>;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse2008
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse2008
+     */
+    links?: any & Pagination;
+}
+/**
+ * 
+ * @export
  * @interface InlineResponse201
  */
 export interface InlineResponse201 {
@@ -1099,6 +1244,31 @@ export interface InlineResponse2015 {
      * Link members related to primary data
      * @type {any & Pagination}
      * @memberof InlineResponse2015
+     */
+    links?: any & Pagination;
+}
+/**
+ * 
+ * @export
+ * @interface InlineResponse2016
+ */
+export interface InlineResponse2016 {
+    /**
+     * 
+     * @type {Synonym}
+     * @memberof InlineResponse2016
+     */
+    data: Synonym;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse2016
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse2016
      */
     links?: any & Pagination;
 }
@@ -1743,6 +1913,43 @@ export interface SampleAttributes {
 /**
  * 
  * @export
+ * @interface Synonym
+ */
+export interface Synonym {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof Synonym
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof Synonym
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof Synonym
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {ApiSynonymsDataAttributes}
+     * @memberof Synonym
+     */
+    attributes: ApiSynonymsDataAttributes;
+    /**
+     * 
+     * @type {ApiNodesIdDataRelationships}
+     * @memberof Synonym
+     */
+    relationships: ApiNodesIdDataRelationships;
+}
+/**
+ * 
+ * @export
  * @interface Tag
  */
 export interface Tag {
@@ -2101,6 +2308,39 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
+         * @param {InlineObject8} [inlineObject8] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createApiSynonyms: async (inlineObject8?: InlineObject8, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/synonyms`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject8, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {InlineObject4} [inlineObject4] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2142,6 +2382,39 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('destroyApiNodesId', 'id', id)
             const localVarPath = `/api/nodes/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this synonym.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyApiSynonymsId: async (id: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('destroyApiSynonymsId', 'id', id)
+            const localVarPath = `/api/synonyms/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2504,6 +2777,65 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
+        listApiSynonyms: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/synonyms`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (include !== undefined) {
+                localVarQueryParameter['include'] = include;
+            }
+
+            if (fields !== undefined) {
+                localVarQueryParameter['fields'] = fields;
+            }
+
+            if (pageNumber !== undefined) {
+                localVarQueryParameter['page[number]'] = pageNumber;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page[size]'] = pageSize;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (filterSearch !== undefined) {
+                localVarQueryParameter['filter[search]'] = filterSearch;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {number} [pageNumber] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
         listApiTags: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/tags`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -2591,6 +2923,43 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
+         * @param {string} id A unique integer value identifying this synonym.
+         * @param {InlineObject9} [inlineObject9] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        partialUpdateApiSynonymsId: async (id: string, inlineObject9?: InlineObject9, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('partialUpdateApiSynonymsId', 'id', id)
+            const localVarPath = `/api/synonyms/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject9, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @param {string} id A unique integer value identifying this tag.
          * @param {InlineObject5} [inlineObject5] 
          * @param {*} [options] Override http request option.
@@ -2640,6 +3009,59 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             // verify required parameter 'id' is not null or undefined
             assertParamExists('retrieveApiNodesId', 'id', id)
             const localVarPath = `/api/nodes/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (include !== undefined) {
+                localVarQueryParameter['include'] = include;
+            }
+
+            if (fields !== undefined) {
+                localVarQueryParameter['fields'] = fields;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (filterSearch !== undefined) {
+                localVarQueryParameter['filter[search]'] = filterSearch;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this synonym.
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        retrieveApiSynonymsId: async (id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('retrieveApiSynonymsId', 'id', id)
+            const localVarPath = `/api/synonyms/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2827,6 +3249,16 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {InlineObject8} [inlineObject8] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createApiSynonyms(inlineObject8?: InlineObject8, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiSynonyms(inlineObject8, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {InlineObject4} [inlineObject4] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2843,6 +3275,16 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          */
         async destroyApiNodesId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.destroyApiNodesId(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this synonym.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async destroyApiSynonymsId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.destroyApiSynonymsId(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -2941,6 +3383,21 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
+        async listApiSynonyms(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2008>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiSynonyms(include, fields, pageNumber, pageSize, sort, filterSearch, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {number} [pageNumber] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
         async listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
@@ -2954,6 +3411,17 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          */
         async partialUpdateApiNodesId(id: string, inlineObject7?: InlineObject7, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiNodesId(id, inlineObject7, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this synonym.
+         * @param {InlineObject9} [inlineObject9] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async partialUpdateApiSynonymsId(id: string, inlineObject9?: InlineObject9, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiSynonymsId(id, inlineObject9, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -2979,6 +3447,20 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          */
         async retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiNodesId(id, include, fields, sort, filterSearch, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this synonym.
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async retrieveApiSynonymsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiSynonymsId(id, include, fields, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3062,6 +3544,15 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
         },
         /**
          * 
+         * @param {InlineObject8} [inlineObject8] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createApiSynonyms(inlineObject8?: InlineObject8, options?: any): AxiosPromise<InlineResponse2016> {
+            return localVarFp.createApiSynonyms(inlineObject8, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @param {InlineObject4} [inlineObject4] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -3077,6 +3568,15 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          */
         destroyApiNodesId(id: string, options?: any): AxiosPromise<Onlymeta> {
             return localVarFp.destroyApiNodesId(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this synonym.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyApiSynonymsId(id: string, options?: any): AxiosPromise<Onlymeta> {
+            return localVarFp.destroyApiSynonymsId(id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3168,6 +3668,20 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
+        listApiSynonyms(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2008> {
+            return localVarFp.listApiSynonyms(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {number} [pageNumber] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
         listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2004> {
             return localVarFp.listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
@@ -3180,6 +3694,16 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          */
         partialUpdateApiNodesId(id: string, inlineObject7?: InlineObject7, options?: any): AxiosPromise<InlineResponse2015> {
             return localVarFp.partialUpdateApiNodesId(id, inlineObject7, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this synonym.
+         * @param {InlineObject9} [inlineObject9] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        partialUpdateApiSynonymsId(id: string, inlineObject9?: InlineObject9, options?: any): AxiosPromise<InlineResponse2016> {
+            return localVarFp.partialUpdateApiSynonymsId(id, inlineObject9, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3203,6 +3727,19 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          */
         retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2015> {
             return localVarFp.retrieveApiNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this synonym.
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        retrieveApiSynonymsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2016> {
+            return localVarFp.retrieveApiSynonymsId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3293,6 +3830,17 @@ export class StarrydataApi extends BaseAPI {
 
     /**
      * 
+     * @param {InlineObject8} [inlineObject8] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public createApiSynonyms(inlineObject8?: InlineObject8, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiSynonyms(inlineObject8, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @param {InlineObject4} [inlineObject4] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3311,6 +3859,17 @@ export class StarrydataApi extends BaseAPI {
      */
     public destroyApiNodesId(id: string, options?: any) {
         return StarrydataApiFp(this.configuration).destroyApiNodesId(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id A unique integer value identifying this synonym.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public destroyApiSynonymsId(id: string, options?: any) {
+        return StarrydataApiFp(this.configuration).destroyApiSynonymsId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3416,6 +3975,22 @@ export class StarrydataApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
+    public listApiSynonyms(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
+        return StarrydataApiFp(this.configuration).listApiSynonyms(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+     * @param {number} [pageNumber] A page number within the paginated result set.
+     * @param {number} [pageSize] Number of results to return per page.
+     * @param {string} [sort] Which field to use when ordering the results.
+     * @param {string} [filterSearch] A search term.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
     public listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
         return StarrydataApiFp(this.configuration).listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
@@ -3430,6 +4005,18 @@ export class StarrydataApi extends BaseAPI {
      */
     public partialUpdateApiNodesId(id: string, inlineObject7?: InlineObject7, options?: any) {
         return StarrydataApiFp(this.configuration).partialUpdateApiNodesId(id, inlineObject7, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id A unique integer value identifying this synonym.
+     * @param {InlineObject9} [inlineObject9] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public partialUpdateApiSynonymsId(id: string, inlineObject9?: InlineObject9, options?: any) {
+        return StarrydataApiFp(this.configuration).partialUpdateApiSynonymsId(id, inlineObject9, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3457,6 +4044,21 @@ export class StarrydataApi extends BaseAPI {
      */
     public retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
         return StarrydataApiFp(this.configuration).retrieveApiNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id A unique integer value identifying this synonym.
+     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+     * @param {string} [sort] Which field to use when ordering the results.
+     * @param {string} [filterSearch] A search term.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public retrieveApiSynonymsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
+        return StarrydataApiFp(this.configuration).retrieveApiSynonymsId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
