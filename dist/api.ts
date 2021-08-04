@@ -955,6 +955,19 @@ export interface InlineResponse2007 {
 /**
  * 
  * @export
+ * @interface InlineResponse2008
+ */
+export interface InlineResponse2008 {
+    /**
+     * 
+     * @type {TagAncestors}
+     * @memberof InlineResponse2008
+     */
+    data: TagAncestors;
+}
+/**
+ * 
+ * @export
  * @interface InlineResponse201
  */
 export interface InlineResponse201 {
@@ -1776,6 +1789,87 @@ export interface Tag {
      * @memberof Tag
      */
     relationships?: TagRelationships;
+}
+/**
+ * 
+ * @export
+ * @interface TagAncestors
+ */
+export interface TagAncestors {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof TagAncestors
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof TagAncestors
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof TagAncestors
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {TagAncestorsAttributes}
+     * @memberof TagAncestors
+     */
+    attributes: TagAncestorsAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface TagAncestorsAttributes
+ */
+export interface TagAncestorsAttributes {
+    /**
+     * 
+     * @type {Array<TagAncestorsAttributesAncestors>}
+     * @memberof TagAncestorsAttributes
+     */
+    ancestors: Array<TagAncestorsAttributesAncestors>;
+}
+/**
+ * 
+ * @export
+ * @interface TagAncestorsAttributesAncestors
+ */
+export interface TagAncestorsAttributesAncestors {
+    /**
+     * 
+     * @type {string}
+     * @memberof TagAncestorsAttributesAncestors
+     */
+    name_ja?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TagAncestorsAttributesAncestors
+     */
+    name_en?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TagAncestorsAttributesAncestors
+     */
+    node_id: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TagAncestorsAttributesAncestors
+     */
+    tag_id: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TagAncestorsAttributesAncestors
+     */
+    parent_node_id?: string;
 }
 /**
  * 
@@ -2685,6 +2779,39 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
+        retrieveApiTagAncestorsId: async (id: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('retrieveApiTagAncestorsId', 'id', id)
+            const localVarPath = `/api/tag_ancestors/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
         retrieveApiTagTreeId: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('retrieveApiTagTreeId', 'id', id)
@@ -2987,6 +3114,16 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
+        async retrieveApiTagAncestorsId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2008>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiTagAncestorsId(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
         async retrieveApiTagTreeId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiTagTreeId(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
@@ -3203,6 +3340,15 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          */
         retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2015> {
             return localVarFp.retrieveApiNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        retrieveApiTagAncestorsId(id: string, options?: any): AxiosPromise<InlineResponse2008> {
+            return localVarFp.retrieveApiTagAncestorsId(id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3457,6 +3603,17 @@ export class StarrydataApi extends BaseAPI {
      */
     public retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
         return StarrydataApiFp(this.configuration).retrieveApiNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public retrieveApiTagAncestorsId(id: string, options?: any) {
+        return StarrydataApiFp(this.configuration).retrieveApiTagAncestorsId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
