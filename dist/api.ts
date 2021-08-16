@@ -900,6 +900,12 @@ export interface InlineResponse2004 {
      * @memberof InlineResponse2004
      */
     meta: Meta;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse2004
+     */
+    included?: Set<Resource>;
 }
 /**
  * 
@@ -1779,10 +1785,10 @@ export interface Tag {
     links?: ApiDatabasesDataLinks;
     /**
      * 
-     * @type {TagAttributes}
+     * @type {object}
      * @memberof Tag
      */
-    attributes: TagAttributes;
+    attributes: object;
     /**
      * 
      * @type {TagRelationships}
@@ -1870,31 +1876,6 @@ export interface TagAncestorsAttributesAncestors {
      * @memberof TagAncestorsAttributesAncestors
      */
     parent_node_id?: string;
-}
-/**
- * 
- * @export
- * @interface TagAttributes
- */
-export interface TagAttributes {
-    /**
-     * 
-     * @type {number}
-     * @memberof TagAttributes
-     */
-    id?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof TagAttributes
-     */
-    name_ja: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TagAttributes
-     */
-    name_en?: string;
 }
 /**
  * 
