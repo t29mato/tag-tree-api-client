@@ -902,10 +902,10 @@ export interface InlineResponse2004 {
     meta: Meta;
     /**
      * 
-     * @type {Set<Resource>}
+     * @type {Array<Resource>}
      * @memberof InlineResponse2004
      */
-    included?: Set<Resource>;
+    included?: Array<Resource>;
 }
 /**
  * 
