@@ -1888,13 +1888,13 @@ export interface TagAttributes {
      * @type {TagAttributesTermJa}
      * @memberof TagAttributes
      */
-    term_ja?: TagAttributesTermJa;
+    term_ja: TagAttributesTermJa;
     /**
      * 
      * @type {TagAttributesTermJa}
      * @memberof TagAttributes
      */
-    term_en?: TagAttributesTermJa;
+    term_en: TagAttributesTermJa;
 }
 /**
  * 
