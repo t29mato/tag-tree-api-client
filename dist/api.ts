@@ -1785,10 +1785,10 @@ export interface Tag {
     links?: ApiDatabasesDataLinks;
     /**
      * 
-     * @type {object}
+     * @type {TagAttributes}
      * @memberof Tag
      */
-    attributes: object;
+    attributes: TagAttributes;
     /**
      * 
      * @type {TagRelationships}
@@ -1876,6 +1876,44 @@ export interface TagAncestorsAttributesAncestors {
      * @memberof TagAncestorsAttributesAncestors
      */
     parent_node_id?: string;
+}
+/**
+ * 
+ * @export
+ * @interface TagAttributes
+ */
+export interface TagAttributes {
+    /**
+     * 
+     * @type {TagAttributesTermJa}
+     * @memberof TagAttributes
+     */
+    term_ja?: TagAttributesTermJa;
+    /**
+     * 
+     * @type {TagAttributesTermJa}
+     * @memberof TagAttributes
+     */
+    term_en?: TagAttributesTermJa;
+}
+/**
+ * 
+ * @export
+ * @interface TagAttributesTermJa
+ */
+export interface TagAttributesTermJa {
+    /**
+     * 
+     * @type {string}
+     * @memberof TagAttributesTermJa
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TagAttributesTermJa
+     */
+    language?: string;
 }
 /**
  * 
