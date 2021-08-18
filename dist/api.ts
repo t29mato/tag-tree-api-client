@@ -429,16 +429,35 @@ export interface ApiTagsData {
 export interface ApiTagsDataAttributes {
     /**
      * 
-     * @type {string}
+     * @type {ApiTagsDataAttributesTermJa}
      * @memberof ApiTagsDataAttributes
      */
-    name_ja: string;
+    term_ja: ApiTagsDataAttributesTermJa;
+    /**
+     * 
+     * @type {ApiTagsDataAttributesTermJa}
+     * @memberof ApiTagsDataAttributes
+     */
+    term_en: ApiTagsDataAttributesTermJa;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTagsDataAttributesTermJa
+ */
+export interface ApiTagsDataAttributesTermJa {
     /**
      * 
      * @type {string}
-     * @memberof ApiTagsDataAttributes
+     * @memberof ApiTagsDataAttributesTermJa
      */
-    name_en?: string;
+    name: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTagsDataAttributesTermJa
+     */
+    language: string;
 }
 /**
  * 
