@@ -429,16 +429,16 @@ export interface ApiTagsData {
 export interface ApiTagsDataAttributes {
     /**
      * 
-     * @type {ApiTermsDataAttributes}
+     * @type {string}
      * @memberof ApiTagsDataAttributes
      */
-    term_ja: ApiTermsDataAttributes;
+    term_ja_id?: string;
     /**
      * 
-     * @type {ApiTermsDataAttributes}
+     * @type {string}
      * @memberof ApiTagsDataAttributes
      */
-    term_en: ApiTermsDataAttributes;
+    term_en_id?: string;
 }
 /**
  * 
