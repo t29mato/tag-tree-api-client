@@ -429,35 +429,16 @@ export interface ApiTagsData {
 export interface ApiTagsDataAttributes {
     /**
      * 
-     * @type {ApiTagsDataAttributesTermJa}
+     * @type {ApiTermsDataAttributes}
      * @memberof ApiTagsDataAttributes
      */
-    term_ja: ApiTagsDataAttributesTermJa;
+    term_ja: ApiTermsDataAttributes;
     /**
      * 
-     * @type {ApiTagsDataAttributesTermJa}
+     * @type {ApiTermsDataAttributes}
      * @memberof ApiTagsDataAttributes
      */
-    term_en: ApiTagsDataAttributesTermJa;
-}
-/**
- * 
- * @export
- * @interface ApiTagsDataAttributesTermJa
- */
-export interface ApiTagsDataAttributesTermJa {
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiTagsDataAttributesTermJa
-     */
-    name: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiTagsDataAttributesTermJa
-     */
-    language: string;
+    term_en: ApiTermsDataAttributes;
 }
 /**
  * 
@@ -502,6 +483,56 @@ export interface ApiTagsIdDataAttributes {
      * @memberof ApiTagsIdDataAttributes
      */
     name_en?: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTermsData
+ */
+export interface ApiTermsData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiTermsData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiTermsData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiDatabasesDataLinks}
+     * @memberof ApiTermsData
+     */
+    links?: ApiDatabasesDataLinks;
+    /**
+     * 
+     * @type {ApiTermsDataAttributes}
+     * @memberof ApiTermsData
+     */
+    attributes?: ApiTermsDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTermsDataAttributes
+ */
+export interface ApiTermsDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTermsDataAttributes
+     */
+    name: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTermsDataAttributes
+     */
+    language: string;
 }
 /**
  * @type Data
@@ -712,10 +743,10 @@ export interface InlineObject {
 export interface InlineObject1 {
     /**
      * 
-     * @type {ApiDatabasesData}
+     * @type {ApiTermsData}
      * @memberof InlineObject1
      */
-    data: ApiDatabasesData;
+    data: ApiTermsData;
 }
 /**
  * 
