@@ -419,7 +419,13 @@ export interface ApiTagsData {
      * @type {ApiTagsDataAttributes}
      * @memberof ApiTagsData
      */
-    attributes?: ApiTagsDataAttributes;
+    attributes: ApiTagsDataAttributes;
+    /**
+     * 
+     * @type {ApiTagsDataRelationships}
+     * @memberof ApiTagsData
+     */
+    relationships: ApiTagsDataRelationships;
 }
 /**
  * 
@@ -439,6 +445,51 @@ export interface ApiTagsDataAttributes {
      * @memberof ApiTagsDataAttributes
      */
     term_en_id?: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTagsDataRelationships
+ */
+export interface ApiTagsDataRelationships {
+    /**
+     * 
+     * @type {ApiTagsDataRelationshipsNodes}
+     * @memberof ApiTagsDataRelationships
+     */
+    nodes: ApiTagsDataRelationshipsNodes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTagsDataRelationshipsNodes
+ */
+export interface ApiTagsDataRelationshipsNodes {
+    /**
+     * 
+     * @type {ApiTagsDataRelationshipsNodesData}
+     * @memberof ApiTagsDataRelationshipsNodes
+     */
+    data: ApiTagsDataRelationshipsNodesData;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTagsDataRelationshipsNodesData
+ */
+export interface ApiTagsDataRelationshipsNodesData {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTagsDataRelationshipsNodesData
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTagsDataRelationshipsNodesData
+     */
+    id?: string;
 }
 /**
  * 
