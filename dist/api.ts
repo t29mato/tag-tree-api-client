@@ -445,6 +445,12 @@ export interface ApiTagsDataAttributes {
      * @memberof ApiTagsDataAttributes
      */
     term_en_id?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof ApiTagsDataAttributes
+     */
+    synonyms_ids?: Array<string>;
 }
 /**
  * 
@@ -2059,6 +2065,12 @@ export interface TagAttributes {
      * @memberof TagAttributes
      */
     term_en: TagAttributesTermJa;
+    /**
+     * 
+     * @type {Array<ApiTermsDataAttributes>}
+     * @memberof TagAttributes
+     */
+    synonyms?: Array<ApiTermsDataAttributes>;
 }
 /**
  * 
