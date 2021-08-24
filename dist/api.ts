@@ -2070,7 +2070,7 @@ export interface TagAttributes {
      * @type {Array<ApiTermsDataAttributes>}
      * @memberof TagAttributes
      */
-    synonyms?: Array<ApiTermsDataAttributes>;
+    synonyms: Array<ApiTermsDataAttributes>;
 }
 /**
  * 
