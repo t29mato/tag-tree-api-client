@@ -1970,7 +1970,7 @@ export interface Tag {
      * @type {TagRelationships}
      * @memberof Tag
      */
-    relationships?: TagRelationships;
+    relationships: TagRelationships;
 }
 /**
  * 
