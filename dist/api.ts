@@ -2109,6 +2109,12 @@ export interface TagRelationships {
      * @memberof TagRelationships
      */
     nodes: TagRelationshipsNodes;
+    /**
+     * 
+     * @type {TagRelationshipsNodes}
+     * @memberof TagRelationships
+     */
+    synonyms_ids: TagRelationshipsNodes;
 }
 /**
  * 
