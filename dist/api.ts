@@ -530,10 +530,10 @@ export interface ApiTagsIdData {
 export interface ApiTagsIdDataAttributes {
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof ApiTagsIdDataAttributes
      */
-    name_ja_id?: number;
+    name_ja_id?: string;
     /**
      * 
      * @type {string}
@@ -542,10 +542,10 @@ export interface ApiTagsIdDataAttributes {
     name_en_id?: string;
     /**
      * 
-     * @type {Array<number>}
+     * @type {Array<string>}
      * @memberof ApiTagsIdDataAttributes
      */
-    synonyms_ids?: Array<number>;
+    synonyms_ids?: Array<string>;
 }
 /**
  * 
