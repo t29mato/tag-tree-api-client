@@ -2245,7 +2245,7 @@ export interface Term {
      * @type {TermAttributes}
      * @memberof Term
      */
-    attributes?: TermAttributes;
+    attributes: TermAttributes;
 }
 /**
  * 
