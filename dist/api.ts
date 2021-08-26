@@ -420,12 +420,6 @@ export interface ApiTagsData {
      * @memberof ApiTagsData
      */
     attributes: ApiTagsDataAttributes;
-    /**
-     * 
-     * @type {ApiTagsDataRelationships}
-     * @memberof ApiTagsData
-     */
-    relationships: ApiTagsDataRelationships;
 }
 /**
  * 
@@ -451,49 +445,48 @@ export interface ApiTagsDataAttributes {
      * @memberof ApiTagsDataAttributes
      */
     synonyms?: Array<ApiTermsDataAttributes>;
-}
-/**
- * 
- * @export
- * @interface ApiTagsDataRelationships
- */
-export interface ApiTagsDataRelationships {
     /**
      * 
-     * @type {ApiTagsDataRelationshipsNodes}
-     * @memberof ApiTagsDataRelationships
+     * @type {Array<ApiTagsDataAttributesNodes>}
+     * @memberof ApiTagsDataAttributes
      */
-    nodes: ApiTagsDataRelationshipsNodes;
+    nodes?: Array<ApiTagsDataAttributesNodes>;
 }
 /**
  * 
  * @export
- * @interface ApiTagsDataRelationshipsNodes
+ * @interface ApiTagsDataAttributesNodes
  */
-export interface ApiTagsDataRelationshipsNodes {
+export interface ApiTagsDataAttributesNodes {
     /**
      * 
-     * @type {ApiTagsDataRelationshipsNodesData}
-     * @memberof ApiTagsDataRelationshipsNodes
+     * @type {ApiTagsDataAttributesTag}
+     * @memberof ApiTagsDataAttributesNodes
      */
-    data: ApiTagsDataRelationshipsNodesData;
+    tag: ApiTagsDataAttributesTag;
+    /**
+     * 
+     * @type {ApiTagsDataAttributesTag}
+     * @memberof ApiTagsDataAttributesNodes
+     */
+    parent: ApiTagsDataAttributesTag;
 }
 /**
  * 
  * @export
- * @interface ApiTagsDataRelationshipsNodesData
+ * @interface ApiTagsDataAttributesTag
  */
-export interface ApiTagsDataRelationshipsNodesData {
+export interface ApiTagsDataAttributesTag {
     /**
-     * 
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
      * @type {string}
-     * @memberof ApiTagsDataRelationshipsNodesData
+     * @memberof ApiTagsDataAttributesTag
      */
     type?: string;
     /**
-     * 
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
      * @type {string}
-     * @memberof ApiTagsDataRelationshipsNodesData
+     * @memberof ApiTagsDataAttributesTag
      */
     id?: string;
 }
@@ -517,54 +510,10 @@ export interface ApiTagsIdData {
     id: string;
     /**
      * 
-     * @type {ApiTagsIdDataAttributes}
+     * @type {ApiTagsDataAttributes}
      * @memberof ApiTagsIdData
      */
-    attributes?: ApiTagsIdDataAttributes;
-    /**
-     * 
-     * @type {ApiTagsIdDataRelationships}
-     * @memberof ApiTagsIdData
-     */
-    relationships?: ApiTagsIdDataRelationships;
-}
-/**
- * 
- * @export
- * @interface ApiTagsIdDataAttributes
- */
-export interface ApiTagsIdDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiTagsIdDataAttributes
-     */
-    term_ja_id: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiTagsIdDataAttributes
-     */
-    term_en_id: string;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof ApiTagsIdDataAttributes
-     */
-    synonyms_ids: Array<string>;
-}
-/**
- * 
- * @export
- * @interface ApiTagsIdDataRelationships
- */
-export interface ApiTagsIdDataRelationships {
-    /**
-     * 
-     * @type {Array<ApiTagsDataRelationshipsNodes>}
-     * @memberof ApiTagsIdDataRelationships
-     */
-    nodes: Array<ApiTagsDataRelationshipsNodes>;
+    attributes?: ApiTagsDataAttributes;
 }
 /**
  * 
