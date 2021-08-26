@@ -521,6 +521,12 @@ export interface ApiTagsIdData {
      * @memberof ApiTagsIdData
      */
     attributes?: ApiTagsIdDataAttributes;
+    /**
+     * 
+     * @type {ApiTagsDataRelationships}
+     * @memberof ApiTagsIdData
+     */
+    relationships?: ApiTagsDataRelationships;
 }
 /**
  * 
