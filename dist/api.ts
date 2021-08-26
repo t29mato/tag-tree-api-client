@@ -435,22 +435,22 @@ export interface ApiTagsData {
 export interface ApiTagsDataAttributes {
     /**
      * 
-     * @type {string}
+     * @type {ApiTermsDataAttributes}
      * @memberof ApiTagsDataAttributes
      */
-    term_ja_id?: string;
+    term_ja?: ApiTermsDataAttributes;
     /**
      * 
-     * @type {string}
+     * @type {ApiTermsDataAttributes}
      * @memberof ApiTagsDataAttributes
      */
-    term_en_id?: string;
+    term_en?: ApiTermsDataAttributes;
     /**
      * 
-     * @type {Array<string>}
+     * @type {Array<ApiTermsDataAttributes>}
      * @memberof ApiTagsDataAttributes
      */
-    synonyms_ids?: Array<string>;
+    synonyms?: Array<ApiTermsDataAttributes>;
 }
 /**
  * 
