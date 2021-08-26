@@ -2111,6 +2111,18 @@ export interface TagRelationships {
     nodes: TagRelationshipsNodes;
     /**
      * 
+     * @type {TagRelationshipsTermJaId}
+     * @memberof TagRelationships
+     */
+    term_ja_id?: TagRelationshipsTermJaId;
+    /**
+     * 
+     * @type {TagRelationshipsTermJaId}
+     * @memberof TagRelationships
+     */
+    term_en_id?: TagRelationshipsTermJaId;
+    /**
+     * 
      * @type {TagRelationshipsNodes}
      * @memberof TagRelationships
      */
@@ -2147,6 +2159,19 @@ export interface TagRelationshipsNodesMeta {
      * @memberof TagRelationshipsNodesMeta
      */
     count: number;
+}
+/**
+ * 
+ * @export
+ * @interface TagRelationshipsTermJaId
+ */
+export interface TagRelationshipsTermJaId {
+    /**
+     * 
+     * @type {ApiNodesDataAttributesTag}
+     * @memberof TagRelationshipsTermJaId
+     */
+    data: ApiNodesDataAttributesTag;
 }
 /**
  * 
