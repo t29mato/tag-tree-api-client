@@ -517,35 +517,10 @@ export interface ApiTagsIdData {
     id: string;
     /**
      * 
-     * @type {ApiTagsIdDataAttributes}
+     * @type {ApiTagsDataAttributes}
      * @memberof ApiTagsIdData
      */
-    attributes?: ApiTagsIdDataAttributes;
-}
-/**
- * 
- * @export
- * @interface ApiTagsIdDataAttributes
- */
-export interface ApiTagsIdDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiTagsIdDataAttributes
-     */
-    name_ja_id?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiTagsIdDataAttributes
-     */
-    name_en_id?: string;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof ApiTagsIdDataAttributes
-     */
-    synonyms_ids?: Array<string>;
+    attributes?: ApiTagsDataAttributes;
 }
 /**
  * 
@@ -2114,13 +2089,13 @@ export interface TagRelationships {
      * @type {TagRelationshipsTermJaId}
      * @memberof TagRelationships
      */
-    term_ja_id?: TagRelationshipsTermJaId;
+    term_ja_id: TagRelationshipsTermJaId;
     /**
      * 
      * @type {TagRelationshipsTermJaId}
      * @memberof TagRelationships
      */
-    term_en_id?: TagRelationshipsTermJaId;
+    term_en_id: TagRelationshipsTermJaId;
     /**
      * 
      * @type {TagRelationshipsNodes}
