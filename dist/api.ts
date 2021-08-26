@@ -517,10 +517,35 @@ export interface ApiTagsIdData {
     id: string;
     /**
      * 
-     * @type {ApiTagsDataAttributes}
+     * @type {ApiTagsIdDataAttributes}
      * @memberof ApiTagsIdData
      */
-    attributes?: ApiTagsDataAttributes;
+    attributes?: ApiTagsIdDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTagsIdDataAttributes
+ */
+export interface ApiTagsIdDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTagsIdDataAttributes
+     */
+    term_ja_id: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTagsIdDataAttributes
+     */
+    term_en_id: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof ApiTagsIdDataAttributes
+     */
+    synonyms_ids: Array<string>;
 }
 /**
  * 
