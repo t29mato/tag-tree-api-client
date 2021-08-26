@@ -523,10 +523,10 @@ export interface ApiTagsIdData {
     attributes?: ApiTagsIdDataAttributes;
     /**
      * 
-     * @type {ApiTagsDataRelationships}
+     * @type {ApiTagsIdDataRelationships}
      * @memberof ApiTagsIdData
      */
-    relationships?: ApiTagsDataRelationships;
+    relationships?: ApiTagsIdDataRelationships;
 }
 /**
  * 
@@ -552,6 +552,19 @@ export interface ApiTagsIdDataAttributes {
      * @memberof ApiTagsIdDataAttributes
      */
     synonyms_ids: Array<string>;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTagsIdDataRelationships
+ */
+export interface ApiTagsIdDataRelationships {
+    /**
+     * 
+     * @type {Array<ApiTagsDataRelationshipsNodes>}
+     * @memberof ApiTagsIdDataRelationships
+     */
+    nodes: Array<ApiTagsDataRelationshipsNodes>;
 }
 /**
  * 
