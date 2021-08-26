@@ -445,50 +445,6 @@ export interface ApiTagsDataAttributes {
      * @memberof ApiTagsDataAttributes
      */
     synonyms?: Array<ApiTermsDataAttributes>;
-    /**
-     * 
-     * @type {Array<ApiTagsDataAttributesNodes>}
-     * @memberof ApiTagsDataAttributes
-     */
-    nodes?: Array<ApiTagsDataAttributesNodes>;
-}
-/**
- * 
- * @export
- * @interface ApiTagsDataAttributesNodes
- */
-export interface ApiTagsDataAttributesNodes {
-    /**
-     * 
-     * @type {ApiTagsDataAttributesTag}
-     * @memberof ApiTagsDataAttributesNodes
-     */
-    tag: ApiTagsDataAttributesTag;
-    /**
-     * 
-     * @type {ApiTagsDataAttributesTag}
-     * @memberof ApiTagsDataAttributesNodes
-     */
-    parent: ApiTagsDataAttributesTag;
-}
-/**
- * 
- * @export
- * @interface ApiTagsDataAttributesTag
- */
-export interface ApiTagsDataAttributesTag {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiTagsDataAttributesTag
-     */
-    type?: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiTagsDataAttributesTag
-     */
-    id?: string;
 }
 /**
  * 
