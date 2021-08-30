@@ -2145,7 +2145,7 @@ export interface TagTreeAttributes {
      * @type {string}
      * @memberof TagTreeAttributes
      */
-    name_en?: string;
+    name_en: string;
     /**
      * 
      * @type {string}
