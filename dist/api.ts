@@ -2172,6 +2172,18 @@ export interface TagTreeAttributes {
     tree_level: number;
     /**
      * 
+     * @type {Array<string>}
+     * @memberof TagTreeAttributes
+     */
+    synonyms_ja: Array<string>;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof TagTreeAttributes
+     */
+    synonyms_en: Array<string>;
+    /**
+     * 
      * @type {Array<TagTreeAttributes>}
      * @memberof TagTreeAttributes
      */
