@@ -24,126 +24,6 @@ import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } fr
 /**
  * 
  * @export
- * @interface ApiDatabasesData
- */
-export interface ApiDatabasesData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiDatabasesData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiDatabasesData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof ApiDatabasesData
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {ApiDatabasesDataAttributes}
-     * @memberof ApiDatabasesData
-     */
-    attributes?: ApiDatabasesDataAttributes;
-}
-/**
- * 
- * @export
- * @interface ApiDatabasesDataAttributes
- */
-export interface ApiDatabasesDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiDatabasesDataAttributes
-     */
-    name: string;
-}
-/**
- * 
- * @export
- * @interface ApiDatabasesDataLinks
- */
-export interface ApiDatabasesDataLinks {
-    /**
-     * 
-     * @type {Link}
-     * @memberof ApiDatabasesDataLinks
-     */
-    self?: Link;
-}
-/**
- * 
- * @export
- * @interface ApiFiguresData
- */
-export interface ApiFiguresData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiFiguresData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiFiguresData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof ApiFiguresData
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {ApiFiguresDataAttributes}
-     * @memberof ApiFiguresData
-     */
-    attributes?: ApiFiguresDataAttributes;
-    /**
-     * 
-     * @type {ApiFiguresDataRelationships}
-     * @memberof ApiFiguresData
-     */
-    relationships?: ApiFiguresDataRelationships;
-}
-/**
- * 
- * @export
- * @interface ApiFiguresDataAttributes
- */
-export interface ApiFiguresDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiFiguresDataAttributes
-     */
-    title: string;
-}
-/**
- * 
- * @export
- * @interface ApiFiguresDataRelationships
- */
-export interface ApiFiguresDataRelationships {
-    /**
-     * 
-     * @type {Reltomany}
-     * @memberof ApiFiguresDataRelationships
-     */
-    paper?: Reltomany;
-}
-/**
- * 
- * @export
  * @interface ApiNodesData
  */
 export interface ApiNodesData {
@@ -224,10 +104,10 @@ export interface ApiNodesIdData {
     id: string;
     /**
      * 
-     * @type {ApiDatabasesDataLinks}
+     * @type {ApiTagsDataLinks}
      * @memberof ApiNodesIdData
      */
-    links?: ApiDatabasesDataLinks;
+    links?: ApiTagsDataLinks;
     /**
      * 
      * @type {object}
@@ -263,136 +143,6 @@ export interface ApiNodesIdDataRelationships {
 /**
  * 
  * @export
- * @interface ApiPapersData
- */
-export interface ApiPapersData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiPapersData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiPapersData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof ApiPapersData
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {ApiPapersDataAttributes}
-     * @memberof ApiPapersData
-     */
-    attributes?: ApiPapersDataAttributes;
-    /**
-     * 
-     * @type {ApiPapersDataRelationships}
-     * @memberof ApiPapersData
-     */
-    relationships?: ApiPapersDataRelationships;
-}
-/**
- * 
- * @export
- * @interface ApiPapersDataAttributes
- */
-export interface ApiPapersDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiPapersDataAttributes
-     */
-    title: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiPapersDataAttributes
-     */
-    authors: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiPapersDataAttributes
-     */
-    identifier: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiPapersDataAttributes
-     */
-    DOI: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiPapersDataAttributes
-     */
-    container_title?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiPapersDataAttributes
-     */
-    publisher?: string;
-}
-/**
- * 
- * @export
- * @interface ApiPapersDataRelationships
- */
-export interface ApiPapersDataRelationships {
-    /**
-     * 
-     * @type {Reltomany}
-     * @memberof ApiPapersDataRelationships
-     */
-    database?: Reltomany;
-}
-/**
- * 
- * @export
- * @interface ApiSamplesData
- */
-export interface ApiSamplesData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiSamplesData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiSamplesData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof ApiSamplesData
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {ApiDatabasesDataAttributes}
-     * @memberof ApiSamplesData
-     */
-    attributes?: ApiDatabasesDataAttributes;
-    /**
-     * 
-     * @type {ApiFiguresDataRelationships}
-     * @memberof ApiSamplesData
-     */
-    relationships?: ApiFiguresDataRelationships;
-}
-/**
- * 
- * @export
  * @interface ApiTagsData
  */
 export interface ApiTagsData {
@@ -410,10 +160,10 @@ export interface ApiTagsData {
     id?: string;
     /**
      * 
-     * @type {ApiDatabasesDataLinks}
+     * @type {ApiTagsDataLinks}
      * @memberof ApiTagsData
      */
-    links?: ApiDatabasesDataLinks;
+    links?: ApiTagsDataLinks;
     /**
      * 
      * @type {ApiTagsDataAttributes}
@@ -429,22 +179,29 @@ export interface ApiTagsData {
 export interface ApiTagsDataAttributes {
     /**
      * 
-     * @type {ApiTermsDataAttributes}
+     * @type {string}
      * @memberof ApiTagsDataAttributes
      */
-    term_ja?: ApiTermsDataAttributes;
+    name: string;
     /**
      * 
-     * @type {ApiTermsDataAttributes}
+     * @type {string}
      * @memberof ApiTagsDataAttributes
      */
-    term_en?: ApiTermsDataAttributes;
+    memo?: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTagsDataLinks
+ */
+export interface ApiTagsDataLinks {
     /**
      * 
-     * @type {Array<ApiTermsDataAttributes>}
-     * @memberof ApiTagsDataAttributes
+     * @type {Link}
+     * @memberof ApiTagsDataLinks
      */
-    synonyms?: Array<ApiTermsDataAttributes>;
+    self?: Link;
 }
 /**
  * 
@@ -470,56 +227,6 @@ export interface ApiTagsIdData {
      * @memberof ApiTagsIdData
      */
     attributes?: ApiTagsDataAttributes;
-}
-/**
- * 
- * @export
- * @interface ApiTermsData
- */
-export interface ApiTermsData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiTermsData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof ApiTermsData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiDatabasesDataLinks}
-     * @memberof ApiTermsData
-     */
-    links?: ApiDatabasesDataLinks;
-    /**
-     * 
-     * @type {ApiTermsDataAttributes}
-     * @memberof ApiTermsData
-     */
-    attributes?: ApiTermsDataAttributes;
-}
-/**
- * 
- * @export
- * @interface ApiTermsDataAttributes
- */
-export interface ApiTermsDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiTermsDataAttributes
-     */
-    name: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ApiTermsDataAttributes
-     */
-    language: string;
 }
 /**
  * @type Data
@@ -548,10 +255,10 @@ export interface Database {
     id: string;
     /**
      * 
-     * @type {ApiDatabasesDataLinks}
+     * @type {ApiTagsDataLinks}
      * @memberof Database
      */
-    links?: ApiDatabasesDataLinks;
+    links?: ApiTagsDataLinks;
     /**
      * 
      * @type {DatabaseAttributes}
@@ -673,10 +380,10 @@ export interface Figure {
     id: string;
     /**
      * 
-     * @type {ApiDatabasesDataLinks}
+     * @type {ApiTagsDataLinks}
      * @memberof Figure
      */
-    links?: ApiDatabasesDataLinks;
+    links?: ApiTagsDataLinks;
     /**
      * 
      * @type {FigureAttributes}
@@ -685,10 +392,10 @@ export interface Figure {
     attributes?: FigureAttributes;
     /**
      * 
-     * @type {ApiFiguresDataRelationships}
+     * @type {FigureRelationships}
      * @memberof Figure
      */
-    relationships?: ApiFiguresDataRelationships;
+    relationships?: FigureRelationships;
 }
 /**
  * 
@@ -712,15 +419,28 @@ export interface FigureAttributes {
 /**
  * 
  * @export
+ * @interface FigureRelationships
+ */
+export interface FigureRelationships {
+    /**
+     * 
+     * @type {Reltomany}
+     * @memberof FigureRelationships
+     */
+    paper?: Reltomany;
+}
+/**
+ * 
+ * @export
  * @interface InlineObject
  */
 export interface InlineObject {
     /**
      * 
-     * @type {ApiDatabasesData}
+     * @type {ApiTagsData}
      * @memberof InlineObject
      */
-    data: ApiDatabasesData;
+    data: ApiTagsData;
 }
 /**
  * 
@@ -730,10 +450,10 @@ export interface InlineObject {
 export interface InlineObject1 {
     /**
      * 
-     * @type {ApiTermsData}
+     * @type {ApiTagsIdData}
      * @memberof InlineObject1
      */
-    data: ApiTermsData;
+    data: ApiTagsIdData;
 }
 /**
  * 
@@ -743,10 +463,10 @@ export interface InlineObject1 {
 export interface InlineObject2 {
     /**
      * 
-     * @type {ApiPapersData}
+     * @type {ApiNodesData}
      * @memberof InlineObject2
      */
-    data: ApiPapersData;
+    data: ApiNodesData;
 }
 /**
  * 
@@ -756,73 +476,8 @@ export interface InlineObject2 {
 export interface InlineObject3 {
     /**
      * 
-     * @type {ApiFiguresData}
-     * @memberof InlineObject3
-     */
-    data: ApiFiguresData;
-}
-/**
- * 
- * @export
- * @interface InlineObject4
- */
-export interface InlineObject4 {
-    /**
-     * 
-     * @type {ApiSamplesData}
-     * @memberof InlineObject4
-     */
-    data: ApiSamplesData;
-}
-/**
- * 
- * @export
- * @interface InlineObject5
- */
-export interface InlineObject5 {
-    /**
-     * 
-     * @type {ApiTagsData}
-     * @memberof InlineObject5
-     */
-    data: ApiTagsData;
-}
-/**
- * 
- * @export
- * @interface InlineObject6
- */
-export interface InlineObject6 {
-    /**
-     * 
-     * @type {ApiTagsIdData}
-     * @memberof InlineObject6
-     */
-    data: ApiTagsIdData;
-}
-/**
- * 
- * @export
- * @interface InlineObject7
- */
-export interface InlineObject7 {
-    /**
-     * 
-     * @type {ApiNodesData}
-     * @memberof InlineObject7
-     */
-    data: ApiNodesData;
-}
-/**
- * 
- * @export
- * @interface InlineObject8
- */
-export interface InlineObject8 {
-    /**
-     * 
      * @type {ApiNodesIdData}
-     * @memberof InlineObject8
+     * @memberof InlineObject3
      */
     data: ApiNodesIdData;
 }
@@ -834,22 +489,28 @@ export interface InlineObject8 {
 export interface InlineResponse200 {
     /**
      * 
-     * @type {Array<Database>}
+     * @type {Array<Tag>}
      * @memberof InlineResponse200
      */
-    data: Array<Database>;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse200
-     */
-    included?: Set<Resource>;
+    data: Array<Tag>;
     /**
      * Link members related to primary data
      * @type {any & Pagination}
      * @memberof InlineResponse200
      */
-    links?: any & Pagination;
+    links: any & Pagination;
+    /**
+     * 
+     * @type {Meta}
+     * @memberof InlineResponse200
+     */
+    meta: Meta;
+    /**
+     * 
+     * @type {Array<Resource>}
+     * @memberof InlineResponse200
+     */
+    included?: Array<Resource>;
 }
 /**
  * 
@@ -859,22 +520,10 @@ export interface InlineResponse200 {
 export interface InlineResponse2001 {
     /**
      * 
-     * @type {Array<Term>}
+     * @type {Tag}
      * @memberof InlineResponse2001
      */
-    data: Array<Term>;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2001
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2001
-     */
-    links?: any & Pagination;
+    data: Tag;
 }
 /**
  * 
@@ -884,10 +533,10 @@ export interface InlineResponse2001 {
 export interface InlineResponse2002 {
     /**
      * 
-     * @type {Array<Paper>}
+     * @type {Array<Node>}
      * @memberof InlineResponse2002
      */
-    data: Array<Paper>;
+    data: Array<Node>;
     /**
      * 
      * @type {Set<Resource>}
@@ -909,22 +558,10 @@ export interface InlineResponse2002 {
 export interface InlineResponse2003 {
     /**
      * 
-     * @type {Array<Figure>}
+     * @type {TagTree}
      * @memberof InlineResponse2003
      */
-    data: Array<Figure>;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2003
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2003
-     */
-    links?: any & Pagination;
+    data: TagTree;
 }
 /**
  * 
@@ -934,115 +571,8 @@ export interface InlineResponse2003 {
 export interface InlineResponse2004 {
     /**
      * 
-     * @type {Array<Sample>}
-     * @memberof InlineResponse2004
-     */
-    data: Array<Sample>;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2004
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2004
-     */
-    links?: any & Pagination;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2005
- */
-export interface InlineResponse2005 {
-    /**
-     * 
-     * @type {Array<Tag>}
-     * @memberof InlineResponse2005
-     */
-    data: Array<Tag>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2005
-     */
-    links: any & Pagination;
-    /**
-     * 
-     * @type {Meta}
-     * @memberof InlineResponse2005
-     */
-    meta: Meta;
-    /**
-     * 
-     * @type {Array<Resource>}
-     * @memberof InlineResponse2005
-     */
-    included?: Array<Resource>;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2006
- */
-export interface InlineResponse2006 {
-    /**
-     * 
-     * @type {Tag}
-     * @memberof InlineResponse2006
-     */
-    data: Tag;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2007
- */
-export interface InlineResponse2007 {
-    /**
-     * 
-     * @type {Array<Node>}
-     * @memberof InlineResponse2007
-     */
-    data: Array<Node>;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2007
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2007
-     */
-    links?: any & Pagination;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2008
- */
-export interface InlineResponse2008 {
-    /**
-     * 
-     * @type {TagTree}
-     * @memberof InlineResponse2008
-     */
-    data: TagTree;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2009
- */
-export interface InlineResponse2009 {
-    /**
-     * 
      * @type {TagAncestors}
-     * @memberof InlineResponse2009
+     * @memberof InlineResponse2004
      */
     data: TagAncestors;
 }
@@ -1054,10 +584,10 @@ export interface InlineResponse2009 {
 export interface InlineResponse201 {
     /**
      * 
-     * @type {Database}
+     * @type {Tag}
      * @memberof InlineResponse201
      */
-    data: Database;
+    data: Tag;
     /**
      * 
      * @type {Set<Resource>}
@@ -1079,145 +609,20 @@ export interface InlineResponse201 {
 export interface InlineResponse2011 {
     /**
      * 
-     * @type {Term}
-     * @memberof InlineResponse2011
-     */
-    data: Term;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2011
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2011
-     */
-    links?: any & Pagination;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2012
- */
-export interface InlineResponse2012 {
-    /**
-     * 
-     * @type {Paper}
-     * @memberof InlineResponse2012
-     */
-    data: Paper;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2012
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2012
-     */
-    links?: any & Pagination;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2013
- */
-export interface InlineResponse2013 {
-    /**
-     * 
-     * @type {Figure}
-     * @memberof InlineResponse2013
-     */
-    data: Figure;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2013
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2013
-     */
-    links?: any & Pagination;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2014
- */
-export interface InlineResponse2014 {
-    /**
-     * 
-     * @type {Sample}
-     * @memberof InlineResponse2014
-     */
-    data: Sample;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2014
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2014
-     */
-    links?: any & Pagination;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2015
- */
-export interface InlineResponse2015 {
-    /**
-     * 
-     * @type {Tag}
-     * @memberof InlineResponse2015
-     */
-    data: Tag;
-    /**
-     * 
-     * @type {Set<Resource>}
-     * @memberof InlineResponse2015
-     */
-    included?: Set<Resource>;
-    /**
-     * Link members related to primary data
-     * @type {any & Pagination}
-     * @memberof InlineResponse2015
-     */
-    links?: any & Pagination;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2016
- */
-export interface InlineResponse2016 {
-    /**
-     * 
      * @type {Node}
-     * @memberof InlineResponse2016
+     * @memberof InlineResponse2011
      */
     data: Node;
     /**
      * 
      * @type {Set<Resource>}
-     * @memberof InlineResponse2016
+     * @memberof InlineResponse2011
      */
     included?: Set<Resource>;
     /**
      * Link members related to primary data
      * @type {any & Pagination}
-     * @memberof InlineResponse2016
+     * @memberof InlineResponse2011
      */
     links?: any & Pagination;
 }
@@ -1385,10 +790,10 @@ export interface Node {
     id: string;
     /**
      * 
-     * @type {ApiDatabasesDataLinks}
+     * @type {ApiTagsDataLinks}
      * @memberof Node
      */
-    links?: ApiDatabasesDataLinks;
+    links?: ApiTagsDataLinks;
     /**
      * 
      * @type {NodeAttributes}
@@ -1479,10 +884,10 @@ export interface Paper {
     id: string;
     /**
      * 
-     * @type {ApiDatabasesDataLinks}
+     * @type {ApiTagsDataLinks}
      * @memberof Paper
      */
-    links?: ApiDatabasesDataLinks;
+    links?: ApiTagsDataLinks;
     /**
      * 
      * @type {PaperAttributes}
@@ -1491,10 +896,10 @@ export interface Paper {
     attributes?: PaperAttributes;
     /**
      * 
-     * @type {ApiPapersDataRelationships}
+     * @type {PaperRelationships}
      * @memberof Paper
      */
-    relationships?: ApiPapersDataRelationships;
+    relationships?: PaperRelationships;
 }
 /**
  * 
@@ -1556,6 +961,19 @@ export interface PaperAttributes {
      * @memberof PaperAttributes
      */
     publisher?: string;
+}
+/**
+ * 
+ * @export
+ * @interface PaperRelationships
+ */
+export interface PaperRelationships {
+    /**
+     * 
+     * @type {Reltomany}
+     * @memberof PaperRelationships
+     */
+    database?: Reltomany;
 }
 /**
  * singular item being [created](https://jsonapi.org/format/#crud-creating). `id` is optional and may be ignored if supplied and created by the system.
@@ -1823,10 +1241,10 @@ export interface Sample {
     id: string;
     /**
      * 
-     * @type {ApiDatabasesDataLinks}
+     * @type {ApiTagsDataLinks}
      * @memberof Sample
      */
-    links?: ApiDatabasesDataLinks;
+    links?: ApiTagsDataLinks;
     /**
      * 
      * @type {SampleAttributes}
@@ -1835,10 +1253,10 @@ export interface Sample {
     attributes?: SampleAttributes;
     /**
      * 
-     * @type {ApiFiguresDataRelationships}
+     * @type {FigureRelationships}
      * @memberof Sample
      */
-    relationships?: ApiFiguresDataRelationships;
+    relationships?: FigureRelationships;
 }
 /**
  * 
@@ -1879,16 +1297,16 @@ export interface Tag {
     id: string;
     /**
      * 
-     * @type {ApiDatabasesDataLinks}
+     * @type {ApiTagsDataLinks}
      * @memberof Tag
      */
-    links?: ApiDatabasesDataLinks;
+    links?: ApiTagsDataLinks;
     /**
      * 
-     * @type {TagAttributes}
+     * @type {ApiTagsDataAttributes}
      * @memberof Tag
      */
-    attributes: TagAttributes;
+    attributes: ApiTagsDataAttributes;
     /**
      * 
      * @type {TagRelationships}
@@ -1916,10 +1334,10 @@ export interface TagAncestors {
     id: string;
     /**
      * 
-     * @type {ApiDatabasesDataLinks}
+     * @type {ApiTagsDataLinks}
      * @memberof TagAncestors
      */
-    links?: ApiDatabasesDataLinks;
+    links?: ApiTagsDataLinks;
     /**
      * 
      * @type {TagAncestorsAttributes}
@@ -1976,50 +1394,6 @@ export interface TagAncestorsAttributesAncestors {
      * @memberof TagAncestorsAttributesAncestors
      */
     parent_node_id?: string;
-}
-/**
- * 
- * @export
- * @interface TagAttributes
- */
-export interface TagAttributes {
-    /**
-     * 
-     * @type {TagAttributesTermJa}
-     * @memberof TagAttributes
-     */
-    term_ja: TagAttributesTermJa;
-    /**
-     * 
-     * @type {TagAttributesTermJa}
-     * @memberof TagAttributes
-     */
-    term_en: TagAttributesTermJa;
-    /**
-     * 
-     * @type {Array<ApiTermsDataAttributes>}
-     * @memberof TagAttributes
-     */
-    synonyms: Array<ApiTermsDataAttributes>;
-}
-/**
- * 
- * @export
- * @interface TagAttributesTermJa
- */
-export interface TagAttributesTermJa {
-    /**
-     * 
-     * @type {string}
-     * @memberof TagAttributesTermJa
-     */
-    name?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TagAttributesTermJa
-     */
-    language?: string;
 }
 /**
  * 
@@ -2117,10 +1491,10 @@ export interface TagTree {
     id: string;
     /**
      * 
-     * @type {ApiDatabasesDataLinks}
+     * @type {ApiTagsDataLinks}
      * @memberof TagTree
      */
-    links?: ApiDatabasesDataLinks;
+    links?: ApiTagsDataLinks;
     /**
      * 
      * @type {TagTreeAttributes}
@@ -2139,13 +1513,7 @@ export interface TagTreeAttributes {
      * @type {string}
      * @memberof TagTreeAttributes
      */
-    name_ja: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TagTreeAttributes
-     */
-    name_en: string;
+    name: string;
     /**
      * 
      * @type {string}
@@ -2170,18 +1538,6 @@ export interface TagTreeAttributes {
      * @memberof TagTreeAttributes
      */
     tree_level: number;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof TagTreeAttributes
-     */
-    synonyms_ja: Array<string>;
-    /**
-     * 
-     * @type {Array<string>}
-     * @memberof TagTreeAttributes
-     */
-    synonyms_en: Array<string>;
     /**
      * 
      * @type {Array<TagTreeAttributes>}
@@ -2209,10 +1565,10 @@ export interface Term {
     id: string;
     /**
      * 
-     * @type {ApiDatabasesDataLinks}
+     * @type {ApiTagsDataLinks}
      * @memberof Term
      */
-    links?: ApiDatabasesDataLinks;
+    links?: ApiTagsDataLinks;
     /**
      * 
      * @type {TermAttributes}
@@ -2248,111 +1604,12 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
     return {
         /**
          * 
-         * @param {InlineObject} [inlineObject] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiDatabases: async (inlineObject?: InlineObject, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/databases`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {InlineObject3} [inlineObject3] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiFigures: async (inlineObject3?: InlineObject3, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/figures`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject3, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {InlineObject7} [inlineObject7] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiNodes: async (inlineObject7?: InlineObject7, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/nodes`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject7, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {InlineObject2} [inlineObject2] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiPapers: async (inlineObject2?: InlineObject2, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/papers`;
+        createApiNodes: async (inlineObject2?: InlineObject2, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/nodes`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2380,44 +1637,11 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {InlineObject4} [inlineObject4] 
+         * @param {InlineObject} [inlineObject] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiSamples: async (inlineObject4?: InlineObject4, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/samples`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject4, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {InlineObject5} [inlineObject5] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiTags: async (inlineObject5?: InlineObject5, options: any = {}): Promise<RequestArgs> => {
+        createApiTags: async (inlineObject?: InlineObject, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/tags`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -2437,40 +1661,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject5, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {InlineObject1} [inlineObject1] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiTerms: async (inlineObject1?: InlineObject1, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/terms`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject1, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -2554,244 +1745,8 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApiDatabases: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/databases`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (include !== undefined) {
-                localVarQueryParameter['include'] = include;
-            }
-
-            if (fields !== undefined) {
-                localVarQueryParameter['fields'] = fields;
-            }
-
-            if (pageNumber !== undefined) {
-                localVarQueryParameter['page[number]'] = pageNumber;
-            }
-
-            if (pageSize !== undefined) {
-                localVarQueryParameter['page[size]'] = pageSize;
-            }
-
-            if (sort !== undefined) {
-                localVarQueryParameter['sort'] = sort;
-            }
-
-            if (filterSearch !== undefined) {
-                localVarQueryParameter['filter[search]'] = filterSearch;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiFigures: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/figures`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (include !== undefined) {
-                localVarQueryParameter['include'] = include;
-            }
-
-            if (fields !== undefined) {
-                localVarQueryParameter['fields'] = fields;
-            }
-
-            if (pageNumber !== undefined) {
-                localVarQueryParameter['page[number]'] = pageNumber;
-            }
-
-            if (pageSize !== undefined) {
-                localVarQueryParameter['page[size]'] = pageSize;
-            }
-
-            if (sort !== undefined) {
-                localVarQueryParameter['sort'] = sort;
-            }
-
-            if (filterSearch !== undefined) {
-                localVarQueryParameter['filter[search]'] = filterSearch;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
         listApiNodes: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/nodes`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (include !== undefined) {
-                localVarQueryParameter['include'] = include;
-            }
-
-            if (fields !== undefined) {
-                localVarQueryParameter['fields'] = fields;
-            }
-
-            if (pageNumber !== undefined) {
-                localVarQueryParameter['page[number]'] = pageNumber;
-            }
-
-            if (pageSize !== undefined) {
-                localVarQueryParameter['page[size]'] = pageSize;
-            }
-
-            if (sort !== undefined) {
-                localVarQueryParameter['sort'] = sort;
-            }
-
-            if (filterSearch !== undefined) {
-                localVarQueryParameter['filter[search]'] = filterSearch;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiPapers: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/papers`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (include !== undefined) {
-                localVarQueryParameter['include'] = include;
-            }
-
-            if (fields !== undefined) {
-                localVarQueryParameter['fields'] = fields;
-            }
-
-            if (pageNumber !== undefined) {
-                localVarQueryParameter['page[number]'] = pageNumber;
-            }
-
-            if (pageSize !== undefined) {
-                localVarQueryParameter['page[size]'] = pageSize;
-            }
-
-            if (sort !== undefined) {
-                localVarQueryParameter['sort'] = sort;
-            }
-
-            if (filterSearch !== undefined) {
-                localVarQueryParameter['filter[search]'] = filterSearch;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiSamples: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/samples`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2899,71 +1854,12 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiTerms: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/api/terms`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            if (include !== undefined) {
-                localVarQueryParameter['include'] = include;
-            }
-
-            if (fields !== undefined) {
-                localVarQueryParameter['fields'] = fields;
-            }
-
-            if (pageNumber !== undefined) {
-                localVarQueryParameter['page[number]'] = pageNumber;
-            }
-
-            if (pageSize !== undefined) {
-                localVarQueryParameter['page[size]'] = pageSize;
-            }
-
-            if (sort !== undefined) {
-                localVarQueryParameter['sort'] = sort;
-            }
-
-            if (filterSearch !== undefined) {
-                localVarQueryParameter['filter[search]'] = filterSearch;
-            }
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
          * @param {string} id A unique integer value identifying this node.
-         * @param {InlineObject8} [inlineObject8] 
+         * @param {InlineObject3} [inlineObject3] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateApiNodesId: async (id: string, inlineObject8?: InlineObject8, options: any = {}): Promise<RequestArgs> => {
+        partialUpdateApiNodesId: async (id: string, inlineObject3?: InlineObject3, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('partialUpdateApiNodesId', 'id', id)
             const localVarPath = `/api/nodes/{id}`
@@ -2986,7 +1882,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject8, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject3, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -2996,11 +1892,11 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         /**
          * 
          * @param {string} id A unique integer value identifying this tag.
-         * @param {InlineObject6} [inlineObject6] 
+         * @param {InlineObject1} [inlineObject1] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateApiTagsId: async (id: string, inlineObject6?: InlineObject6, options: any = {}): Promise<RequestArgs> => {
+        partialUpdateApiTagsId: async (id: string, inlineObject1?: InlineObject1, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('partialUpdateApiTagsId', 'id', id)
             const localVarPath = `/api/tags/{id}`
@@ -3023,7 +1919,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject6, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject1, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -3214,72 +2110,22 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {InlineObject} [inlineObject] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createApiDatabases(inlineObject?: InlineObject, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse201>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiDatabases(inlineObject, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {InlineObject3} [inlineObject3] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createApiFigures(inlineObject3?: InlineObject3, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2013>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiFigures(inlineObject3, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {InlineObject7} [inlineObject7] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createApiNodes(inlineObject7?: InlineObject7, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiNodes(inlineObject7, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @param {InlineObject2} [inlineObject2] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createApiPapers(inlineObject2?: InlineObject2, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2012>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiPapers(inlineObject2, options);
+        async createApiNodes(inlineObject2?: InlineObject2, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2011>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiNodes(inlineObject2, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {InlineObject4} [inlineObject4] 
+         * @param {InlineObject} [inlineObject] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createApiSamples(inlineObject4?: InlineObject4, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2014>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiSamples(inlineObject4, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {InlineObject5} [inlineObject5] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createApiTags(inlineObject5?: InlineObject5, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiTags(inlineObject5, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {InlineObject1} [inlineObject1] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async createApiTerms(inlineObject1?: InlineObject1, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2011>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiTerms(inlineObject1, options);
+        async createApiTags(inlineObject?: InlineObject, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse201>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiTags(inlineObject, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3313,37 +2159,7 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listApiDatabases(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiDatabases(include, fields, pageNumber, pageSize, sort, filterSearch, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listApiFigures(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2003>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiFigures(include, fields, pageNumber, pageSize, sort, filterSearch, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listApiNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
+        async listApiNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2002>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listApiNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -3358,75 +2174,30 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listApiPapers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2002>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiPapers(include, fields, pageNumber, pageSize, sort, filterSearch, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listApiSamples(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiSamples(include, fields, pageNumber, pageSize, sort, filterSearch, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2005>> {
+        async listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async listApiTerms(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2001>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiTerms(include, fields, pageNumber, pageSize, sort, filterSearch, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
          * @param {string} id A unique integer value identifying this node.
-         * @param {InlineObject8} [inlineObject8] 
+         * @param {InlineObject3} [inlineObject3] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async partialUpdateApiNodesId(id: string, inlineObject8?: InlineObject8, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiNodesId(id, inlineObject8, options);
+        async partialUpdateApiNodesId(id: string, inlineObject3?: InlineObject3, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2011>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiNodesId(id, inlineObject3, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
          * @param {string} id A unique integer value identifying this tag.
-         * @param {InlineObject6} [inlineObject6] 
+         * @param {InlineObject1} [inlineObject1] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async partialUpdateApiTagsId(id: string, inlineObject6?: InlineObject6, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiTagsId(id, inlineObject6, options);
+        async partialUpdateApiTagsId(id: string, inlineObject1?: InlineObject1, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse201>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiTagsId(id, inlineObject1, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3439,7 +2210,7 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
+        async retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2011>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiNodesId(id, include, fields, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -3449,7 +2220,7 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveApiTagAncestorsId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2009>> {
+        async retrieveApiTagAncestorsId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiTagAncestorsId(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -3459,7 +2230,7 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveApiTagTreeId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2008>> {
+        async retrieveApiTagTreeId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2003>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiTagTreeId(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -3473,7 +2244,7 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveApiTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2006>> {
+        async retrieveApiTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2001>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiTagsId(id, include, fields, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -3489,66 +2260,21 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
     return {
         /**
          * 
-         * @param {InlineObject} [inlineObject] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiDatabases(inlineObject?: InlineObject, options?: any): AxiosPromise<InlineResponse201> {
-            return localVarFp.createApiDatabases(inlineObject, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {InlineObject3} [inlineObject3] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiFigures(inlineObject3?: InlineObject3, options?: any): AxiosPromise<InlineResponse2013> {
-            return localVarFp.createApiFigures(inlineObject3, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {InlineObject7} [inlineObject7] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiNodes(inlineObject7?: InlineObject7, options?: any): AxiosPromise<InlineResponse2016> {
-            return localVarFp.createApiNodes(inlineObject7, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @param {InlineObject2} [inlineObject2] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiPapers(inlineObject2?: InlineObject2, options?: any): AxiosPromise<InlineResponse2012> {
-            return localVarFp.createApiPapers(inlineObject2, options).then((request) => request(axios, basePath));
+        createApiNodes(inlineObject2?: InlineObject2, options?: any): AxiosPromise<InlineResponse2011> {
+            return localVarFp.createApiNodes(inlineObject2, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {InlineObject4} [inlineObject4] 
+         * @param {InlineObject} [inlineObject] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiSamples(inlineObject4?: InlineObject4, options?: any): AxiosPromise<InlineResponse2014> {
-            return localVarFp.createApiSamples(inlineObject4, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {InlineObject5} [inlineObject5] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiTags(inlineObject5?: InlineObject5, options?: any): AxiosPromise<InlineResponse2015> {
-            return localVarFp.createApiTags(inlineObject5, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {InlineObject1} [inlineObject1] 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        createApiTerms(inlineObject1?: InlineObject1, options?: any): AxiosPromise<InlineResponse2011> {
-            return localVarFp.createApiTerms(inlineObject1, options).then((request) => request(axios, basePath));
+        createApiTags(inlineObject?: InlineObject, options?: any): AxiosPromise<InlineResponse201> {
+            return localVarFp.createApiTags(inlineObject, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3579,35 +2305,7 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApiDatabases(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse200> {
-            return localVarFp.listApiDatabases(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiFigures(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2003> {
-            return localVarFp.listApiFigures(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2007> {
+        listApiNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2002> {
             return localVarFp.listApiNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3621,70 +2319,28 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listApiPapers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2002> {
-            return localVarFp.listApiPapers(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiSamples(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2004> {
-            return localVarFp.listApiSamples(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2005> {
+        listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse200> {
             return localVarFp.listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
          * 
-         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-         * @param {number} [pageNumber] A page number within the paginated result set.
-         * @param {number} [pageSize] Number of results to return per page.
-         * @param {string} [sort] Which field to use when ordering the results.
-         * @param {string} [filterSearch] A search term.
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        listApiTerms(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2001> {
-            return localVarFp.listApiTerms(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
          * @param {string} id A unique integer value identifying this node.
-         * @param {InlineObject8} [inlineObject8] 
+         * @param {InlineObject3} [inlineObject3] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateApiNodesId(id: string, inlineObject8?: InlineObject8, options?: any): AxiosPromise<InlineResponse2016> {
-            return localVarFp.partialUpdateApiNodesId(id, inlineObject8, options).then((request) => request(axios, basePath));
+        partialUpdateApiNodesId(id: string, inlineObject3?: InlineObject3, options?: any): AxiosPromise<InlineResponse2011> {
+            return localVarFp.partialUpdateApiNodesId(id, inlineObject3, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @param {string} id A unique integer value identifying this tag.
-         * @param {InlineObject6} [inlineObject6] 
+         * @param {InlineObject1} [inlineObject1] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateApiTagsId(id: string, inlineObject6?: InlineObject6, options?: any): AxiosPromise<InlineResponse2015> {
-            return localVarFp.partialUpdateApiTagsId(id, inlineObject6, options).then((request) => request(axios, basePath));
+        partialUpdateApiTagsId(id: string, inlineObject1?: InlineObject1, options?: any): AxiosPromise<InlineResponse201> {
+            return localVarFp.partialUpdateApiTagsId(id, inlineObject1, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3696,7 +2352,7 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2016> {
+        retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2011> {
             return localVarFp.retrieveApiNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3705,7 +2361,7 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveApiTagAncestorsId(id: string, options?: any): AxiosPromise<InlineResponse2009> {
+        retrieveApiTagAncestorsId(id: string, options?: any): AxiosPromise<InlineResponse2004> {
             return localVarFp.retrieveApiTagAncestorsId(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3714,7 +2370,7 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveApiTagTreeId(id: string, options?: any): AxiosPromise<InlineResponse2008> {
+        retrieveApiTagTreeId(id: string, options?: any): AxiosPromise<InlineResponse2003> {
             return localVarFp.retrieveApiTagTreeId(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3727,7 +2383,7 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveApiTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2006> {
+        retrieveApiTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2001> {
             return localVarFp.retrieveApiTagsId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
     };
@@ -3742,79 +2398,24 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
 export class StarrydataApi extends BaseAPI {
     /**
      * 
-     * @param {InlineObject} [inlineObject] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public createApiDatabases(inlineObject?: InlineObject, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiDatabases(inlineObject, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {InlineObject3} [inlineObject3] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public createApiFigures(inlineObject3?: InlineObject3, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiFigures(inlineObject3, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {InlineObject7} [inlineObject7] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public createApiNodes(inlineObject7?: InlineObject7, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiNodes(inlineObject7, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
      * @param {InlineObject2} [inlineObject2] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public createApiPapers(inlineObject2?: InlineObject2, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiPapers(inlineObject2, options).then((request) => request(this.axios, this.basePath));
+    public createApiNodes(inlineObject2?: InlineObject2, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiNodes(inlineObject2, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
-     * @param {InlineObject4} [inlineObject4] 
+     * @param {InlineObject} [inlineObject] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public createApiSamples(inlineObject4?: InlineObject4, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiSamples(inlineObject4, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {InlineObject5} [inlineObject5] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public createApiTags(inlineObject5?: InlineObject5, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiTags(inlineObject5, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {InlineObject1} [inlineObject1] 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public createApiTerms(inlineObject1?: InlineObject1, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiTerms(inlineObject1, options).then((request) => request(this.axios, this.basePath));
+    public createApiTags(inlineObject?: InlineObject, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiTags(inlineObject, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3851,72 +2452,8 @@ export class StarrydataApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public listApiDatabases(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).listApiDatabases(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-     * @param {number} [pageNumber] A page number within the paginated result set.
-     * @param {number} [pageSize] Number of results to return per page.
-     * @param {string} [sort] Which field to use when ordering the results.
-     * @param {string} [filterSearch] A search term.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public listApiFigures(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).listApiFigures(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-     * @param {number} [pageNumber] A page number within the paginated result set.
-     * @param {number} [pageSize] Number of results to return per page.
-     * @param {string} [sort] Which field to use when ordering the results.
-     * @param {string} [filterSearch] A search term.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
     public listApiNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
         return StarrydataApiFp(this.configuration).listApiNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-     * @param {number} [pageNumber] A page number within the paginated result set.
-     * @param {number} [pageSize] Number of results to return per page.
-     * @param {string} [sort] Which field to use when ordering the results.
-     * @param {string} [filterSearch] A search term.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public listApiPapers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).listApiPapers(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-     * @param {number} [pageNumber] A page number within the paginated result set.
-     * @param {number} [pageSize] Number of results to return per page.
-     * @param {string} [sort] Which field to use when ordering the results.
-     * @param {string} [filterSearch] A search term.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public listApiSamples(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).listApiSamples(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3937,42 +2474,26 @@ export class StarrydataApi extends BaseAPI {
 
     /**
      * 
-     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
-     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
-     * @param {number} [pageNumber] A page number within the paginated result set.
-     * @param {number} [pageSize] Number of results to return per page.
-     * @param {string} [sort] Which field to use when ordering the results.
-     * @param {string} [filterSearch] A search term.
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public listApiTerms(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).listApiTerms(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
      * @param {string} id A unique integer value identifying this node.
-     * @param {InlineObject8} [inlineObject8] 
+     * @param {InlineObject3} [inlineObject3] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public partialUpdateApiNodesId(id: string, inlineObject8?: InlineObject8, options?: any) {
-        return StarrydataApiFp(this.configuration).partialUpdateApiNodesId(id, inlineObject8, options).then((request) => request(this.axios, this.basePath));
+    public partialUpdateApiNodesId(id: string, inlineObject3?: InlineObject3, options?: any) {
+        return StarrydataApiFp(this.configuration).partialUpdateApiNodesId(id, inlineObject3, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
      * @param {string} id A unique integer value identifying this tag.
-     * @param {InlineObject6} [inlineObject6] 
+     * @param {InlineObject1} [inlineObject1] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public partialUpdateApiTagsId(id: string, inlineObject6?: InlineObject6, options?: any) {
-        return StarrydataApiFp(this.configuration).partialUpdateApiTagsId(id, inlineObject6, options).then((request) => request(this.axios, this.basePath));
+    public partialUpdateApiTagsId(id: string, inlineObject1?: InlineObject1, options?: any) {
+        return StarrydataApiFp(this.configuration).partialUpdateApiTagsId(id, inlineObject1, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
