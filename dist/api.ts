@@ -363,75 +363,6 @@ export interface Failure {
 /**
  * 
  * @export
- * @interface Figure
- */
-export interface Figure {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof Figure
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof Figure
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof Figure
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {FigureAttributes}
-     * @memberof Figure
-     */
-    attributes?: FigureAttributes;
-    /**
-     * 
-     * @type {FigureRelationships}
-     * @memberof Figure
-     */
-    relationships?: FigureRelationships;
-}
-/**
- * 
- * @export
- * @interface FigureAttributes
- */
-export interface FigureAttributes {
-    /**
-     * 
-     * @type {number}
-     * @memberof FigureAttributes
-     */
-    id?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof FigureAttributes
-     */
-    title: string;
-}
-/**
- * 
- * @export
- * @interface FigureRelationships
- */
-export interface FigureRelationships {
-    /**
-     * 
-     * @type {Reltomany}
-     * @memberof FigureRelationships
-     */
-    paper?: Reltomany;
-}
-/**
- * 
- * @export
  * @interface InlineObject
  */
 export interface InlineObject {
@@ -865,117 +796,6 @@ export interface Pagination {
     next?: string | number;
 }
 /**
- * 
- * @export
- * @interface Paper
- */
-export interface Paper {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof Paper
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof Paper
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof Paper
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {PaperAttributes}
-     * @memberof Paper
-     */
-    attributes?: PaperAttributes;
-    /**
-     * 
-     * @type {PaperRelationships}
-     * @memberof Paper
-     */
-    relationships?: PaperRelationships;
-}
-/**
- * 
- * @export
- * @interface PaperAttributes
- */
-export interface PaperAttributes {
-    /**
-     * 
-     * @type {number}
-     * @memberof PaperAttributes
-     */
-    id?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaperAttributes
-     */
-    sample_count?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaperAttributes
-     */
-    figure_count?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaperAttributes
-     */
-    title: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaperAttributes
-     */
-    authors: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaperAttributes
-     */
-    identifier: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaperAttributes
-     */
-    DOI: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaperAttributes
-     */
-    container_title?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof PaperAttributes
-     */
-    publisher?: string;
-}
-/**
- * 
- * @export
- * @interface PaperRelationships
- */
-export interface PaperRelationships {
-    /**
-     * 
-     * @type {Reltomany}
-     * @memberof PaperRelationships
-     */
-    database?: Reltomany;
-}
-/**
  * singular item being [created](https://jsonapi.org/format/#crud-creating). `id` is optional and may be ignored if supplied and created by the system.
  * @export
  * @interface PostDatum
@@ -1224,62 +1044,6 @@ export interface Resource {
 /**
  * 
  * @export
- * @interface Sample
- */
-export interface Sample {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof Sample
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof Sample
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof Sample
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {SampleAttributes}
-     * @memberof Sample
-     */
-    attributes?: SampleAttributes;
-    /**
-     * 
-     * @type {FigureRelationships}
-     * @memberof Sample
-     */
-    relationships?: FigureRelationships;
-}
-/**
- * 
- * @export
- * @interface SampleAttributes
- */
-export interface SampleAttributes {
-    /**
-     * 
-     * @type {number}
-     * @memberof SampleAttributes
-     */
-    id?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof SampleAttributes
-     */
-    name: string;
-}
-/**
- * 
- * @export
  * @interface Tag
  */
 export interface Tag {
@@ -1407,24 +1171,6 @@ export interface TagRelationships {
      * @memberof TagRelationships
      */
     nodes: TagRelationshipsNodes;
-    /**
-     * 
-     * @type {TagRelationshipsTermJaId}
-     * @memberof TagRelationships
-     */
-    term_ja_id: TagRelationshipsTermJaId;
-    /**
-     * 
-     * @type {TagRelationshipsTermJaId}
-     * @memberof TagRelationships
-     */
-    term_en_id: TagRelationshipsTermJaId;
-    /**
-     * 
-     * @type {TagRelationshipsNodes}
-     * @memberof TagRelationships
-     */
-    synonyms_ids: TagRelationshipsNodes;
 }
 /**
  * 
@@ -1457,19 +1203,6 @@ export interface TagRelationshipsNodesMeta {
      * @memberof TagRelationshipsNodesMeta
      */
     count: number;
-}
-/**
- * 
- * @export
- * @interface TagRelationshipsTermJaId
- */
-export interface TagRelationshipsTermJaId {
-    /**
-     * 
-     * @type {ApiNodesDataAttributesTag}
-     * @memberof TagRelationshipsTermJaId
-     */
-    data: ApiNodesDataAttributesTag;
 }
 /**
  * 
@@ -1544,56 +1277,6 @@ export interface TagTreeAttributes {
      * @memberof TagTreeAttributes
      */
     children: Array<TagTreeAttributes>;
-}
-/**
- * 
- * @export
- * @interface Term
- */
-export interface Term {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof Term
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof Term
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof Term
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {TermAttributes}
-     * @memberof Term
-     */
-    attributes: TermAttributes;
-}
-/**
- * 
- * @export
- * @interface TermAttributes
- */
-export interface TermAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof TermAttributes
-     */
-    name: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TermAttributes
-     */
-    language: string;
 }
 
 /**
