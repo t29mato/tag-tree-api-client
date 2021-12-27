@@ -143,6 +143,106 @@ export interface ApiNodesIdDataRelationships {
 /**
  * 
  * @export
+ * @interface ApiTagTreeData
+ */
+export interface ApiTagTreeData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiTagTreeData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiTagTreeData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof ApiTagTreeData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {ApiTagTreeDataAttributes}
+     * @memberof ApiTagTreeData
+     */
+    attributes: ApiTagTreeDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTagTreeDataAttributes
+ */
+export interface ApiTagTreeDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTagTreeDataAttributes
+     */
+    name: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTagTreeDataAttributes
+     */
+    key: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTagTreeIdData
+ */
+export interface ApiTagTreeIdData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiTagTreeIdData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiTagTreeIdData
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagTreeIdDataAttributes}
+     * @memberof ApiTagTreeIdData
+     */
+    attributes?: ApiTagTreeIdDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTagTreeIdDataAttributes
+ */
+export interface ApiTagTreeIdDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTagTreeIdDataAttributes
+     */
+    name: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTagTreeIdDataAttributes
+     */
+    key?: string;
+    /**
+     * 
+     * @type {TagTreeDetail}
+     * @memberof ApiTagTreeIdDataAttributes
+     */
+    tree?: TagTreeDetail;
+}
+/**
+ * 
+ * @export
  * @interface ApiTagsData
  */
 export interface ApiTagsData {
@@ -415,6 +515,32 @@ export interface InlineObject3 {
 /**
  * 
  * @export
+ * @interface InlineObject4
+ */
+export interface InlineObject4 {
+    /**
+     * 
+     * @type {ApiTagTreeData}
+     * @memberof InlineObject4
+     */
+    data: ApiTagTreeData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject5
+ */
+export interface InlineObject5 {
+    /**
+     * 
+     * @type {ApiTagTreeIdData}
+     * @memberof InlineObject5
+     */
+    data: ApiTagTreeIdData;
+}
+/**
+ * 
+ * @export
  * @interface InlineResponse200
  */
 export interface InlineResponse200 {
@@ -489,10 +615,28 @@ export interface InlineResponse2002 {
 export interface InlineResponse2003 {
     /**
      * 
-     * @type {TagTree}
+     * @type {Array<TagTree>}
      * @memberof InlineResponse2003
      */
-    data: TagTree;
+    data: Array<TagTree>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse2003
+     */
+    links: any & Pagination;
+    /**
+     * 
+     * @type {Meta}
+     * @memberof InlineResponse2003
+     */
+    meta: Meta;
+    /**
+     * 
+     * @type {Array<Resource>}
+     * @memberof InlineResponse2003
+     */
+    included?: Array<Resource>;
 }
 /**
  * 
@@ -502,8 +646,46 @@ export interface InlineResponse2003 {
 export interface InlineResponse2004 {
     /**
      * 
-     * @type {TagAncestors}
+     * @type {TagTreeDetail}
      * @memberof InlineResponse2004
+     */
+    data: TagTreeDetail;
+}
+/**
+ * 
+ * @export
+ * @interface InlineResponse2005
+ */
+export interface InlineResponse2005 {
+    /**
+     * 
+     * @type {TagTreeDetail}
+     * @memberof InlineResponse2005
+     */
+    data: TagTreeDetail;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse2005
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse2005
+     */
+    links?: any & Pagination;
+}
+/**
+ * 
+ * @export
+ * @interface InlineResponse2006
+ */
+export interface InlineResponse2006 {
+    /**
+     * 
+     * @type {TagAncestors}
+     * @memberof InlineResponse2006
      */
     data: TagAncestors;
 }
@@ -1246,37 +1428,69 @@ export interface TagTreeAttributes {
      * @type {string}
      * @memberof TagTreeAttributes
      */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TagTreeAttributes
+     */
+    key?: string;
+}
+/**
+ * 
+ * @export
+ * @interface TagTreeDetail
+ */
+export interface TagTreeDetail {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof TagTreeDetail
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof TagTreeDetail
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof TagTreeDetail
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {object}
+     * @memberof TagTreeDetail
+     */
+    attributes: object;
+}
+/**
+ * 
+ * @export
+ * @interface Tree
+ */
+export interface Tree {
+    /**
+     * 
+     * @type {string}
+     * @memberof Tree
+     */
     name: string;
     /**
      * 
-     * @type {string}
-     * @memberof TagTreeAttributes
-     */
-    node_id: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TagTreeAttributes
-     */
-    tag_id: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TagTreeAttributes
-     */
-    parent_node_id: string;
-    /**
-     * 
      * @type {number}
-     * @memberof TagTreeAttributes
+     * @memberof Tree
      */
     tree_level: number;
     /**
      * 
-     * @type {Array<TagTreeAttributes>}
-     * @memberof TagTreeAttributes
+     * @type {Array<Tree>}
+     * @memberof Tree
      */
-    children: Array<TagTreeAttributes>;
+    children: Array<Tree>;
 }
 
 /**
@@ -1312,6 +1526,39 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
             localVarRequestOptions.data = serializeDataIfNeeded(inlineObject2, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {InlineObject4} [inlineObject4] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createApiTagTree: async (inlineObject4?: InlineObject4, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/tag_tree`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject4, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -1487,6 +1734,65 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
+        listApiTagTree: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/tag_tree`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (include !== undefined) {
+                localVarQueryParameter['include'] = include;
+            }
+
+            if (fields !== undefined) {
+                localVarQueryParameter['fields'] = fields;
+            }
+
+            if (pageNumber !== undefined) {
+                localVarQueryParameter['page[number]'] = pageNumber;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page[size]'] = pageSize;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (filterSearch !== undefined) {
+                localVarQueryParameter['filter[search]'] = filterSearch;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {number} [pageNumber] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
         listApiTags: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/tags`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
@@ -1566,6 +1872,43 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
             localVarRequestOptions.data = serializeDataIfNeeded(inlineObject3, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this tag.
+         * @param {InlineObject5} [inlineObject5] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        partialUpdateApiTagTreeId: async (id: string, inlineObject5?: InlineObject5, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('partialUpdateApiTagTreeId', 'id', id)
+            const localVarPath = `/api/tag_tree/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject5, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -1803,6 +2146,16 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @param {InlineObject4} [inlineObject4] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createApiTagTree(inlineObject4?: InlineObject4, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse201>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiTagTree(inlineObject4, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @param {InlineObject} [inlineObject] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1857,6 +2210,21 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
+        async listApiTagTree(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2003>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiTagTree(include, fields, pageNumber, pageSize, sort, filterSearch, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {number} [pageNumber] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
         async listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
@@ -1870,6 +2238,17 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          */
         async partialUpdateApiNodesId(id: string, inlineObject3?: InlineObject3, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2011>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiNodesId(id, inlineObject3, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this tag.
+         * @param {InlineObject5} [inlineObject5] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async partialUpdateApiTagTreeId(id: string, inlineObject5?: InlineObject5, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2005>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiTagTreeId(id, inlineObject5, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -1903,7 +2282,7 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveApiTagAncestorsId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004>> {
+        async retrieveApiTagAncestorsId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2006>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiTagAncestorsId(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -1913,7 +2292,7 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveApiTagTreeId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2003>> {
+        async retrieveApiTagTreeId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiTagTreeId(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -1949,6 +2328,15 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          */
         createApiNodes(inlineObject2?: InlineObject2, options?: any): AxiosPromise<InlineResponse2011> {
             return localVarFp.createApiNodes(inlineObject2, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {InlineObject4} [inlineObject4] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createApiTagTree(inlineObject4?: InlineObject4, options?: any): AxiosPromise<InlineResponse201> {
+            return localVarFp.createApiTagTree(inlineObject4, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -2002,6 +2390,20 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
+        listApiTagTree(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2003> {
+            return localVarFp.listApiTagTree(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {number} [pageNumber] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
         listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse200> {
             return localVarFp.listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
@@ -2014,6 +2416,16 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          */
         partialUpdateApiNodesId(id: string, inlineObject3?: InlineObject3, options?: any): AxiosPromise<InlineResponse2011> {
             return localVarFp.partialUpdateApiNodesId(id, inlineObject3, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this tag.
+         * @param {InlineObject5} [inlineObject5] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        partialUpdateApiTagTreeId(id: string, inlineObject5?: InlineObject5, options?: any): AxiosPromise<InlineResponse2005> {
+            return localVarFp.partialUpdateApiTagTreeId(id, inlineObject5, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -2044,7 +2456,7 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveApiTagAncestorsId(id: string, options?: any): AxiosPromise<InlineResponse2004> {
+        retrieveApiTagAncestorsId(id: string, options?: any): AxiosPromise<InlineResponse2006> {
             return localVarFp.retrieveApiTagAncestorsId(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -2053,7 +2465,7 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveApiTagTreeId(id: string, options?: any): AxiosPromise<InlineResponse2003> {
+        retrieveApiTagTreeId(id: string, options?: any): AxiosPromise<InlineResponse2004> {
             return localVarFp.retrieveApiTagTreeId(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -2088,6 +2500,17 @@ export class StarrydataApi extends BaseAPI {
      */
     public createApiNodes(inlineObject2?: InlineObject2, options?: any) {
         return StarrydataApiFp(this.configuration).createApiNodes(inlineObject2, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {InlineObject4} [inlineObject4] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public createApiTagTree(inlineObject4?: InlineObject4, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiTagTree(inlineObject4, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2151,6 +2574,22 @@ export class StarrydataApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
+    public listApiTagTree(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
+        return StarrydataApiFp(this.configuration).listApiTagTree(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+     * @param {number} [pageNumber] A page number within the paginated result set.
+     * @param {number} [pageSize] Number of results to return per page.
+     * @param {string} [sort] Which field to use when ordering the results.
+     * @param {string} [filterSearch] A search term.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
     public listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
         return StarrydataApiFp(this.configuration).listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
@@ -2165,6 +2604,18 @@ export class StarrydataApi extends BaseAPI {
      */
     public partialUpdateApiNodesId(id: string, inlineObject3?: InlineObject3, options?: any) {
         return StarrydataApiFp(this.configuration).partialUpdateApiNodesId(id, inlineObject3, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id A unique integer value identifying this tag.
+     * @param {InlineObject5} [inlineObject5] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public partialUpdateApiTagTreeId(id: string, inlineObject5?: InlineObject5, options?: any) {
+        return StarrydataApiFp(this.configuration).partialUpdateApiTagTreeId(id, inlineObject5, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
