@@ -232,13 +232,13 @@ export interface ApiTagTreeIdDataAttributes {
      * @type {string}
      * @memberof ApiTagTreeIdDataAttributes
      */
-    key?: string;
+    key: string;
     /**
      * 
-     * @type {TagTreeDetail}
+     * @type {TagTree}
      * @memberof ApiTagTreeIdDataAttributes
      */
-    tree?: TagTreeDetail;
+    tree: TagTree;
 }
 /**
  * 
@@ -1509,7 +1509,7 @@ export interface Tree {
      * @type {number}
      * @memberof Tree
      */
-    tree_level: number;
+    tree_level?: number;
     /**
      * 
      * @type {Array<Tree>}
