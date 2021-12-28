@@ -1462,10 +1462,35 @@ export interface TagTreeDetail {
     links?: ApiTagsDataLinks;
     /**
      * 
-     * @type {object}
+     * @type {TagTreeDetailAttributes}
      * @memberof TagTreeDetail
      */
-    attributes: object;
+    attributes: TagTreeDetailAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface TagTreeDetailAttributes
+ */
+export interface TagTreeDetailAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof TagTreeDetailAttributes
+     */
+    name: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TagTreeDetailAttributes
+     */
+    key: string;
+    /**
+     * 
+     * @type {Tree}
+     * @memberof TagTreeDetailAttributes
+     */
+    tree: Tree;
 }
 /**
  * 
