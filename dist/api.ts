@@ -1503,7 +1503,7 @@ export interface Tree {
      * @type {string}
      * @memberof Tree
      */
-    name: string;
+    tag_name: string;
     /**
      * 
      * @type {number}
