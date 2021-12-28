@@ -1393,48 +1393,23 @@ export interface TagRelationshipsNodesMeta {
  */
 export interface TagTree {
     /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * 
      * @type {string}
      * @memberof TagTree
      */
-    type: string;
+    tag_name: string;
     /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
+     * 
+     * @type {number}
      * @memberof TagTree
      */
-    id: string;
+    tree_level?: number;
     /**
      * 
-     * @type {ApiTagsDataLinks}
+     * @type {Array<TagTree>}
      * @memberof TagTree
      */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {TagTreeAttributes}
-     * @memberof TagTree
-     */
-    attributes: TagTreeAttributes;
-}
-/**
- * 
- * @export
- * @interface TagTreeAttributes
- */
-export interface TagTreeAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof TagTreeAttributes
-     */
-    name?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TagTreeAttributes
-     */
-    key?: string;
+    children: Array<TagTree>;
 }
 /**
  * 
@@ -1462,60 +1437,60 @@ export interface TagTreeDetail {
     links?: ApiTagsDataLinks;
     /**
      * 
-     * @type {TagTreeDetailAttributes}
+     * @type {ApiTagTreeIdDataAttributes}
      * @memberof TagTreeDetail
      */
-    attributes: TagTreeDetailAttributes;
+    attributes: ApiTagTreeIdDataAttributes;
 }
 /**
  * 
  * @export
- * @interface TagTreeDetailAttributes
+ * @interface TagTreeList
  */
-export interface TagTreeDetailAttributes {
+export interface TagTreeList {
     /**
-     * 
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
      * @type {string}
-     * @memberof TagTreeDetailAttributes
+     * @memberof TagTreeList
      */
-    name: string;
+    type: string;
     /**
-     * 
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
      * @type {string}
-     * @memberof TagTreeDetailAttributes
+     * @memberof TagTreeList
      */
-    key: string;
+    id: string;
     /**
      * 
-     * @type {Tree}
-     * @memberof TagTreeDetailAttributes
+     * @type {ApiTagsDataLinks}
+     * @memberof TagTreeList
      */
-    tree: Tree;
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {TagTreeListAttributes}
+     * @memberof TagTreeList
+     */
+    attributes: TagTreeListAttributes;
 }
 /**
  * 
  * @export
- * @interface Tree
+ * @interface TagTreeListAttributes
  */
-export interface Tree {
+export interface TagTreeListAttributes {
     /**
      * 
      * @type {string}
-     * @memberof Tree
+     * @memberof TagTreeListAttributes
      */
-    tag_name: string;
+    name?: string;
     /**
      * 
-     * @type {number}
-     * @memberof Tree
+     * @type {string}
+     * @memberof TagTreeListAttributes
      */
-    tree_level?: number;
-    /**
-     * 
-     * @type {Array<Tree>}
-     * @memberof Tree
-     */
-    children: Array<Tree>;
+    key?: string;
 }
 
 /**
