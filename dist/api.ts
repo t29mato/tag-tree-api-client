@@ -336,74 +336,6 @@ export interface ApiTagsIdData {
 export type Data = Resource | Set<Resource> | number;
 
 /**
- * 
- * @export
- * @interface Database
- */
-export interface Database {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof Database
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof Database
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof Database
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {DatabaseAttributes}
-     * @memberof Database
-     */
-    attributes?: DatabaseAttributes;
-}
-/**
- * 
- * @export
- * @interface DatabaseAttributes
- */
-export interface DatabaseAttributes {
-    /**
-     * 
-     * @type {number}
-     * @memberof DatabaseAttributes
-     */
-    id?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof DatabaseAttributes
-     */
-    sample_count?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof DatabaseAttributes
-     */
-    paper_count?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof DatabaseAttributes
-     */
-    figure_count?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof DatabaseAttributes
-     */
-    name: string;
-}
-/**
  * singular item
  * @export
  * @interface Datum
@@ -448,17 +380,48 @@ export interface Failure {
      */
     errors: Set<ModelError>;
     /**
-     * 
-     * @type {Meta}
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
      * @memberof Failure
      */
-    meta?: Meta;
+    meta?: { [key: string]: object; };
+    /**
+     * 
+     * @type {Jsonapi}
+     * @memberof Failure
+     */
+    jsonapi?: Jsonapi;
     /**
      * 
      * @type {{ [key: string]: Link; }}
      * @memberof Failure
      */
     links?: { [key: string]: Link; };
+}
+/**
+ * 
+ * @export
+ * @interface Info
+ */
+export interface Info {
+    /**
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
+     * @memberof Info
+     */
+    meta: { [key: string]: object; };
+    /**
+     * 
+     * @type {{ [key: string]: Link; }}
+     * @memberof Info
+     */
+    links?: { [key: string]: Link; };
+    /**
+     * 
+     * @type {Jsonapi}
+     * @memberof Info
+     */
+    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -557,11 +520,11 @@ export interface InlineResponse200 {
      */
     links: any & Pagination;
     /**
-     * 
-     * @type {Meta}
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
      * @memberof InlineResponse200
      */
-    meta: Meta;
+    meta: { [key: string]: object; };
     /**
      * 
      * @type {Array<Resource>}
@@ -626,11 +589,11 @@ export interface InlineResponse2003 {
      */
     links: any & Pagination;
     /**
-     * 
-     * @type {Meta}
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
      * @memberof InlineResponse2003
      */
-    meta: Meta;
+    meta: { [key: string]: object; };
     /**
      * 
      * @type {Array<Resource>}
@@ -675,19 +638,6 @@ export interface InlineResponse2005 {
      * @memberof InlineResponse2005
      */
     links?: any & Pagination;
-}
-/**
- * 
- * @export
- * @interface InlineResponse2006
- */
-export interface InlineResponse2006 {
-    /**
-     * 
-     * @type {TagAncestors}
-     * @memberof InlineResponse2006
-     */
-    data: TagAncestors;
 }
 /**
  * 
@@ -740,6 +690,93 @@ export interface InlineResponse2011 {
     links?: any & Pagination;
 }
 /**
+ * 
+ * @export
+ * @interface InlineResponse2012
+ */
+export interface InlineResponse2012 {
+    /**
+     * 
+     * @type {TokenObtainPair}
+     * @memberof InlineResponse2012
+     */
+    data: TokenObtainPair;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse2012
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse2012
+     */
+    links?: any & Pagination;
+    /**
+     * 
+     * @type {Jsonapi}
+     * @memberof InlineResponse2012
+     */
+    jsonapi?: Jsonapi;
+}
+/**
+ * 
+ * @export
+ * @interface InlineResponse2013
+ */
+export interface InlineResponse2013 {
+    /**
+     * 
+     * @type {TokenRefresh}
+     * @memberof InlineResponse2013
+     */
+    data: TokenRefresh;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse2013
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse2013
+     */
+    links?: any & Pagination;
+    /**
+     * 
+     * @type {Jsonapi}
+     * @memberof InlineResponse2013
+     */
+    jsonapi?: Jsonapi;
+}
+/**
+ * @type JSONAPIresponse
+ * @export
+ */
+export type JSONAPIresponse = Failure | Info | Success;
+
+/**
+ * An object describing the server\'s implementation
+ * @export
+ * @interface Jsonapi
+ */
+export interface Jsonapi {
+    /**
+     * 
+     * @type {string}
+     * @memberof Jsonapi
+     */
+    version?: string;
+    /**
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
+     * @memberof Jsonapi
+     */
+    meta?: { [key: string]: object; };
+}
+/**
  * @type Link
  * A link **MUST** be represented as either: a string containing the link\'s URL or a link object.
  * @export
@@ -759,11 +796,11 @@ export interface LinkOneOf {
      */
     href: string;
     /**
-     * 
-     * @type {Meta}
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
      * @memberof LinkOneOf
      */
-    meta?: Meta;
+    meta?: { [key: string]: object; };
 }
 /**
  * The `type` and `id` to non-empty members.
@@ -784,49 +821,11 @@ export interface Linkage {
      */
     id: string;
     /**
-     * 
-     * @type {Meta}
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
      * @memberof Linkage
      */
-    meta?: Meta;
-}
-/**
- * 
- * @export
- * @interface Meta
- */
-export interface Meta {
-    /**
-     * 
-     * @type {MetaPagination}
-     * @memberof Meta
-     */
-    pagination: MetaPagination;
-}
-/**
- * 
- * @export
- * @interface MetaPagination
- */
-export interface MetaPagination {
-    /**
-     * 
-     * @type {number}
-     * @memberof MetaPagination
-     */
-    page: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof MetaPagination
-     */
-    pages: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof MetaPagination
-     */
-    count: number;
+    meta?: { [key: string]: object; };
 }
 /**
  * 
@@ -877,11 +876,11 @@ export interface ModelError {
      */
     source?: ErrorSource;
     /**
-     * 
-     * @type {Meta}
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
      * @memberof ModelError
      */
-    meta?: Meta;
+    meta?: { [key: string]: object; };
 }
 /**
  * 
@@ -940,11 +939,11 @@ export interface NodeAttributes {
  */
 export interface Onlymeta {
     /**
-     * 
-     * @type {Meta}
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
      * @memberof Onlymeta
      */
-    meta?: Meta;
+    meta?: { [key: string]: object; };
 }
 /**
  * 
@@ -1027,11 +1026,11 @@ export interface PostResource {
      */
     links?: { [key: string]: Link; };
     /**
-     * 
-     * @type {Meta}
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
      * @memberof PostResource
      */
-    meta?: Meta;
+    meta?: { [key: string]: object; };
 }
 /**
  * A single relationship description
@@ -1052,11 +1051,11 @@ export interface Relationship {
      */
     data?: RelationshipToOne | Set<any>;
     /**
-     * 
-     * @type {Meta}
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
      * @memberof Relationship
      */
-    meta?: Meta;
+    meta?: { [key: string]: object; };
 }
 /**
  * A resource object **MAY** contain references to other resource objects (`relationships`). Relationships may be to-one or to-many. Relationships can be specified by including a member in a resource\'s links object.
@@ -1098,11 +1097,11 @@ export interface RelationshipToOne {
      */
     id: string;
     /**
-     * 
-     * @type {Meta}
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
      * @memberof RelationshipToOne
      */
-    meta?: Meta;
+    meta?: { [key: string]: object; };
 }
 /**
  * A multiple relationship
@@ -1123,11 +1122,11 @@ export interface Reltomany {
      */
     data?: Set<Linkage>;
     /**
-     * 
-     * @type {Meta}
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
      * @memberof Reltomany
      */
-    meta?: Meta;
+    meta?: { [key: string]: object; };
 }
 /**
  * A multiple relationship, data only.
@@ -1161,11 +1160,11 @@ export interface Reltoone {
      */
     data?: RelationshipToOne;
     /**
-     * 
-     * @type {Meta}
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
      * @memberof Reltoone
      */
-    meta?: Meta;
+    meta?: { [key: string]: object; };
 }
 /**
  * A singular relationship, data only.
@@ -1217,11 +1216,48 @@ export interface Resource {
      */
     links?: { [key: string]: Link; };
     /**
-     * 
-     * @type {Meta}
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
      * @memberof Resource
      */
-    meta?: Meta;
+    meta?: { [key: string]: object; };
+}
+/**
+ * 
+ * @export
+ * @interface Success
+ */
+export interface Success {
+    /**
+     * 
+     * @type {Data}
+     * @memberof Success
+     */
+    data: Data;
+    /**
+     * To reduce the number of HTTP requests, servers **MAY** allow responses that include related resources along with the requested primary resources. Such responses are called `compound documents`.
+     * @type {Set<Resource>}
+     * @memberof Success
+     */
+    included?: Set<Resource>;
+    /**
+     * Non-standard meta-information that can not be represented as an attribute or relationship.
+     * @type {{ [key: string]: object; }}
+     * @memberof Success
+     */
+    meta?: { [key: string]: object; };
+    /**
+     * Link members related to the primary data.
+     * @type {any & Pagination}
+     * @memberof Success
+     */
+    links?: any & Pagination;
+    /**
+     * 
+     * @type {Jsonapi}
+     * @memberof Success
+     */
+    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -1259,87 +1295,6 @@ export interface Tag {
      * @memberof Tag
      */
     relationships: TagRelationships;
-}
-/**
- * 
- * @export
- * @interface TagAncestors
- */
-export interface TagAncestors {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof TagAncestors
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof TagAncestors
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof TagAncestors
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {TagAncestorsAttributes}
-     * @memberof TagAncestors
-     */
-    attributes: TagAncestorsAttributes;
-}
-/**
- * 
- * @export
- * @interface TagAncestorsAttributes
- */
-export interface TagAncestorsAttributes {
-    /**
-     * 
-     * @type {Array<TagAncestorsAttributesAncestors>}
-     * @memberof TagAncestorsAttributes
-     */
-    ancestors: Array<TagAncestorsAttributesAncestors>;
-}
-/**
- * 
- * @export
- * @interface TagAncestorsAttributesAncestors
- */
-export interface TagAncestorsAttributesAncestors {
-    /**
-     * 
-     * @type {string}
-     * @memberof TagAncestorsAttributesAncestors
-     */
-    name_ja?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TagAncestorsAttributesAncestors
-     */
-    name_en?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TagAncestorsAttributesAncestors
-     */
-    node_id: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TagAncestorsAttributesAncestors
-     */
-    tag_id: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TagAncestorsAttributesAncestors
-     */
-    parent_node_id?: string;
 }
 /**
  * 
@@ -1492,6 +1447,106 @@ export interface TagTreeListAttributes {
      */
     key?: string;
 }
+/**
+ * 
+ * @export
+ * @interface TokenObtainPair
+ */
+export interface TokenObtainPair {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof TokenObtainPair
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof TokenObtainPair
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof TokenObtainPair
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {TokenObtainPairAttributes}
+     * @memberof TokenObtainPair
+     */
+    attributes?: TokenObtainPairAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface TokenObtainPairAttributes
+ */
+export interface TokenObtainPairAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof TokenObtainPairAttributes
+     */
+    username: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TokenObtainPairAttributes
+     */
+    password: string;
+}
+/**
+ * 
+ * @export
+ * @interface TokenRefresh
+ */
+export interface TokenRefresh {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof TokenRefresh
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof TokenRefresh
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof TokenRefresh
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {TokenRefreshAttributes}
+     * @memberof TokenRefresh
+     */
+    attributes?: TokenRefreshAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface TokenRefreshAttributes
+ */
+export interface TokenRefreshAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof TokenRefreshAttributes
+     */
+    refresh: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TokenRefreshAttributes
+     */
+    access?: string;
+}
 
 /**
  * StarrydataApi - axios parameter creator
@@ -1592,6 +1647,72 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
             localVarRequestOptions.data = serializeDataIfNeeded(inlineObject, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
+         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createApiToken: async (uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/token/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(uNKNOWNBASETYPE, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
+         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createApiTokenRefresh: async (uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/token/refresh/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(uNKNOWNBASETYPE, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -2011,39 +2132,6 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveApiTagAncestorsId: async (id: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'id' is not null or undefined
-            assertParamExists('retrieveApiTagAncestorsId', 'id', id)
-            const localVarPath = `/api/tag_ancestors/{id}`
-                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * 
-         * @param {string} id 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
         retrieveApiTagTreeId: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
             assertParamExists('retrieveApiTagTreeId', 'id', id)
@@ -2165,6 +2253,26 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
+         * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
+         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createApiToken(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2012>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiToken(uNKNOWNBASETYPE, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
+         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createApiTokenRefresh(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2013>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiTokenRefresh(uNKNOWNBASETYPE, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
          * 
          * @param {string} id A unique integer value identifying this node.
          * @param {*} [options] Override http request option.
@@ -2282,16 +2390,6 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveApiTagAncestorsId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2006>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiTagAncestorsId(id, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {string} id 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
         async retrieveApiTagTreeId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiTagTreeId(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
@@ -2346,6 +2444,24 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          */
         createApiTags(inlineObject?: InlineObject, options?: any): AxiosPromise<InlineResponse201> {
             return localVarFp.createApiTags(inlineObject, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
+         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createApiToken(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): AxiosPromise<InlineResponse2012> {
+            return localVarFp.createApiToken(uNKNOWNBASETYPE, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
+         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createApiTokenRefresh(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): AxiosPromise<InlineResponse2013> {
+            return localVarFp.createApiTokenRefresh(uNKNOWNBASETYPE, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -2456,15 +2572,6 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveApiTagAncestorsId(id: string, options?: any): AxiosPromise<InlineResponse2006> {
-            return localVarFp.retrieveApiTagAncestorsId(id, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {string} id 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
         retrieveApiTagTreeId(id: string, options?: any): AxiosPromise<InlineResponse2004> {
             return localVarFp.retrieveApiTagTreeId(id, options).then((request) => request(axios, basePath));
         },
@@ -2522,6 +2629,28 @@ export class StarrydataApi extends BaseAPI {
      */
     public createApiTags(inlineObject?: InlineObject, options?: any) {
         return StarrydataApiFp(this.configuration).createApiTags(inlineObject, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
+     * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public createApiToken(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiToken(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
+     * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof StarrydataApi
+     */
+    public createApiTokenRefresh(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiTokenRefresh(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2643,17 +2772,6 @@ export class StarrydataApi extends BaseAPI {
      */
     public retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
         return StarrydataApiFp(this.configuration).retrieveApiNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {string} id 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof StarrydataApi
-     */
-    public retrieveApiTagAncestorsId(id: string, options?: any) {
-        return StarrydataApiFp(this.configuration).retrieveApiTagAncestorsId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
