@@ -329,6 +329,100 @@ export interface ApiTagsIdData {
     attributes?: ApiTagsDataAttributes;
 }
 /**
+ * 
+ * @export
+ * @interface ApiTokenData
+ */
+export interface ApiTokenData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiTokenData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiTokenData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof ApiTokenData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {ApiTokenDataAttributes}
+     * @memberof ApiTokenData
+     */
+    attributes?: ApiTokenDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTokenDataAttributes
+ */
+export interface ApiTokenDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTokenDataAttributes
+     */
+    username: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTokenDataAttributes
+     */
+    password: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTokenRefreshData
+ */
+export interface ApiTokenRefreshData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiTokenRefreshData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiTokenRefreshData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof ApiTokenRefreshData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {ApiTokenRefreshDataAttributes}
+     * @memberof ApiTokenRefreshData
+     */
+    attributes?: ApiTokenRefreshDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiTokenRefreshDataAttributes
+ */
+export interface ApiTokenRefreshDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiTokenRefreshDataAttributes
+     */
+    refresh: string;
+}
+/**
  * @type Data
  * The document\'s `primary data` is a representation of the resource or collection of resources targeted by a request.
  * @export
@@ -500,6 +594,32 @@ export interface InlineObject5 {
      * @memberof InlineObject5
      */
     data: ApiTagTreeIdData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject6
+ */
+export interface InlineObject6 {
+    /**
+     * 
+     * @type {ApiTokenData}
+     * @memberof InlineObject6
+     */
+    data: ApiTokenData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject7
+ */
+export interface InlineObject7 {
+    /**
+     * 
+     * @type {ApiTokenRefreshData}
+     * @memberof InlineObject7
+     */
+    data: ApiTokenRefreshData;
 }
 /**
  * 
@@ -1473,29 +1593,10 @@ export interface TokenObtainPair {
     links?: ApiTagsDataLinks;
     /**
      * 
-     * @type {TokenObtainPairAttributes}
+     * @type {ApiTokenDataAttributes}
      * @memberof TokenObtainPair
      */
-    attributes?: TokenObtainPairAttributes;
-}
-/**
- * 
- * @export
- * @interface TokenObtainPairAttributes
- */
-export interface TokenObtainPairAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof TokenObtainPairAttributes
-     */
-    username: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TokenObtainPairAttributes
-     */
-    password: string;
+    attributes?: ApiTokenDataAttributes;
 }
 /**
  * 
@@ -1655,11 +1756,11 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject6} [inlineObject6] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiToken: async (uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options: any = {}): Promise<RequestArgs> => {
+        createApiToken: async (inlineObject6?: InlineObject6, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/token/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1679,7 +1780,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(uNKNOWNBASETYPE, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject6, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -1688,11 +1789,11 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
         },
         /**
          * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject7} [inlineObject7] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiTokenRefresh: async (uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options: any = {}): Promise<RequestArgs> => {
+        createApiTokenRefresh: async (inlineObject7?: InlineObject7, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/token/refresh/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1712,7 +1813,7 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(uNKNOWNBASETYPE, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject7, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -2254,22 +2355,22 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
         },
         /**
          * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject6} [inlineObject6] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createApiToken(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2012>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiToken(uNKNOWNBASETYPE, options);
+        async createApiToken(inlineObject6?: InlineObject6, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2012>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiToken(inlineObject6, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject7} [inlineObject7] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createApiTokenRefresh(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2013>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiTokenRefresh(uNKNOWNBASETYPE, options);
+        async createApiTokenRefresh(inlineObject7?: InlineObject7, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2013>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiTokenRefresh(inlineObject7, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -2447,21 +2548,21 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
         },
         /**
          * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject6} [inlineObject6] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiToken(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): AxiosPromise<InlineResponse2012> {
-            return localVarFp.createApiToken(uNKNOWNBASETYPE, options).then((request) => request(axios, basePath));
+        createApiToken(inlineObject6?: InlineObject6, options?: any): AxiosPromise<InlineResponse2012> {
+            return localVarFp.createApiToken(inlineObject6, options).then((request) => request(axios, basePath));
         },
         /**
          * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
-         * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+         * @param {InlineObject7} [inlineObject7] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createApiTokenRefresh(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any): AxiosPromise<InlineResponse2013> {
-            return localVarFp.createApiTokenRefresh(uNKNOWNBASETYPE, options).then((request) => request(axios, basePath));
+        createApiTokenRefresh(inlineObject7?: InlineObject7, options?: any): AxiosPromise<InlineResponse2013> {
+            return localVarFp.createApiTokenRefresh(inlineObject7, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -2633,24 +2734,24 @@ export class StarrydataApi extends BaseAPI {
 
     /**
      * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
-     * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+     * @param {InlineObject6} [inlineObject6] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public createApiToken(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiToken(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+    public createApiToken(inlineObject6?: InlineObject6, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiToken(inlineObject6, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
-     * @param {UNKNOWN_BASE_TYPE} [uNKNOWNBASETYPE] 
+     * @param {InlineObject7} [inlineObject7] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StarrydataApi
      */
-    public createApiTokenRefresh(uNKNOWNBASETYPE?: UNKNOWN_BASE_TYPE, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiTokenRefresh(uNKNOWNBASETYPE, options).then((request) => request(this.axios, this.basePath));
+    public createApiTokenRefresh(inlineObject7?: InlineObject7, options?: any) {
+        return StarrydataApiFp(this.configuration).createApiTokenRefresh(inlineObject7, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
