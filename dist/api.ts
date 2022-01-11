@@ -24,6 +24,37 @@ import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } fr
 /**
  * 
  * @export
+ * @interface Activation
+ */
+export interface Activation {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof Activation
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof Activation
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof Activation
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthUsersActivationDataAttributes}
+     * @memberof Activation
+     */
+    attributes?: AuthUsersActivationDataAttributes;
+}
+/**
+ * 
+ * @export
  * @interface ApiNodesData
  */
 export interface ApiNodesData {
@@ -423,6 +454,444 @@ export interface ApiTokenRefreshDataAttributes {
     refresh: string;
 }
 /**
+ * 
+ * @export
+ * @interface AuthJwtVerifyData
+ */
+export interface AuthJwtVerifyData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthJwtVerifyData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthJwtVerifyData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof AuthJwtVerifyData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthJwtVerifyDataAttributes}
+     * @memberof AuthJwtVerifyData
+     */
+    attributes?: AuthJwtVerifyDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface AuthJwtVerifyDataAttributes
+ */
+export interface AuthJwtVerifyDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthJwtVerifyDataAttributes
+     */
+    token: string;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersActivationData
+ */
+export interface AuthUsersActivationData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersActivationData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersActivationData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof AuthUsersActivationData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthUsersActivationDataAttributes}
+     * @memberof AuthUsersActivationData
+     */
+    attributes?: AuthUsersActivationDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersActivationDataAttributes
+ */
+export interface AuthUsersActivationDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthUsersActivationDataAttributes
+     */
+    uid: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthUsersActivationDataAttributes
+     */
+    token: string;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersData
+ */
+export interface AuthUsersData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof AuthUsersData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthUsersDataAttributes}
+     * @memberof AuthUsersData
+     */
+    attributes?: AuthUsersDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersDataAttributes
+ */
+export interface AuthUsersDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthUsersDataAttributes
+     */
+    email?: string;
+    /**
+     * Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
+     * @type {string}
+     * @memberof AuthUsersDataAttributes
+     */
+    username: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthUsersDataAttributes
+     */
+    password: string;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersMeData
+ */
+export interface AuthUsersMeData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersMeData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersMeData
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof AuthUsersMeData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthUsersMeDataAttributes}
+     * @memberof AuthUsersMeData
+     */
+    attributes?: AuthUsersMeDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersMeDataAttributes
+ */
+export interface AuthUsersMeDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthUsersMeDataAttributes
+     */
+    email?: string;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersResendActivationData
+ */
+export interface AuthUsersResendActivationData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersResendActivationData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersResendActivationData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof AuthUsersResendActivationData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthUsersResendActivationDataAttributes}
+     * @memberof AuthUsersResendActivationData
+     */
+    attributes?: AuthUsersResendActivationDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersResendActivationDataAttributes
+ */
+export interface AuthUsersResendActivationDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthUsersResendActivationDataAttributes
+     */
+    email: string;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersResetPasswordConfirmData
+ */
+export interface AuthUsersResetPasswordConfirmData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersResetPasswordConfirmData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersResetPasswordConfirmData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof AuthUsersResetPasswordConfirmData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthUsersResetPasswordConfirmDataAttributes}
+     * @memberof AuthUsersResetPasswordConfirmData
+     */
+    attributes?: AuthUsersResetPasswordConfirmDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersResetPasswordConfirmDataAttributes
+ */
+export interface AuthUsersResetPasswordConfirmDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthUsersResetPasswordConfirmDataAttributes
+     */
+    uid: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthUsersResetPasswordConfirmDataAttributes
+     */
+    token: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthUsersResetPasswordConfirmDataAttributes
+     */
+    new_password: string;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersResetUsernameConfirmData
+ */
+export interface AuthUsersResetUsernameConfirmData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersResetUsernameConfirmData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersResetUsernameConfirmData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof AuthUsersResetUsernameConfirmData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthUsersResetUsernameConfirmDataAttributes}
+     * @memberof AuthUsersResetUsernameConfirmData
+     */
+    attributes?: AuthUsersResetUsernameConfirmDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersResetUsernameConfirmDataAttributes
+ */
+export interface AuthUsersResetUsernameConfirmDataAttributes {
+    /**
+     * Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
+     * @type {string}
+     * @memberof AuthUsersResetUsernameConfirmDataAttributes
+     */
+    new_username: string;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersSetPasswordData
+ */
+export interface AuthUsersSetPasswordData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersSetPasswordData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersSetPasswordData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof AuthUsersSetPasswordData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthUsersSetPasswordDataAttributes}
+     * @memberof AuthUsersSetPasswordData
+     */
+    attributes?: AuthUsersSetPasswordDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersSetPasswordDataAttributes
+ */
+export interface AuthUsersSetPasswordDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthUsersSetPasswordDataAttributes
+     */
+    new_password: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthUsersSetPasswordDataAttributes
+     */
+    current_password: string;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersSetUsernameData
+ */
+export interface AuthUsersSetUsernameData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersSetUsernameData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof AuthUsersSetUsernameData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof AuthUsersSetUsernameData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthUsersSetUsernameDataAttributes}
+     * @memberof AuthUsersSetUsernameData
+     */
+    attributes?: AuthUsersSetUsernameDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface AuthUsersSetUsernameDataAttributes
+ */
+export interface AuthUsersSetUsernameDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof AuthUsersSetUsernameDataAttributes
+     */
+    current_password: string;
+    /**
+     * Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
+     * @type {string}
+     * @memberof AuthUsersSetUsernameDataAttributes
+     */
+    new_username: string;
+}
+/**
  * @type Data
  * The document\'s `primary data` is a representation of the resource or collection of resources targeted by a request.
  * @export
@@ -546,6 +1015,136 @@ export interface InlineObject1 {
 /**
  * 
  * @export
+ * @interface InlineObject10
+ */
+export interface InlineObject10 {
+    /**
+     * 
+     * @type {AuthUsersMeData}
+     * @memberof InlineObject10
+     */
+    data: AuthUsersMeData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject11
+ */
+export interface InlineObject11 {
+    /**
+     * 
+     * @type {AuthUsersActivationData}
+     * @memberof InlineObject11
+     */
+    data: AuthUsersActivationData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject12
+ */
+export interface InlineObject12 {
+    /**
+     * 
+     * @type {AuthUsersResendActivationData}
+     * @memberof InlineObject12
+     */
+    data: AuthUsersResendActivationData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject13
+ */
+export interface InlineObject13 {
+    /**
+     * 
+     * @type {AuthUsersResendActivationData}
+     * @memberof InlineObject13
+     */
+    data: AuthUsersResendActivationData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject14
+ */
+export interface InlineObject14 {
+    /**
+     * 
+     * @type {AuthUsersResetPasswordConfirmData}
+     * @memberof InlineObject14
+     */
+    data: AuthUsersResetPasswordConfirmData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject15
+ */
+export interface InlineObject15 {
+    /**
+     * 
+     * @type {AuthUsersResendActivationData}
+     * @memberof InlineObject15
+     */
+    data: AuthUsersResendActivationData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject16
+ */
+export interface InlineObject16 {
+    /**
+     * 
+     * @type {AuthUsersResetUsernameConfirmData}
+     * @memberof InlineObject16
+     */
+    data: AuthUsersResetUsernameConfirmData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject17
+ */
+export interface InlineObject17 {
+    /**
+     * 
+     * @type {AuthUsersSetPasswordData}
+     * @memberof InlineObject17
+     */
+    data: AuthUsersSetPasswordData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject18
+ */
+export interface InlineObject18 {
+    /**
+     * 
+     * @type {AuthUsersSetUsernameData}
+     * @memberof InlineObject18
+     */
+    data: AuthUsersSetUsernameData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject19
+ */
+export interface InlineObject19 {
+    /**
+     * 
+     * @type {ApiTokenData}
+     * @memberof InlineObject19
+     */
+    data: ApiTokenData;
+}
+/**
+ * 
+ * @export
  * @interface InlineObject2
  */
 export interface InlineObject2 {
@@ -555,6 +1154,32 @@ export interface InlineObject2 {
      * @memberof InlineObject2
      */
     data: ApiNodesData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject20
+ */
+export interface InlineObject20 {
+    /**
+     * 
+     * @type {ApiTokenRefreshData}
+     * @memberof InlineObject20
+     */
+    data: ApiTokenRefreshData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject21
+ */
+export interface InlineObject21 {
+    /**
+     * 
+     * @type {AuthJwtVerifyData}
+     * @memberof InlineObject21
+     */
+    data: AuthJwtVerifyData;
 }
 /**
  * 
@@ -620,6 +1245,32 @@ export interface InlineObject7 {
      * @memberof InlineObject7
      */
     data: ApiTokenRefreshData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject8
+ */
+export interface InlineObject8 {
+    /**
+     * 
+     * @type {AuthUsersData}
+     * @memberof InlineObject8
+     */
+    data: AuthUsersData;
+}
+/**
+ * 
+ * @export
+ * @interface InlineObject9
+ */
+export interface InlineObject9 {
+    /**
+     * 
+     * @type {AuthUsersMeData}
+     * @memberof InlineObject9
+     */
+    data: AuthUsersMeData;
 }
 /**
  * 
@@ -762,6 +1413,68 @@ export interface InlineResponse2005 {
 /**
  * 
  * @export
+ * @interface InlineResponse2006
+ */
+export interface InlineResponse2006 {
+    /**
+     * 
+     * @type {Array<User>}
+     * @memberof InlineResponse2006
+     */
+    data: Array<User>;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse2006
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse2006
+     */
+    links?: any & Pagination;
+    /**
+     * 
+     * @type {Jsonapi}
+     * @memberof InlineResponse2006
+     */
+    jsonapi?: Jsonapi;
+}
+/**
+ * 
+ * @export
+ * @interface InlineResponse2007
+ */
+export interface InlineResponse2007 {
+    /**
+     * 
+     * @type {User}
+     * @memberof InlineResponse2007
+     */
+    data: User;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse2007
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse2007
+     */
+    links?: any & Pagination;
+    /**
+     * 
+     * @type {Jsonapi}
+     * @memberof InlineResponse2007
+     */
+    jsonapi?: Jsonapi;
+}
+/**
+ * 
+ * @export
  * @interface InlineResponse201
  */
 export interface InlineResponse201 {
@@ -808,6 +1521,68 @@ export interface InlineResponse2011 {
      * @memberof InlineResponse2011
      */
     links?: any & Pagination;
+}
+/**
+ * 
+ * @export
+ * @interface InlineResponse20110
+ */
+export interface InlineResponse20110 {
+    /**
+     * 
+     * @type {SetUsername}
+     * @memberof InlineResponse20110
+     */
+    data: SetUsername;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse20110
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse20110
+     */
+    links?: any & Pagination;
+    /**
+     * 
+     * @type {Jsonapi}
+     * @memberof InlineResponse20110
+     */
+    jsonapi?: Jsonapi;
+}
+/**
+ * 
+ * @export
+ * @interface InlineResponse20111
+ */
+export interface InlineResponse20111 {
+    /**
+     * 
+     * @type {TokenVerify}
+     * @memberof InlineResponse20111
+     */
+    data: TokenVerify;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse20111
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse20111
+     */
+    links?: any & Pagination;
+    /**
+     * 
+     * @type {Jsonapi}
+     * @memberof InlineResponse20111
+     */
+    jsonapi?: Jsonapi;
 }
 /**
  * 
@@ -868,6 +1643,192 @@ export interface InlineResponse2013 {
      * 
      * @type {Jsonapi}
      * @memberof InlineResponse2013
+     */
+    jsonapi?: Jsonapi;
+}
+/**
+ * 
+ * @export
+ * @interface InlineResponse2014
+ */
+export interface InlineResponse2014 {
+    /**
+     * 
+     * @type {UserCreate}
+     * @memberof InlineResponse2014
+     */
+    data: UserCreate;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse2014
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse2014
+     */
+    links?: any & Pagination;
+    /**
+     * 
+     * @type {Jsonapi}
+     * @memberof InlineResponse2014
+     */
+    jsonapi?: Jsonapi;
+}
+/**
+ * 
+ * @export
+ * @interface InlineResponse2015
+ */
+export interface InlineResponse2015 {
+    /**
+     * 
+     * @type {Activation}
+     * @memberof InlineResponse2015
+     */
+    data: Activation;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse2015
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse2015
+     */
+    links?: any & Pagination;
+    /**
+     * 
+     * @type {Jsonapi}
+     * @memberof InlineResponse2015
+     */
+    jsonapi?: Jsonapi;
+}
+/**
+ * 
+ * @export
+ * @interface InlineResponse2016
+ */
+export interface InlineResponse2016 {
+    /**
+     * 
+     * @type {SendEmailReset}
+     * @memberof InlineResponse2016
+     */
+    data: SendEmailReset;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse2016
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse2016
+     */
+    links?: any & Pagination;
+    /**
+     * 
+     * @type {Jsonapi}
+     * @memberof InlineResponse2016
+     */
+    jsonapi?: Jsonapi;
+}
+/**
+ * 
+ * @export
+ * @interface InlineResponse2017
+ */
+export interface InlineResponse2017 {
+    /**
+     * 
+     * @type {PasswordResetConfirm}
+     * @memberof InlineResponse2017
+     */
+    data: PasswordResetConfirm;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse2017
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse2017
+     */
+    links?: any & Pagination;
+    /**
+     * 
+     * @type {Jsonapi}
+     * @memberof InlineResponse2017
+     */
+    jsonapi?: Jsonapi;
+}
+/**
+ * 
+ * @export
+ * @interface InlineResponse2018
+ */
+export interface InlineResponse2018 {
+    /**
+     * 
+     * @type {UsernameResetConfirm}
+     * @memberof InlineResponse2018
+     */
+    data: UsernameResetConfirm;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse2018
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse2018
+     */
+    links?: any & Pagination;
+    /**
+     * 
+     * @type {Jsonapi}
+     * @memberof InlineResponse2018
+     */
+    jsonapi?: Jsonapi;
+}
+/**
+ * 
+ * @export
+ * @interface InlineResponse2019
+ */
+export interface InlineResponse2019 {
+    /**
+     * 
+     * @type {SetPassword}
+     * @memberof InlineResponse2019
+     */
+    data: SetPassword;
+    /**
+     * 
+     * @type {Set<Resource>}
+     * @memberof InlineResponse2019
+     */
+    included?: Set<Resource>;
+    /**
+     * Link members related to primary data
+     * @type {any & Pagination}
+     * @memberof InlineResponse2019
+     */
+    links?: any & Pagination;
+    /**
+     * 
+     * @type {Jsonapi}
+     * @memberof InlineResponse2019
      */
     jsonapi?: Jsonapi;
 }
@@ -1095,6 +2056,37 @@ export interface Pagination {
      * @memberof Pagination
      */
     next?: string | number;
+}
+/**
+ * 
+ * @export
+ * @interface PasswordResetConfirm
+ */
+export interface PasswordResetConfirm {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof PasswordResetConfirm
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof PasswordResetConfirm
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof PasswordResetConfirm
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthUsersResetPasswordConfirmDataAttributes}
+     * @memberof PasswordResetConfirm
+     */
+    attributes?: AuthUsersResetPasswordConfirmDataAttributes;
 }
 /**
  * singular item being [created](https://jsonapi.org/format/#crud-creating). `id` is optional and may be ignored if supplied and created by the system.
@@ -1341,6 +2333,99 @@ export interface Resource {
      * @memberof Resource
      */
     meta?: { [key: string]: object; };
+}
+/**
+ * 
+ * @export
+ * @interface SendEmailReset
+ */
+export interface SendEmailReset {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof SendEmailReset
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof SendEmailReset
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof SendEmailReset
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthUsersResendActivationDataAttributes}
+     * @memberof SendEmailReset
+     */
+    attributes?: AuthUsersResendActivationDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface SetPassword
+ */
+export interface SetPassword {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof SetPassword
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof SetPassword
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof SetPassword
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthUsersSetPasswordDataAttributes}
+     * @memberof SetPassword
+     */
+    attributes?: AuthUsersSetPasswordDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface SetUsername
+ */
+export interface SetUsername {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof SetUsername
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof SetUsername
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof SetUsername
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthUsersSetUsernameDataAttributes}
+     * @memberof SetUsername
+     */
+    attributes?: AuthUsersSetUsernameDataAttributes;
 }
 /**
  * 
@@ -1648,6 +2733,1503 @@ export interface TokenRefreshAttributes {
      */
     access?: string;
 }
+/**
+ * 
+ * @export
+ * @interface TokenVerify
+ */
+export interface TokenVerify {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof TokenVerify
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof TokenVerify
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof TokenVerify
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthJwtVerifyDataAttributes}
+     * @memberof TokenVerify
+     */
+    attributes?: AuthJwtVerifyDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface User
+ */
+export interface User {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof User
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof User
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof User
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {UserAttributes}
+     * @memberof User
+     */
+    attributes?: UserAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface UserAttributes
+ */
+export interface UserAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserAttributes
+     */
+    email?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UserAttributes
+     */
+    id?: number;
+    /**
+     * Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
+     * @type {string}
+     * @memberof UserAttributes
+     */
+    username?: string;
+}
+/**
+ * 
+ * @export
+ * @interface UserCreate
+ */
+export interface UserCreate {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof UserCreate
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof UserCreate
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof UserCreate
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {UserCreateAttributes}
+     * @memberof UserCreate
+     */
+    attributes?: UserCreateAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface UserCreateAttributes
+ */
+export interface UserCreateAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof UserCreateAttributes
+     */
+    email?: string;
+    /**
+     * Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
+     * @type {string}
+     * @memberof UserCreateAttributes
+     */
+    username: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UserCreateAttributes
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UserCreateAttributes
+     */
+    password: string;
+}
+/**
+ * 
+ * @export
+ * @interface UsernameResetConfirm
+ */
+export interface UsernameResetConfirm {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof UsernameResetConfirm
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof UsernameResetConfirm
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof UsernameResetConfirm
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {AuthUsersResetUsernameConfirmDataAttributes}
+     * @memberof UsernameResetConfirm
+     */
+    attributes?: AuthUsersResetUsernameConfirmDataAttributes;
+}
+
+/**
+ * AuthApi - axios parameter creator
+ * @export
+ */
+export const AuthApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {InlineObject11} [inlineObject11] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        activationAuthUsersActivation: async (inlineObject11?: InlineObject11, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/users/activation/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject11, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
+         * @param {InlineObject19} [inlineObject19] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAuthJwtCreate: async (inlineObject19?: InlineObject19, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/jwt/create/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject19, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
+         * @param {InlineObject20} [inlineObject20] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAuthJwtRefresh: async (inlineObject20?: InlineObject20, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/jwt/refresh/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject20, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Takes a token and indicates if it is valid.  This view provides no information about a token\'s fitness for a particular use.
+         * @param {InlineObject21} [inlineObject21] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAuthJwtVerify: async (inlineObject21?: InlineObject21, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/jwt/verify/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject21, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {InlineObject8} [inlineObject8] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAuthUsers: async (inlineObject8?: InlineObject8, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/users/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject8, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this user.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyAuthUsersId: async (id: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('destroyAuthUsersId', 'id', id)
+            const localVarPath = `/auth/users/{id}/`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyAuthUsersMe: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/users/me/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {number} [pageNumber] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listAuthUsers: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/users/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (include !== undefined) {
+                localVarQueryParameter['include'] = include;
+            }
+
+            if (fields !== undefined) {
+                localVarQueryParameter['fields'] = fields;
+            }
+
+            if (pageNumber !== undefined) {
+                localVarQueryParameter['page[number]'] = pageNumber;
+            }
+
+            if (pageSize !== undefined) {
+                localVarQueryParameter['page[size]'] = pageSize;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (filterSearch !== undefined) {
+                localVarQueryParameter['filter[search]'] = filterSearch;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this user.
+         * @param {InlineObject10} [inlineObject10] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        partialUpdateAuthUsersId: async (id: string, inlineObject10?: InlineObject10, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('partialUpdateAuthUsersId', 'id', id)
+            const localVarPath = `/auth/users/{id}/`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject10, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {InlineObject9} [inlineObject9] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        partialUpdateAuthUsersMe: async (inlineObject9?: InlineObject9, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/users/me/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject9, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {InlineObject12} [inlineObject12] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resendActivationAuthUsersResendActivation: async (inlineObject12?: InlineObject12, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/users/resend_activation/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject12, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {InlineObject13} [inlineObject13] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resetPasswordAuthUsersResetPassword: async (inlineObject13?: InlineObject13, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/users/reset_password/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject13, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {InlineObject14} [inlineObject14] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resetPasswordConfirmAuthUsersResetPasswordConfirm: async (inlineObject14?: InlineObject14, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/users/reset_password_confirm/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject14, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {InlineObject15} [inlineObject15] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resetUsernameAuthUsersResetUsername: async (inlineObject15?: InlineObject15, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/users/reset_username/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject15, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {InlineObject16} [inlineObject16] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resetUsernameConfirmAuthUsersResetUsernameConfirm: async (inlineObject16?: InlineObject16, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/users/reset_username_confirm/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject16, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this user.
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        retrieveAuthUsersId: async (id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'id' is not null or undefined
+            assertParamExists('retrieveAuthUsersId', 'id', id)
+            const localVarPath = `/auth/users/{id}/`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (include !== undefined) {
+                localVarQueryParameter['include'] = include;
+            }
+
+            if (fields !== undefined) {
+                localVarQueryParameter['fields'] = fields;
+            }
+
+            if (sort !== undefined) {
+                localVarQueryParameter['sort'] = sort;
+            }
+
+            if (filterSearch !== undefined) {
+                localVarQueryParameter['filter[search]'] = filterSearch;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        retrieveAuthUsersMe: async (include?: string, fields?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/users/me/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (include !== undefined) {
+                localVarQueryParameter['include'] = include;
+            }
+
+            if (fields !== undefined) {
+                localVarQueryParameter['fields'] = fields;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {InlineObject17} [inlineObject17] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        setPasswordAuthUsersSetPassword: async (inlineObject17?: InlineObject17, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/users/set_password/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject17, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {InlineObject18} [inlineObject18] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        setUsernameAuthUsersSetUsername: async (inlineObject18?: InlineObject18, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/auth/users/set_username/`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/vnd.api+json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(inlineObject18, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AuthApi - functional programming interface
+ * @export
+ */
+export const AuthApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = AuthApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {InlineObject11} [inlineObject11] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async activationAuthUsersActivation(inlineObject11?: InlineObject11, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.activationAuthUsersActivation(inlineObject11, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
+         * @param {InlineObject19} [inlineObject19] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createAuthJwtCreate(inlineObject19?: InlineObject19, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2012>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createAuthJwtCreate(inlineObject19, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
+         * @param {InlineObject20} [inlineObject20] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createAuthJwtRefresh(inlineObject20?: InlineObject20, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2013>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createAuthJwtRefresh(inlineObject20, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * Takes a token and indicates if it is valid.  This view provides no information about a token\'s fitness for a particular use.
+         * @param {InlineObject21} [inlineObject21] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createAuthJwtVerify(inlineObject21?: InlineObject21, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20111>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createAuthJwtVerify(inlineObject21, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {InlineObject8} [inlineObject8] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async createAuthUsers(inlineObject8?: InlineObject8, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2014>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createAuthUsers(inlineObject8, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this user.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async destroyAuthUsersId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.destroyAuthUsersId(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async destroyAuthUsersMe(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.destroyAuthUsersMe(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {number} [pageNumber] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async listAuthUsers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2006>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listAuthUsers(include, fields, pageNumber, pageSize, sort, filterSearch, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this user.
+         * @param {InlineObject10} [inlineObject10] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async partialUpdateAuthUsersId(id: string, inlineObject10?: InlineObject10, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateAuthUsersId(id, inlineObject10, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {InlineObject9} [inlineObject9] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async partialUpdateAuthUsersMe(inlineObject9?: InlineObject9, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateAuthUsersMe(inlineObject9, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {InlineObject12} [inlineObject12] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async resendActivationAuthUsersResendActivation(inlineObject12?: InlineObject12, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.resendActivationAuthUsersResendActivation(inlineObject12, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {InlineObject13} [inlineObject13] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async resetPasswordAuthUsersResetPassword(inlineObject13?: InlineObject13, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.resetPasswordAuthUsersResetPassword(inlineObject13, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {InlineObject14} [inlineObject14] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async resetPasswordConfirmAuthUsersResetPasswordConfirm(inlineObject14?: InlineObject14, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2017>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.resetPasswordConfirmAuthUsersResetPasswordConfirm(inlineObject14, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {InlineObject15} [inlineObject15] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async resetUsernameAuthUsersResetUsername(inlineObject15?: InlineObject15, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.resetUsernameAuthUsersResetUsername(inlineObject15, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {InlineObject16} [inlineObject16] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async resetUsernameConfirmAuthUsersResetUsernameConfirm(inlineObject16?: InlineObject16, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2018>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.resetUsernameConfirmAuthUsersResetUsernameConfirm(inlineObject16, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this user.
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async retrieveAuthUsersId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveAuthUsersId(id, include, fields, sort, filterSearch, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async retrieveAuthUsersMe(include?: string, fields?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveAuthUsersMe(include, fields, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {InlineObject17} [inlineObject17] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async setPasswordAuthUsersSetPassword(inlineObject17?: InlineObject17, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2019>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.setPasswordAuthUsersSetPassword(inlineObject17, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {InlineObject18} [inlineObject18] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async setUsernameAuthUsersSetUsername(inlineObject18?: InlineObject18, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20110>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.setUsernameAuthUsersSetUsername(inlineObject18, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * AuthApi - factory interface
+ * @export
+ */
+export const AuthApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = AuthApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {InlineObject11} [inlineObject11] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        activationAuthUsersActivation(inlineObject11?: InlineObject11, options?: any): AxiosPromise<InlineResponse2015> {
+            return localVarFp.activationAuthUsersActivation(inlineObject11, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
+         * @param {InlineObject19} [inlineObject19] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAuthJwtCreate(inlineObject19?: InlineObject19, options?: any): AxiosPromise<InlineResponse2012> {
+            return localVarFp.createAuthJwtCreate(inlineObject19, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
+         * @param {InlineObject20} [inlineObject20] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAuthJwtRefresh(inlineObject20?: InlineObject20, options?: any): AxiosPromise<InlineResponse2013> {
+            return localVarFp.createAuthJwtRefresh(inlineObject20, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Takes a token and indicates if it is valid.  This view provides no information about a token\'s fitness for a particular use.
+         * @param {InlineObject21} [inlineObject21] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAuthJwtVerify(inlineObject21?: InlineObject21, options?: any): AxiosPromise<InlineResponse20111> {
+            return localVarFp.createAuthJwtVerify(inlineObject21, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {InlineObject8} [inlineObject8] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        createAuthUsers(inlineObject8?: InlineObject8, options?: any): AxiosPromise<InlineResponse2014> {
+            return localVarFp.createAuthUsers(inlineObject8, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this user.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyAuthUsersId(id: string, options?: any): AxiosPromise<Onlymeta> {
+            return localVarFp.destroyAuthUsersId(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        destroyAuthUsersMe(options?: any): AxiosPromise<Onlymeta> {
+            return localVarFp.destroyAuthUsersMe(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {number} [pageNumber] A page number within the paginated result set.
+         * @param {number} [pageSize] Number of results to return per page.
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        listAuthUsers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2006> {
+            return localVarFp.listAuthUsers(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this user.
+         * @param {InlineObject10} [inlineObject10] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        partialUpdateAuthUsersId(id: string, inlineObject10?: InlineObject10, options?: any): AxiosPromise<InlineResponse2007> {
+            return localVarFp.partialUpdateAuthUsersId(id, inlineObject10, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {InlineObject9} [inlineObject9] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        partialUpdateAuthUsersMe(inlineObject9?: InlineObject9, options?: any): AxiosPromise<InlineResponse2007> {
+            return localVarFp.partialUpdateAuthUsersMe(inlineObject9, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {InlineObject12} [inlineObject12] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resendActivationAuthUsersResendActivation(inlineObject12?: InlineObject12, options?: any): AxiosPromise<InlineResponse2016> {
+            return localVarFp.resendActivationAuthUsersResendActivation(inlineObject12, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {InlineObject13} [inlineObject13] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resetPasswordAuthUsersResetPassword(inlineObject13?: InlineObject13, options?: any): AxiosPromise<InlineResponse2016> {
+            return localVarFp.resetPasswordAuthUsersResetPassword(inlineObject13, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {InlineObject14} [inlineObject14] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resetPasswordConfirmAuthUsersResetPasswordConfirm(inlineObject14?: InlineObject14, options?: any): AxiosPromise<InlineResponse2017> {
+            return localVarFp.resetPasswordConfirmAuthUsersResetPasswordConfirm(inlineObject14, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {InlineObject15} [inlineObject15] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resetUsernameAuthUsersResetUsername(inlineObject15?: InlineObject15, options?: any): AxiosPromise<InlineResponse2016> {
+            return localVarFp.resetUsernameAuthUsersResetUsername(inlineObject15, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {InlineObject16} [inlineObject16] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        resetUsernameConfirmAuthUsersResetUsernameConfirm(inlineObject16?: InlineObject16, options?: any): AxiosPromise<InlineResponse2018> {
+            return localVarFp.resetUsernameConfirmAuthUsersResetUsernameConfirm(inlineObject16, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} id A unique integer value identifying this user.
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {string} [sort] Which field to use when ordering the results.
+         * @param {string} [filterSearch] A search term.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        retrieveAuthUsersId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2007> {
+            return localVarFp.retrieveAuthUsersId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+         * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        retrieveAuthUsersMe(include?: string, fields?: string, options?: any): AxiosPromise<InlineResponse2007> {
+            return localVarFp.retrieveAuthUsersMe(include, fields, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {InlineObject17} [inlineObject17] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        setPasswordAuthUsersSetPassword(inlineObject17?: InlineObject17, options?: any): AxiosPromise<InlineResponse2019> {
+            return localVarFp.setPasswordAuthUsersSetPassword(inlineObject17, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {InlineObject18} [inlineObject18] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        setUsernameAuthUsersSetUsername(inlineObject18?: InlineObject18, options?: any): AxiosPromise<InlineResponse20110> {
+            return localVarFp.setUsernameAuthUsersSetUsername(inlineObject18, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * AuthApi - object-oriented interface
+ * @export
+ * @class AuthApi
+ * @extends {BaseAPI}
+ */
+export class AuthApi extends BaseAPI {
+    /**
+     * 
+     * @param {InlineObject11} [inlineObject11] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public activationAuthUsersActivation(inlineObject11?: InlineObject11, options?: any) {
+        return AuthApiFp(this.configuration).activationAuthUsersActivation(inlineObject11, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
+     * @param {InlineObject19} [inlineObject19] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public createAuthJwtCreate(inlineObject19?: InlineObject19, options?: any) {
+        return AuthApiFp(this.configuration).createAuthJwtCreate(inlineObject19, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
+     * @param {InlineObject20} [inlineObject20] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public createAuthJwtRefresh(inlineObject20?: InlineObject20, options?: any) {
+        return AuthApiFp(this.configuration).createAuthJwtRefresh(inlineObject20, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Takes a token and indicates if it is valid.  This view provides no information about a token\'s fitness for a particular use.
+     * @param {InlineObject21} [inlineObject21] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public createAuthJwtVerify(inlineObject21?: InlineObject21, options?: any) {
+        return AuthApiFp(this.configuration).createAuthJwtVerify(inlineObject21, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {InlineObject8} [inlineObject8] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public createAuthUsers(inlineObject8?: InlineObject8, options?: any) {
+        return AuthApiFp(this.configuration).createAuthUsers(inlineObject8, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id A unique integer value identifying this user.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public destroyAuthUsersId(id: string, options?: any) {
+        return AuthApiFp(this.configuration).destroyAuthUsersId(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public destroyAuthUsersMe(options?: any) {
+        return AuthApiFp(this.configuration).destroyAuthUsersMe(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+     * @param {number} [pageNumber] A page number within the paginated result set.
+     * @param {number} [pageSize] Number of results to return per page.
+     * @param {string} [sort] Which field to use when ordering the results.
+     * @param {string} [filterSearch] A search term.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public listAuthUsers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
+        return AuthApiFp(this.configuration).listAuthUsers(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id A unique integer value identifying this user.
+     * @param {InlineObject10} [inlineObject10] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public partialUpdateAuthUsersId(id: string, inlineObject10?: InlineObject10, options?: any) {
+        return AuthApiFp(this.configuration).partialUpdateAuthUsersId(id, inlineObject10, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {InlineObject9} [inlineObject9] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public partialUpdateAuthUsersMe(inlineObject9?: InlineObject9, options?: any) {
+        return AuthApiFp(this.configuration).partialUpdateAuthUsersMe(inlineObject9, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {InlineObject12} [inlineObject12] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public resendActivationAuthUsersResendActivation(inlineObject12?: InlineObject12, options?: any) {
+        return AuthApiFp(this.configuration).resendActivationAuthUsersResendActivation(inlineObject12, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {InlineObject13} [inlineObject13] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public resetPasswordAuthUsersResetPassword(inlineObject13?: InlineObject13, options?: any) {
+        return AuthApiFp(this.configuration).resetPasswordAuthUsersResetPassword(inlineObject13, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {InlineObject14} [inlineObject14] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public resetPasswordConfirmAuthUsersResetPasswordConfirm(inlineObject14?: InlineObject14, options?: any) {
+        return AuthApiFp(this.configuration).resetPasswordConfirmAuthUsersResetPasswordConfirm(inlineObject14, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {InlineObject15} [inlineObject15] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public resetUsernameAuthUsersResetUsername(inlineObject15?: InlineObject15, options?: any) {
+        return AuthApiFp(this.configuration).resetUsernameAuthUsersResetUsername(inlineObject15, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {InlineObject16} [inlineObject16] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public resetUsernameConfirmAuthUsersResetUsernameConfirm(inlineObject16?: InlineObject16, options?: any) {
+        return AuthApiFp(this.configuration).resetUsernameConfirmAuthUsersResetUsernameConfirm(inlineObject16, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} id A unique integer value identifying this user.
+     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+     * @param {string} [sort] Which field to use when ordering the results.
+     * @param {string} [filterSearch] A search term.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public retrieveAuthUsersId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
+        return AuthApiFp(this.configuration).retrieveAuthUsersId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [include] [list of included related resources](https://jsonapi.org/format/#fetching-includes)
+     * @param {string} [fields] sparse fieldsets: &#x60;fields[TYPE]&#x3D;field1,field2,...&#x60;
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public retrieveAuthUsersMe(include?: string, fields?: string, options?: any) {
+        return AuthApiFp(this.configuration).retrieveAuthUsersMe(include, fields, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {InlineObject17} [inlineObject17] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public setPasswordAuthUsersSetPassword(inlineObject17?: InlineObject17, options?: any) {
+        return AuthApiFp(this.configuration).setPasswordAuthUsersSetPassword(inlineObject17, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {InlineObject18} [inlineObject18] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof AuthApi
+     */
+    public setUsernameAuthUsersSetUsername(inlineObject18?: InlineObject18, options?: any) {
+        return AuthApiFp(this.configuration).setUsernameAuthUsersSetUsername(inlineObject18, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
 
 /**
  * StarrydataApi - axios parameter creator
