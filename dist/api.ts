@@ -47,10 +47,448 @@ export interface Activation {
     links?: ApiTagsDataLinks;
     /**
      * 
-     * @type {AuthUsersActivationDataAttributes}
+     * @type {ApiAuthUsersActivationDataAttributes}
      * @memberof Activation
      */
-    attributes?: AuthUsersActivationDataAttributes;
+    attributes?: ApiAuthUsersActivationDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthJwtVerifyData
+ */
+export interface ApiAuthJwtVerifyData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthJwtVerifyData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthJwtVerifyData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof ApiAuthJwtVerifyData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {ApiAuthJwtVerifyDataAttributes}
+     * @memberof ApiAuthJwtVerifyData
+     */
+    attributes?: ApiAuthJwtVerifyDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthJwtVerifyDataAttributes
+ */
+export interface ApiAuthJwtVerifyDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiAuthJwtVerifyDataAttributes
+     */
+    token: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersActivationData
+ */
+export interface ApiAuthUsersActivationData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersActivationData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersActivationData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof ApiAuthUsersActivationData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {ApiAuthUsersActivationDataAttributes}
+     * @memberof ApiAuthUsersActivationData
+     */
+    attributes?: ApiAuthUsersActivationDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersActivationDataAttributes
+ */
+export interface ApiAuthUsersActivationDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiAuthUsersActivationDataAttributes
+     */
+    uid: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiAuthUsersActivationDataAttributes
+     */
+    token: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersData
+ */
+export interface ApiAuthUsersData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof ApiAuthUsersData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {ApiAuthUsersDataAttributes}
+     * @memberof ApiAuthUsersData
+     */
+    attributes?: ApiAuthUsersDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersDataAttributes
+ */
+export interface ApiAuthUsersDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiAuthUsersDataAttributes
+     */
+    email?: string;
+    /**
+     * Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
+     * @type {string}
+     * @memberof ApiAuthUsersDataAttributes
+     */
+    username: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiAuthUsersDataAttributes
+     */
+    password: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersMeData
+ */
+export interface ApiAuthUsersMeData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersMeData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersMeData
+     */
+    id: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof ApiAuthUsersMeData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {ApiAuthUsersMeDataAttributes}
+     * @memberof ApiAuthUsersMeData
+     */
+    attributes?: ApiAuthUsersMeDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersMeDataAttributes
+ */
+export interface ApiAuthUsersMeDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiAuthUsersMeDataAttributes
+     */
+    email?: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersResendActivationData
+ */
+export interface ApiAuthUsersResendActivationData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersResendActivationData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersResendActivationData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof ApiAuthUsersResendActivationData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {ApiAuthUsersResendActivationDataAttributes}
+     * @memberof ApiAuthUsersResendActivationData
+     */
+    attributes?: ApiAuthUsersResendActivationDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersResendActivationDataAttributes
+ */
+export interface ApiAuthUsersResendActivationDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiAuthUsersResendActivationDataAttributes
+     */
+    email: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersResetPasswordConfirmData
+ */
+export interface ApiAuthUsersResetPasswordConfirmData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersResetPasswordConfirmData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersResetPasswordConfirmData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof ApiAuthUsersResetPasswordConfirmData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {ApiAuthUsersResetPasswordConfirmDataAttributes}
+     * @memberof ApiAuthUsersResetPasswordConfirmData
+     */
+    attributes?: ApiAuthUsersResetPasswordConfirmDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersResetPasswordConfirmDataAttributes
+ */
+export interface ApiAuthUsersResetPasswordConfirmDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiAuthUsersResetPasswordConfirmDataAttributes
+     */
+    uid: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiAuthUsersResetPasswordConfirmDataAttributes
+     */
+    token: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiAuthUsersResetPasswordConfirmDataAttributes
+     */
+    new_password: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersResetUsernameConfirmData
+ */
+export interface ApiAuthUsersResetUsernameConfirmData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersResetUsernameConfirmData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersResetUsernameConfirmData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof ApiAuthUsersResetUsernameConfirmData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {ApiAuthUsersResetUsernameConfirmDataAttributes}
+     * @memberof ApiAuthUsersResetUsernameConfirmData
+     */
+    attributes?: ApiAuthUsersResetUsernameConfirmDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersResetUsernameConfirmDataAttributes
+ */
+export interface ApiAuthUsersResetUsernameConfirmDataAttributes {
+    /**
+     * Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
+     * @type {string}
+     * @memberof ApiAuthUsersResetUsernameConfirmDataAttributes
+     */
+    new_username: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersSetPasswordData
+ */
+export interface ApiAuthUsersSetPasswordData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersSetPasswordData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersSetPasswordData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof ApiAuthUsersSetPasswordData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {ApiAuthUsersSetPasswordDataAttributes}
+     * @memberof ApiAuthUsersSetPasswordData
+     */
+    attributes?: ApiAuthUsersSetPasswordDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersSetPasswordDataAttributes
+ */
+export interface ApiAuthUsersSetPasswordDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiAuthUsersSetPasswordDataAttributes
+     */
+    new_password: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiAuthUsersSetPasswordDataAttributes
+     */
+    current_password: string;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersSetUsernameData
+ */
+export interface ApiAuthUsersSetUsernameData {
+    /**
+     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersSetUsernameData
+     */
+    type: string;
+    /**
+     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
+     * @type {string}
+     * @memberof ApiAuthUsersSetUsernameData
+     */
+    id?: string;
+    /**
+     * 
+     * @type {ApiTagsDataLinks}
+     * @memberof ApiAuthUsersSetUsernameData
+     */
+    links?: ApiTagsDataLinks;
+    /**
+     * 
+     * @type {ApiAuthUsersSetUsernameDataAttributes}
+     * @memberof ApiAuthUsersSetUsernameData
+     */
+    attributes?: ApiAuthUsersSetUsernameDataAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface ApiAuthUsersSetUsernameDataAttributes
+ */
+export interface ApiAuthUsersSetUsernameDataAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiAuthUsersSetUsernameDataAttributes
+     */
+    current_password: string;
+    /**
+     * Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
+     * @type {string}
+     * @memberof ApiAuthUsersSetUsernameDataAttributes
+     */
+    new_username: string;
 }
 /**
  * 
@@ -454,444 +892,6 @@ export interface ApiTokenRefreshDataAttributes {
     refresh: string;
 }
 /**
- * 
- * @export
- * @interface AuthJwtVerifyData
- */
-export interface AuthJwtVerifyData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthJwtVerifyData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthJwtVerifyData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof AuthJwtVerifyData
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {AuthJwtVerifyDataAttributes}
-     * @memberof AuthJwtVerifyData
-     */
-    attributes?: AuthJwtVerifyDataAttributes;
-}
-/**
- * 
- * @export
- * @interface AuthJwtVerifyDataAttributes
- */
-export interface AuthJwtVerifyDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthJwtVerifyDataAttributes
-     */
-    token: string;
-}
-/**
- * 
- * @export
- * @interface AuthUsersActivationData
- */
-export interface AuthUsersActivationData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersActivationData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersActivationData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof AuthUsersActivationData
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {AuthUsersActivationDataAttributes}
-     * @memberof AuthUsersActivationData
-     */
-    attributes?: AuthUsersActivationDataAttributes;
-}
-/**
- * 
- * @export
- * @interface AuthUsersActivationDataAttributes
- */
-export interface AuthUsersActivationDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthUsersActivationDataAttributes
-     */
-    uid: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthUsersActivationDataAttributes
-     */
-    token: string;
-}
-/**
- * 
- * @export
- * @interface AuthUsersData
- */
-export interface AuthUsersData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof AuthUsersData
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {AuthUsersDataAttributes}
-     * @memberof AuthUsersData
-     */
-    attributes?: AuthUsersDataAttributes;
-}
-/**
- * 
- * @export
- * @interface AuthUsersDataAttributes
- */
-export interface AuthUsersDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthUsersDataAttributes
-     */
-    email?: string;
-    /**
-     * Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
-     * @type {string}
-     * @memberof AuthUsersDataAttributes
-     */
-    username: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthUsersDataAttributes
-     */
-    password: string;
-}
-/**
- * 
- * @export
- * @interface AuthUsersMeData
- */
-export interface AuthUsersMeData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersMeData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersMeData
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof AuthUsersMeData
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {AuthUsersMeDataAttributes}
-     * @memberof AuthUsersMeData
-     */
-    attributes?: AuthUsersMeDataAttributes;
-}
-/**
- * 
- * @export
- * @interface AuthUsersMeDataAttributes
- */
-export interface AuthUsersMeDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthUsersMeDataAttributes
-     */
-    email?: string;
-}
-/**
- * 
- * @export
- * @interface AuthUsersResendActivationData
- */
-export interface AuthUsersResendActivationData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersResendActivationData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersResendActivationData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof AuthUsersResendActivationData
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {AuthUsersResendActivationDataAttributes}
-     * @memberof AuthUsersResendActivationData
-     */
-    attributes?: AuthUsersResendActivationDataAttributes;
-}
-/**
- * 
- * @export
- * @interface AuthUsersResendActivationDataAttributes
- */
-export interface AuthUsersResendActivationDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthUsersResendActivationDataAttributes
-     */
-    email: string;
-}
-/**
- * 
- * @export
- * @interface AuthUsersResetPasswordConfirmData
- */
-export interface AuthUsersResetPasswordConfirmData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersResetPasswordConfirmData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersResetPasswordConfirmData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof AuthUsersResetPasswordConfirmData
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {AuthUsersResetPasswordConfirmDataAttributes}
-     * @memberof AuthUsersResetPasswordConfirmData
-     */
-    attributes?: AuthUsersResetPasswordConfirmDataAttributes;
-}
-/**
- * 
- * @export
- * @interface AuthUsersResetPasswordConfirmDataAttributes
- */
-export interface AuthUsersResetPasswordConfirmDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthUsersResetPasswordConfirmDataAttributes
-     */
-    uid: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthUsersResetPasswordConfirmDataAttributes
-     */
-    token: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthUsersResetPasswordConfirmDataAttributes
-     */
-    new_password: string;
-}
-/**
- * 
- * @export
- * @interface AuthUsersResetUsernameConfirmData
- */
-export interface AuthUsersResetUsernameConfirmData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersResetUsernameConfirmData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersResetUsernameConfirmData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof AuthUsersResetUsernameConfirmData
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {AuthUsersResetUsernameConfirmDataAttributes}
-     * @memberof AuthUsersResetUsernameConfirmData
-     */
-    attributes?: AuthUsersResetUsernameConfirmDataAttributes;
-}
-/**
- * 
- * @export
- * @interface AuthUsersResetUsernameConfirmDataAttributes
- */
-export interface AuthUsersResetUsernameConfirmDataAttributes {
-    /**
-     * Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
-     * @type {string}
-     * @memberof AuthUsersResetUsernameConfirmDataAttributes
-     */
-    new_username: string;
-}
-/**
- * 
- * @export
- * @interface AuthUsersSetPasswordData
- */
-export interface AuthUsersSetPasswordData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersSetPasswordData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersSetPasswordData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof AuthUsersSetPasswordData
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {AuthUsersSetPasswordDataAttributes}
-     * @memberof AuthUsersSetPasswordData
-     */
-    attributes?: AuthUsersSetPasswordDataAttributes;
-}
-/**
- * 
- * @export
- * @interface AuthUsersSetPasswordDataAttributes
- */
-export interface AuthUsersSetPasswordDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthUsersSetPasswordDataAttributes
-     */
-    new_password: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthUsersSetPasswordDataAttributes
-     */
-    current_password: string;
-}
-/**
- * 
- * @export
- * @interface AuthUsersSetUsernameData
- */
-export interface AuthUsersSetUsernameData {
-    /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersSetUsernameData
-     */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof AuthUsersSetUsernameData
-     */
-    id?: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof AuthUsersSetUsernameData
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {AuthUsersSetUsernameDataAttributes}
-     * @memberof AuthUsersSetUsernameData
-     */
-    attributes?: AuthUsersSetUsernameDataAttributes;
-}
-/**
- * 
- * @export
- * @interface AuthUsersSetUsernameDataAttributes
- */
-export interface AuthUsersSetUsernameDataAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof AuthUsersSetUsernameDataAttributes
-     */
-    current_password: string;
-    /**
-     * Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
-     * @type {string}
-     * @memberof AuthUsersSetUsernameDataAttributes
-     */
-    new_username: string;
-}
-/**
  * @type Data
  * The document\'s `primary data` is a representation of the resource or collection of resources targeted by a request.
  * @export
@@ -1020,10 +1020,10 @@ export interface InlineObject1 {
 export interface InlineObject10 {
     /**
      * 
-     * @type {AuthUsersMeData}
+     * @type {ApiAuthUsersMeData}
      * @memberof InlineObject10
      */
-    data: AuthUsersMeData;
+    data: ApiAuthUsersMeData;
 }
 /**
  * 
@@ -1033,10 +1033,10 @@ export interface InlineObject10 {
 export interface InlineObject11 {
     /**
      * 
-     * @type {AuthUsersActivationData}
+     * @type {ApiAuthUsersActivationData}
      * @memberof InlineObject11
      */
-    data: AuthUsersActivationData;
+    data: ApiAuthUsersActivationData;
 }
 /**
  * 
@@ -1046,10 +1046,10 @@ export interface InlineObject11 {
 export interface InlineObject12 {
     /**
      * 
-     * @type {AuthUsersResendActivationData}
+     * @type {ApiAuthUsersResendActivationData}
      * @memberof InlineObject12
      */
-    data: AuthUsersResendActivationData;
+    data: ApiAuthUsersResendActivationData;
 }
 /**
  * 
@@ -1059,10 +1059,10 @@ export interface InlineObject12 {
 export interface InlineObject13 {
     /**
      * 
-     * @type {AuthUsersResendActivationData}
+     * @type {ApiAuthUsersResendActivationData}
      * @memberof InlineObject13
      */
-    data: AuthUsersResendActivationData;
+    data: ApiAuthUsersResendActivationData;
 }
 /**
  * 
@@ -1072,10 +1072,10 @@ export interface InlineObject13 {
 export interface InlineObject14 {
     /**
      * 
-     * @type {AuthUsersResetPasswordConfirmData}
+     * @type {ApiAuthUsersResetPasswordConfirmData}
      * @memberof InlineObject14
      */
-    data: AuthUsersResetPasswordConfirmData;
+    data: ApiAuthUsersResetPasswordConfirmData;
 }
 /**
  * 
@@ -1085,10 +1085,10 @@ export interface InlineObject14 {
 export interface InlineObject15 {
     /**
      * 
-     * @type {AuthUsersResendActivationData}
+     * @type {ApiAuthUsersResendActivationData}
      * @memberof InlineObject15
      */
-    data: AuthUsersResendActivationData;
+    data: ApiAuthUsersResendActivationData;
 }
 /**
  * 
@@ -1098,10 +1098,10 @@ export interface InlineObject15 {
 export interface InlineObject16 {
     /**
      * 
-     * @type {AuthUsersResetUsernameConfirmData}
+     * @type {ApiAuthUsersResetUsernameConfirmData}
      * @memberof InlineObject16
      */
-    data: AuthUsersResetUsernameConfirmData;
+    data: ApiAuthUsersResetUsernameConfirmData;
 }
 /**
  * 
@@ -1111,10 +1111,10 @@ export interface InlineObject16 {
 export interface InlineObject17 {
     /**
      * 
-     * @type {AuthUsersSetPasswordData}
+     * @type {ApiAuthUsersSetPasswordData}
      * @memberof InlineObject17
      */
-    data: AuthUsersSetPasswordData;
+    data: ApiAuthUsersSetPasswordData;
 }
 /**
  * 
@@ -1124,10 +1124,10 @@ export interface InlineObject17 {
 export interface InlineObject18 {
     /**
      * 
-     * @type {AuthUsersSetUsernameData}
+     * @type {ApiAuthUsersSetUsernameData}
      * @memberof InlineObject18
      */
-    data: AuthUsersSetUsernameData;
+    data: ApiAuthUsersSetUsernameData;
 }
 /**
  * 
@@ -1176,10 +1176,10 @@ export interface InlineObject20 {
 export interface InlineObject21 {
     /**
      * 
-     * @type {AuthJwtVerifyData}
+     * @type {ApiAuthJwtVerifyData}
      * @memberof InlineObject21
      */
-    data: AuthJwtVerifyData;
+    data: ApiAuthJwtVerifyData;
 }
 /**
  * 
@@ -1254,10 +1254,10 @@ export interface InlineObject7 {
 export interface InlineObject8 {
     /**
      * 
-     * @type {AuthUsersData}
+     * @type {ApiAuthUsersData}
      * @memberof InlineObject8
      */
-    data: AuthUsersData;
+    data: ApiAuthUsersData;
 }
 /**
  * 
@@ -1267,10 +1267,10 @@ export interface InlineObject8 {
 export interface InlineObject9 {
     /**
      * 
-     * @type {AuthUsersMeData}
+     * @type {ApiAuthUsersMeData}
      * @memberof InlineObject9
      */
-    data: AuthUsersMeData;
+    data: ApiAuthUsersMeData;
 }
 /**
  * 
@@ -2083,10 +2083,10 @@ export interface PasswordResetConfirm {
     links?: ApiTagsDataLinks;
     /**
      * 
-     * @type {AuthUsersResetPasswordConfirmDataAttributes}
+     * @type {ApiAuthUsersResetPasswordConfirmDataAttributes}
      * @memberof PasswordResetConfirm
      */
-    attributes?: AuthUsersResetPasswordConfirmDataAttributes;
+    attributes?: ApiAuthUsersResetPasswordConfirmDataAttributes;
 }
 /**
  * singular item being [created](https://jsonapi.org/format/#crud-creating). `id` is optional and may be ignored if supplied and created by the system.
@@ -2360,10 +2360,10 @@ export interface SendEmailReset {
     links?: ApiTagsDataLinks;
     /**
      * 
-     * @type {AuthUsersResendActivationDataAttributes}
+     * @type {ApiAuthUsersResendActivationDataAttributes}
      * @memberof SendEmailReset
      */
-    attributes?: AuthUsersResendActivationDataAttributes;
+    attributes?: ApiAuthUsersResendActivationDataAttributes;
 }
 /**
  * 
@@ -2391,10 +2391,10 @@ export interface SetPassword {
     links?: ApiTagsDataLinks;
     /**
      * 
-     * @type {AuthUsersSetPasswordDataAttributes}
+     * @type {ApiAuthUsersSetPasswordDataAttributes}
      * @memberof SetPassword
      */
-    attributes?: AuthUsersSetPasswordDataAttributes;
+    attributes?: ApiAuthUsersSetPasswordDataAttributes;
 }
 /**
  * 
@@ -2422,10 +2422,10 @@ export interface SetUsername {
     links?: ApiTagsDataLinks;
     /**
      * 
-     * @type {AuthUsersSetUsernameDataAttributes}
+     * @type {ApiAuthUsersSetUsernameDataAttributes}
      * @memberof SetUsername
      */
-    attributes?: AuthUsersSetUsernameDataAttributes;
+    attributes?: ApiAuthUsersSetUsernameDataAttributes;
 }
 /**
  * 
@@ -2759,10 +2759,10 @@ export interface TokenVerify {
     links?: ApiTagsDataLinks;
     /**
      * 
-     * @type {AuthJwtVerifyDataAttributes}
+     * @type {ApiAuthJwtVerifyDataAttributes}
      * @memberof TokenVerify
      */
-    attributes?: AuthJwtVerifyDataAttributes;
+    attributes?: ApiAuthJwtVerifyDataAttributes;
 }
 /**
  * 
@@ -2908,10 +2908,10 @@ export interface UsernameResetConfirm {
     links?: ApiTagsDataLinks;
     /**
      * 
-     * @type {AuthUsersResetUsernameConfirmDataAttributes}
+     * @type {ApiAuthUsersResetUsernameConfirmDataAttributes}
      * @memberof UsernameResetConfirm
      */
-    attributes?: AuthUsersResetUsernameConfirmDataAttributes;
+    attributes?: ApiAuthUsersResetUsernameConfirmDataAttributes;
 }
 
 /**
@@ -2926,8 +2926,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        activationAuthUsersActivation: async (inlineObject11?: InlineObject11, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/users/activation/`;
+        activationApiAuthUsersActivation: async (inlineObject11?: InlineObject11, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/users/activation/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2959,8 +2959,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAuthJwtCreate: async (inlineObject19?: InlineObject19, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/jwt/create/`;
+        createApiAuthJwtCreate: async (inlineObject19?: InlineObject19, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/jwt/create/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -2992,8 +2992,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAuthJwtRefresh: async (inlineObject20?: InlineObject20, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/jwt/refresh/`;
+        createApiAuthJwtRefresh: async (inlineObject20?: InlineObject20, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/jwt/refresh/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3025,8 +3025,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAuthJwtVerify: async (inlineObject21?: InlineObject21, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/jwt/verify/`;
+        createApiAuthJwtVerify: async (inlineObject21?: InlineObject21, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/jwt/verify/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3058,8 +3058,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAuthUsers: async (inlineObject8?: InlineObject8, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/users/`;
+        createApiAuthUsers: async (inlineObject8?: InlineObject8, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/users/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3091,10 +3091,10 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyAuthUsersId: async (id: string, options: any = {}): Promise<RequestArgs> => {
+        destroyApiAuthUsersId: async (id: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
-            assertParamExists('destroyAuthUsersId', 'id', id)
-            const localVarPath = `/auth/users/{id}/`
+            assertParamExists('destroyApiAuthUsersId', 'id', id)
+            const localVarPath = `/api/auth/users/{id}/`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -3123,8 +3123,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyAuthUsersMe: async (options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/users/me/`;
+        destroyApiAuthUsersMe: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/users/me/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3158,8 +3158,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAuthUsers: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/users/`;
+        listApiAuthUsers: async (include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/users/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3213,10 +3213,10 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateAuthUsersId: async (id: string, inlineObject10?: InlineObject10, options: any = {}): Promise<RequestArgs> => {
+        partialUpdateApiAuthUsersId: async (id: string, inlineObject10?: InlineObject10, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
-            assertParamExists('partialUpdateAuthUsersId', 'id', id)
-            const localVarPath = `/auth/users/{id}/`
+            assertParamExists('partialUpdateApiAuthUsersId', 'id', id)
+            const localVarPath = `/api/auth/users/{id}/`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -3249,8 +3249,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateAuthUsersMe: async (inlineObject9?: InlineObject9, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/users/me/`;
+        partialUpdateApiAuthUsersMe: async (inlineObject9?: InlineObject9, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/users/me/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3282,8 +3282,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resendActivationAuthUsersResendActivation: async (inlineObject12?: InlineObject12, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/users/resend_activation/`;
+        resendActivationApiAuthUsersResendActivation: async (inlineObject12?: InlineObject12, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/users/resend_activation/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3315,8 +3315,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resetPasswordAuthUsersResetPassword: async (inlineObject13?: InlineObject13, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/users/reset_password/`;
+        resetPasswordApiAuthUsersResetPassword: async (inlineObject13?: InlineObject13, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/users/reset_password/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3348,8 +3348,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resetPasswordConfirmAuthUsersResetPasswordConfirm: async (inlineObject14?: InlineObject14, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/users/reset_password_confirm/`;
+        resetPasswordConfirmApiAuthUsersResetPasswordConfirm: async (inlineObject14?: InlineObject14, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/users/reset_password_confirm/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3381,8 +3381,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resetUsernameAuthUsersResetUsername: async (inlineObject15?: InlineObject15, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/users/reset_username/`;
+        resetUsernameApiAuthUsersResetUsername: async (inlineObject15?: InlineObject15, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/users/reset_username/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3414,8 +3414,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resetUsernameConfirmAuthUsersResetUsernameConfirm: async (inlineObject16?: InlineObject16, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/users/reset_username_confirm/`;
+        resetUsernameConfirmApiAuthUsersResetUsernameConfirm: async (inlineObject16?: InlineObject16, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/users/reset_username_confirm/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3451,10 +3451,10 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveAuthUsersId: async (id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
+        retrieveApiAuthUsersId: async (id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options: any = {}): Promise<RequestArgs> => {
             // verify required parameter 'id' is not null or undefined
-            assertParamExists('retrieveAuthUsersId', 'id', id)
-            const localVarPath = `/auth/users/{id}/`
+            assertParamExists('retrieveApiAuthUsersId', 'id', id)
+            const localVarPath = `/api/auth/users/{id}/`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -3501,8 +3501,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveAuthUsersMe: async (include?: string, fields?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/users/me/`;
+        retrieveApiAuthUsersMe: async (include?: string, fields?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/users/me/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3539,8 +3539,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        setPasswordAuthUsersSetPassword: async (inlineObject17?: InlineObject17, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/users/set_password/`;
+        setPasswordApiAuthUsersSetPassword: async (inlineObject17?: InlineObject17, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/users/set_password/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3572,8 +3572,8 @@ export const AuthApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        setUsernameAuthUsersSetUsername: async (inlineObject18?: InlineObject18, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/auth/users/set_username/`;
+        setUsernameApiAuthUsersSetUsername: async (inlineObject18?: InlineObject18, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/auth/users/set_username/`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -3615,8 +3615,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async activationAuthUsersActivation(inlineObject11?: InlineObject11, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.activationAuthUsersActivation(inlineObject11, options);
+        async activationApiAuthUsersActivation(inlineObject11?: InlineObject11, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2015>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.activationApiAuthUsersActivation(inlineObject11, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3625,8 +3625,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createAuthJwtCreate(inlineObject19?: InlineObject19, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2012>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createAuthJwtCreate(inlineObject19, options);
+        async createApiAuthJwtCreate(inlineObject19?: InlineObject19, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2012>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiAuthJwtCreate(inlineObject19, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3635,8 +3635,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createAuthJwtRefresh(inlineObject20?: InlineObject20, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2013>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createAuthJwtRefresh(inlineObject20, options);
+        async createApiAuthJwtRefresh(inlineObject20?: InlineObject20, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2013>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiAuthJwtRefresh(inlineObject20, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3645,8 +3645,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createAuthJwtVerify(inlineObject21?: InlineObject21, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20111>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createAuthJwtVerify(inlineObject21, options);
+        async createApiAuthJwtVerify(inlineObject21?: InlineObject21, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20111>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiAuthJwtVerify(inlineObject21, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3655,8 +3655,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async createAuthUsers(inlineObject8?: InlineObject8, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2014>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.createAuthUsers(inlineObject8, options);
+        async createApiAuthUsers(inlineObject8?: InlineObject8, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2014>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.createApiAuthUsers(inlineObject8, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3665,8 +3665,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async destroyAuthUsersId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.destroyAuthUsersId(id, options);
+        async destroyApiAuthUsersId(id: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.destroyApiAuthUsersId(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3674,8 +3674,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async destroyAuthUsersMe(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.destroyAuthUsersMe(options);
+        async destroyApiAuthUsersMe(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Onlymeta>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.destroyApiAuthUsersMe(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3689,8 +3689,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listAuthUsers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2006>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.listAuthUsers(include, fields, pageNumber, pageSize, sort, filterSearch, options);
+        async listApiAuthUsers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2006>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.listApiAuthUsers(include, fields, pageNumber, pageSize, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3700,8 +3700,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async partialUpdateAuthUsersId(id: string, inlineObject10?: InlineObject10, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateAuthUsersId(id, inlineObject10, options);
+        async partialUpdateApiAuthUsersId(id: string, inlineObject10?: InlineObject10, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiAuthUsersId(id, inlineObject10, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3710,8 +3710,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async partialUpdateAuthUsersMe(inlineObject9?: InlineObject9, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateAuthUsersMe(inlineObject9, options);
+        async partialUpdateApiAuthUsersMe(inlineObject9?: InlineObject9, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.partialUpdateApiAuthUsersMe(inlineObject9, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3720,8 +3720,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async resendActivationAuthUsersResendActivation(inlineObject12?: InlineObject12, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.resendActivationAuthUsersResendActivation(inlineObject12, options);
+        async resendActivationApiAuthUsersResendActivation(inlineObject12?: InlineObject12, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.resendActivationApiAuthUsersResendActivation(inlineObject12, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3730,8 +3730,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async resetPasswordAuthUsersResetPassword(inlineObject13?: InlineObject13, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.resetPasswordAuthUsersResetPassword(inlineObject13, options);
+        async resetPasswordApiAuthUsersResetPassword(inlineObject13?: InlineObject13, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.resetPasswordApiAuthUsersResetPassword(inlineObject13, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3740,8 +3740,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async resetPasswordConfirmAuthUsersResetPasswordConfirm(inlineObject14?: InlineObject14, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2017>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.resetPasswordConfirmAuthUsersResetPasswordConfirm(inlineObject14, options);
+        async resetPasswordConfirmApiAuthUsersResetPasswordConfirm(inlineObject14?: InlineObject14, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2017>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.resetPasswordConfirmApiAuthUsersResetPasswordConfirm(inlineObject14, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3750,8 +3750,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async resetUsernameAuthUsersResetUsername(inlineObject15?: InlineObject15, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.resetUsernameAuthUsersResetUsername(inlineObject15, options);
+        async resetUsernameApiAuthUsersResetUsername(inlineObject15?: InlineObject15, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2016>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.resetUsernameApiAuthUsersResetUsername(inlineObject15, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3760,8 +3760,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async resetUsernameConfirmAuthUsersResetUsernameConfirm(inlineObject16?: InlineObject16, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2018>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.resetUsernameConfirmAuthUsersResetUsernameConfirm(inlineObject16, options);
+        async resetUsernameConfirmApiAuthUsersResetUsernameConfirm(inlineObject16?: InlineObject16, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2018>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.resetUsernameConfirmApiAuthUsersResetUsernameConfirm(inlineObject16, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3774,8 +3774,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveAuthUsersId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveAuthUsersId(id, include, fields, sort, filterSearch, options);
+        async retrieveApiAuthUsersId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiAuthUsersId(id, include, fields, sort, filterSearch, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3785,8 +3785,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async retrieveAuthUsersMe(include?: string, fields?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveAuthUsersMe(include, fields, options);
+        async retrieveApiAuthUsersMe(include?: string, fields?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.retrieveApiAuthUsersMe(include, fields, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3795,8 +3795,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async setPasswordAuthUsersSetPassword(inlineObject17?: InlineObject17, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2019>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.setPasswordAuthUsersSetPassword(inlineObject17, options);
+        async setPasswordApiAuthUsersSetPassword(inlineObject17?: InlineObject17, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2019>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.setPasswordApiAuthUsersSetPassword(inlineObject17, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -3805,8 +3805,8 @@ export const AuthApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async setUsernameAuthUsersSetUsername(inlineObject18?: InlineObject18, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20110>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.setUsernameAuthUsersSetUsername(inlineObject18, options);
+        async setUsernameApiAuthUsersSetUsername(inlineObject18?: InlineObject18, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20110>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.setUsernameApiAuthUsersSetUsername(inlineObject18, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -3825,8 +3825,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        activationAuthUsersActivation(inlineObject11?: InlineObject11, options?: any): AxiosPromise<InlineResponse2015> {
-            return localVarFp.activationAuthUsersActivation(inlineObject11, options).then((request) => request(axios, basePath));
+        activationApiAuthUsersActivation(inlineObject11?: InlineObject11, options?: any): AxiosPromise<InlineResponse2015> {
+            return localVarFp.activationApiAuthUsersActivation(inlineObject11, options).then((request) => request(axios, basePath));
         },
         /**
          * Takes a set of user credentials and returns an access and refresh JSON web token pair to prove the authentication of those credentials.
@@ -3834,8 +3834,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAuthJwtCreate(inlineObject19?: InlineObject19, options?: any): AxiosPromise<InlineResponse2012> {
-            return localVarFp.createAuthJwtCreate(inlineObject19, options).then((request) => request(axios, basePath));
+        createApiAuthJwtCreate(inlineObject19?: InlineObject19, options?: any): AxiosPromise<InlineResponse2012> {
+            return localVarFp.createApiAuthJwtCreate(inlineObject19, options).then((request) => request(axios, basePath));
         },
         /**
          * Takes a refresh type JSON web token and returns an access type JSON web token if the refresh token is valid.
@@ -3843,8 +3843,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAuthJwtRefresh(inlineObject20?: InlineObject20, options?: any): AxiosPromise<InlineResponse2013> {
-            return localVarFp.createAuthJwtRefresh(inlineObject20, options).then((request) => request(axios, basePath));
+        createApiAuthJwtRefresh(inlineObject20?: InlineObject20, options?: any): AxiosPromise<InlineResponse2013> {
+            return localVarFp.createApiAuthJwtRefresh(inlineObject20, options).then((request) => request(axios, basePath));
         },
         /**
          * Takes a token and indicates if it is valid.  This view provides no information about a token\'s fitness for a particular use.
@@ -3852,8 +3852,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAuthJwtVerify(inlineObject21?: InlineObject21, options?: any): AxiosPromise<InlineResponse20111> {
-            return localVarFp.createAuthJwtVerify(inlineObject21, options).then((request) => request(axios, basePath));
+        createApiAuthJwtVerify(inlineObject21?: InlineObject21, options?: any): AxiosPromise<InlineResponse20111> {
+            return localVarFp.createApiAuthJwtVerify(inlineObject21, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3861,8 +3861,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAuthUsers(inlineObject8?: InlineObject8, options?: any): AxiosPromise<InlineResponse2014> {
-            return localVarFp.createAuthUsers(inlineObject8, options).then((request) => request(axios, basePath));
+        createApiAuthUsers(inlineObject8?: InlineObject8, options?: any): AxiosPromise<InlineResponse2014> {
+            return localVarFp.createApiAuthUsers(inlineObject8, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3870,16 +3870,16 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyAuthUsersId(id: string, options?: any): AxiosPromise<Onlymeta> {
-            return localVarFp.destroyAuthUsersId(id, options).then((request) => request(axios, basePath));
+        destroyApiAuthUsersId(id: string, options?: any): AxiosPromise<Onlymeta> {
+            return localVarFp.destroyApiAuthUsersId(id, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        destroyAuthUsersMe(options?: any): AxiosPromise<Onlymeta> {
-            return localVarFp.destroyAuthUsersMe(options).then((request) => request(axios, basePath));
+        destroyApiAuthUsersMe(options?: any): AxiosPromise<Onlymeta> {
+            return localVarFp.destroyApiAuthUsersMe(options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3892,8 +3892,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listAuthUsers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2006> {
-            return localVarFp.listAuthUsers(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
+        listApiAuthUsers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2006> {
+            return localVarFp.listApiAuthUsers(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3902,8 +3902,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateAuthUsersId(id: string, inlineObject10?: InlineObject10, options?: any): AxiosPromise<InlineResponse2007> {
-            return localVarFp.partialUpdateAuthUsersId(id, inlineObject10, options).then((request) => request(axios, basePath));
+        partialUpdateApiAuthUsersId(id: string, inlineObject10?: InlineObject10, options?: any): AxiosPromise<InlineResponse2007> {
+            return localVarFp.partialUpdateApiAuthUsersId(id, inlineObject10, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3911,8 +3911,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        partialUpdateAuthUsersMe(inlineObject9?: InlineObject9, options?: any): AxiosPromise<InlineResponse2007> {
-            return localVarFp.partialUpdateAuthUsersMe(inlineObject9, options).then((request) => request(axios, basePath));
+        partialUpdateApiAuthUsersMe(inlineObject9?: InlineObject9, options?: any): AxiosPromise<InlineResponse2007> {
+            return localVarFp.partialUpdateApiAuthUsersMe(inlineObject9, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3920,8 +3920,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resendActivationAuthUsersResendActivation(inlineObject12?: InlineObject12, options?: any): AxiosPromise<InlineResponse2016> {
-            return localVarFp.resendActivationAuthUsersResendActivation(inlineObject12, options).then((request) => request(axios, basePath));
+        resendActivationApiAuthUsersResendActivation(inlineObject12?: InlineObject12, options?: any): AxiosPromise<InlineResponse2016> {
+            return localVarFp.resendActivationApiAuthUsersResendActivation(inlineObject12, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3929,8 +3929,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resetPasswordAuthUsersResetPassword(inlineObject13?: InlineObject13, options?: any): AxiosPromise<InlineResponse2016> {
-            return localVarFp.resetPasswordAuthUsersResetPassword(inlineObject13, options).then((request) => request(axios, basePath));
+        resetPasswordApiAuthUsersResetPassword(inlineObject13?: InlineObject13, options?: any): AxiosPromise<InlineResponse2016> {
+            return localVarFp.resetPasswordApiAuthUsersResetPassword(inlineObject13, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3938,8 +3938,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resetPasswordConfirmAuthUsersResetPasswordConfirm(inlineObject14?: InlineObject14, options?: any): AxiosPromise<InlineResponse2017> {
-            return localVarFp.resetPasswordConfirmAuthUsersResetPasswordConfirm(inlineObject14, options).then((request) => request(axios, basePath));
+        resetPasswordConfirmApiAuthUsersResetPasswordConfirm(inlineObject14?: InlineObject14, options?: any): AxiosPromise<InlineResponse2017> {
+            return localVarFp.resetPasswordConfirmApiAuthUsersResetPasswordConfirm(inlineObject14, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3947,8 +3947,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resetUsernameAuthUsersResetUsername(inlineObject15?: InlineObject15, options?: any): AxiosPromise<InlineResponse2016> {
-            return localVarFp.resetUsernameAuthUsersResetUsername(inlineObject15, options).then((request) => request(axios, basePath));
+        resetUsernameApiAuthUsersResetUsername(inlineObject15?: InlineObject15, options?: any): AxiosPromise<InlineResponse2016> {
+            return localVarFp.resetUsernameApiAuthUsersResetUsername(inlineObject15, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3956,8 +3956,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resetUsernameConfirmAuthUsersResetUsernameConfirm(inlineObject16?: InlineObject16, options?: any): AxiosPromise<InlineResponse2018> {
-            return localVarFp.resetUsernameConfirmAuthUsersResetUsernameConfirm(inlineObject16, options).then((request) => request(axios, basePath));
+        resetUsernameConfirmApiAuthUsersResetUsernameConfirm(inlineObject16?: InlineObject16, options?: any): AxiosPromise<InlineResponse2018> {
+            return localVarFp.resetUsernameConfirmApiAuthUsersResetUsernameConfirm(inlineObject16, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3969,8 +3969,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveAuthUsersId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2007> {
-            return localVarFp.retrieveAuthUsersId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
+        retrieveApiAuthUsersId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any): AxiosPromise<InlineResponse2007> {
+            return localVarFp.retrieveApiAuthUsersId(id, include, fields, sort, filterSearch, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3979,8 +3979,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveAuthUsersMe(include?: string, fields?: string, options?: any): AxiosPromise<InlineResponse2007> {
-            return localVarFp.retrieveAuthUsersMe(include, fields, options).then((request) => request(axios, basePath));
+        retrieveApiAuthUsersMe(include?: string, fields?: string, options?: any): AxiosPromise<InlineResponse2007> {
+            return localVarFp.retrieveApiAuthUsersMe(include, fields, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3988,8 +3988,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        setPasswordAuthUsersSetPassword(inlineObject17?: InlineObject17, options?: any): AxiosPromise<InlineResponse2019> {
-            return localVarFp.setPasswordAuthUsersSetPassword(inlineObject17, options).then((request) => request(axios, basePath));
+        setPasswordApiAuthUsersSetPassword(inlineObject17?: InlineObject17, options?: any): AxiosPromise<InlineResponse2019> {
+            return localVarFp.setPasswordApiAuthUsersSetPassword(inlineObject17, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -3997,8 +3997,8 @@ export const AuthApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        setUsernameAuthUsersSetUsername(inlineObject18?: InlineObject18, options?: any): AxiosPromise<InlineResponse20110> {
-            return localVarFp.setUsernameAuthUsersSetUsername(inlineObject18, options).then((request) => request(axios, basePath));
+        setUsernameApiAuthUsersSetUsername(inlineObject18?: InlineObject18, options?: any): AxiosPromise<InlineResponse20110> {
+            return localVarFp.setUsernameApiAuthUsersSetUsername(inlineObject18, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -4017,8 +4017,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public activationAuthUsersActivation(inlineObject11?: InlineObject11, options?: any) {
-        return AuthApiFp(this.configuration).activationAuthUsersActivation(inlineObject11, options).then((request) => request(this.axios, this.basePath));
+    public activationApiAuthUsersActivation(inlineObject11?: InlineObject11, options?: any) {
+        return AuthApiFp(this.configuration).activationApiAuthUsersActivation(inlineObject11, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4028,8 +4028,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public createAuthJwtCreate(inlineObject19?: InlineObject19, options?: any) {
-        return AuthApiFp(this.configuration).createAuthJwtCreate(inlineObject19, options).then((request) => request(this.axios, this.basePath));
+    public createApiAuthJwtCreate(inlineObject19?: InlineObject19, options?: any) {
+        return AuthApiFp(this.configuration).createApiAuthJwtCreate(inlineObject19, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4039,8 +4039,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public createAuthJwtRefresh(inlineObject20?: InlineObject20, options?: any) {
-        return AuthApiFp(this.configuration).createAuthJwtRefresh(inlineObject20, options).then((request) => request(this.axios, this.basePath));
+    public createApiAuthJwtRefresh(inlineObject20?: InlineObject20, options?: any) {
+        return AuthApiFp(this.configuration).createApiAuthJwtRefresh(inlineObject20, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4050,8 +4050,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public createAuthJwtVerify(inlineObject21?: InlineObject21, options?: any) {
-        return AuthApiFp(this.configuration).createAuthJwtVerify(inlineObject21, options).then((request) => request(this.axios, this.basePath));
+    public createApiAuthJwtVerify(inlineObject21?: InlineObject21, options?: any) {
+        return AuthApiFp(this.configuration).createApiAuthJwtVerify(inlineObject21, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4061,8 +4061,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public createAuthUsers(inlineObject8?: InlineObject8, options?: any) {
-        return AuthApiFp(this.configuration).createAuthUsers(inlineObject8, options).then((request) => request(this.axios, this.basePath));
+    public createApiAuthUsers(inlineObject8?: InlineObject8, options?: any) {
+        return AuthApiFp(this.configuration).createApiAuthUsers(inlineObject8, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4072,8 +4072,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public destroyAuthUsersId(id: string, options?: any) {
-        return AuthApiFp(this.configuration).destroyAuthUsersId(id, options).then((request) => request(this.axios, this.basePath));
+    public destroyApiAuthUsersId(id: string, options?: any) {
+        return AuthApiFp(this.configuration).destroyApiAuthUsersId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4082,8 +4082,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public destroyAuthUsersMe(options?: any) {
-        return AuthApiFp(this.configuration).destroyAuthUsersMe(options).then((request) => request(this.axios, this.basePath));
+    public destroyApiAuthUsersMe(options?: any) {
+        return AuthApiFp(this.configuration).destroyApiAuthUsersMe(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4098,8 +4098,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public listAuthUsers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return AuthApiFp(this.configuration).listAuthUsers(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+    public listApiAuthUsers(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
+        return AuthApiFp(this.configuration).listApiAuthUsers(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4110,8 +4110,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public partialUpdateAuthUsersId(id: string, inlineObject10?: InlineObject10, options?: any) {
-        return AuthApiFp(this.configuration).partialUpdateAuthUsersId(id, inlineObject10, options).then((request) => request(this.axios, this.basePath));
+    public partialUpdateApiAuthUsersId(id: string, inlineObject10?: InlineObject10, options?: any) {
+        return AuthApiFp(this.configuration).partialUpdateApiAuthUsersId(id, inlineObject10, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4121,8 +4121,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public partialUpdateAuthUsersMe(inlineObject9?: InlineObject9, options?: any) {
-        return AuthApiFp(this.configuration).partialUpdateAuthUsersMe(inlineObject9, options).then((request) => request(this.axios, this.basePath));
+    public partialUpdateApiAuthUsersMe(inlineObject9?: InlineObject9, options?: any) {
+        return AuthApiFp(this.configuration).partialUpdateApiAuthUsersMe(inlineObject9, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4132,8 +4132,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public resendActivationAuthUsersResendActivation(inlineObject12?: InlineObject12, options?: any) {
-        return AuthApiFp(this.configuration).resendActivationAuthUsersResendActivation(inlineObject12, options).then((request) => request(this.axios, this.basePath));
+    public resendActivationApiAuthUsersResendActivation(inlineObject12?: InlineObject12, options?: any) {
+        return AuthApiFp(this.configuration).resendActivationApiAuthUsersResendActivation(inlineObject12, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4143,8 +4143,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public resetPasswordAuthUsersResetPassword(inlineObject13?: InlineObject13, options?: any) {
-        return AuthApiFp(this.configuration).resetPasswordAuthUsersResetPassword(inlineObject13, options).then((request) => request(this.axios, this.basePath));
+    public resetPasswordApiAuthUsersResetPassword(inlineObject13?: InlineObject13, options?: any) {
+        return AuthApiFp(this.configuration).resetPasswordApiAuthUsersResetPassword(inlineObject13, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4154,8 +4154,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public resetPasswordConfirmAuthUsersResetPasswordConfirm(inlineObject14?: InlineObject14, options?: any) {
-        return AuthApiFp(this.configuration).resetPasswordConfirmAuthUsersResetPasswordConfirm(inlineObject14, options).then((request) => request(this.axios, this.basePath));
+    public resetPasswordConfirmApiAuthUsersResetPasswordConfirm(inlineObject14?: InlineObject14, options?: any) {
+        return AuthApiFp(this.configuration).resetPasswordConfirmApiAuthUsersResetPasswordConfirm(inlineObject14, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4165,8 +4165,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public resetUsernameAuthUsersResetUsername(inlineObject15?: InlineObject15, options?: any) {
-        return AuthApiFp(this.configuration).resetUsernameAuthUsersResetUsername(inlineObject15, options).then((request) => request(this.axios, this.basePath));
+    public resetUsernameApiAuthUsersResetUsername(inlineObject15?: InlineObject15, options?: any) {
+        return AuthApiFp(this.configuration).resetUsernameApiAuthUsersResetUsername(inlineObject15, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4176,8 +4176,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public resetUsernameConfirmAuthUsersResetUsernameConfirm(inlineObject16?: InlineObject16, options?: any) {
-        return AuthApiFp(this.configuration).resetUsernameConfirmAuthUsersResetUsernameConfirm(inlineObject16, options).then((request) => request(this.axios, this.basePath));
+    public resetUsernameConfirmApiAuthUsersResetUsernameConfirm(inlineObject16?: InlineObject16, options?: any) {
+        return AuthApiFp(this.configuration).resetUsernameConfirmApiAuthUsersResetUsernameConfirm(inlineObject16, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4191,8 +4191,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public retrieveAuthUsersId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
-        return AuthApiFp(this.configuration).retrieveAuthUsersId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+    public retrieveApiAuthUsersId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
+        return AuthApiFp(this.configuration).retrieveApiAuthUsersId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4203,8 +4203,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public retrieveAuthUsersMe(include?: string, fields?: string, options?: any) {
-        return AuthApiFp(this.configuration).retrieveAuthUsersMe(include, fields, options).then((request) => request(this.axios, this.basePath));
+    public retrieveApiAuthUsersMe(include?: string, fields?: string, options?: any) {
+        return AuthApiFp(this.configuration).retrieveApiAuthUsersMe(include, fields, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4214,8 +4214,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public setPasswordAuthUsersSetPassword(inlineObject17?: InlineObject17, options?: any) {
-        return AuthApiFp(this.configuration).setPasswordAuthUsersSetPassword(inlineObject17, options).then((request) => request(this.axios, this.basePath));
+    public setPasswordApiAuthUsersSetPassword(inlineObject17?: InlineObject17, options?: any) {
+        return AuthApiFp(this.configuration).setPasswordApiAuthUsersSetPassword(inlineObject17, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4225,8 +4225,8 @@ export class AuthApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof AuthApi
      */
-    public setUsernameAuthUsersSetUsername(inlineObject18?: InlineObject18, options?: any) {
-        return AuthApiFp(this.configuration).setUsernameAuthUsersSetUsername(inlineObject18, options).then((request) => request(this.axios, this.basePath));
+    public setUsernameApiAuthUsersSetUsername(inlineObject18?: InlineObject18, options?: any) {
+        return AuthApiFp(this.configuration).setUsernameApiAuthUsersSetUsername(inlineObject18, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
