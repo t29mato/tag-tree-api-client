@@ -2690,48 +2690,11 @@ export interface TokenObtainPair {
  */
 export interface TokenRefresh {
     /**
-     * [resource object type](https://jsonapi.org/format/#document-resource-object-identification)
+     * 
      * @type {string}
      * @memberof TokenRefresh
      */
-    type: string;
-    /**
-     * [resource object identifier](https://jsonapi.org/format/#document-resource-object-identification)
-     * @type {string}
-     * @memberof TokenRefresh
-     */
-    id: string;
-    /**
-     * 
-     * @type {ApiTagsDataLinks}
-     * @memberof TokenRefresh
-     */
-    links?: ApiTagsDataLinks;
-    /**
-     * 
-     * @type {TokenRefreshAttributes}
-     * @memberof TokenRefresh
-     */
-    attributes?: TokenRefreshAttributes;
-}
-/**
- * 
- * @export
- * @interface TokenRefreshAttributes
- */
-export interface TokenRefreshAttributes {
-    /**
-     * 
-     * @type {string}
-     * @memberof TokenRefreshAttributes
-     */
-    refresh: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof TokenRefreshAttributes
-     */
-    access?: string;
+    access: string;
 }
 /**
  * 
