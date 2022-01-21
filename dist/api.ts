@@ -2597,10 +2597,35 @@ export interface TagTreeDetail {
     links?: ApiTagsDataLinks;
     /**
      * 
-     * @type {ApiTagTreeIdDataAttributes}
+     * @type {TagTreeDetailAttributes}
      * @memberof TagTreeDetail
      */
-    attributes: ApiTagTreeIdDataAttributes;
+    attributes: TagTreeDetailAttributes;
+}
+/**
+ * 
+ * @export
+ * @interface TagTreeDetailAttributes
+ */
+export interface TagTreeDetailAttributes {
+    /**
+     * 
+     * @type {string}
+     * @memberof TagTreeDetailAttributes
+     */
+    name: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof TagTreeDetailAttributes
+     */
+    key: string;
+    /**
+     * 
+     * @type {TagTree}
+     * @memberof TagTreeDetailAttributes
+     */
+    tree?: TagTree;
 }
 /**
  * 
