@@ -4220,10 +4220,10 @@ export class AuthApi extends BaseAPI {
 
 
 /**
- * StarrydataApi - axios parameter creator
+ * TagTreeApi - axios parameter creator
  * @export
  */
-export const StarrydataApiAxiosParamCreator = function (configuration?: Configuration) {
+export const TagTreeApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          * 
@@ -4887,11 +4887,11 @@ export const StarrydataApiAxiosParamCreator = function (configuration?: Configur
 };
 
 /**
- * StarrydataApi - functional programming interface
+ * TagTreeApi - functional programming interface
  * @export
  */
-export const StarrydataApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = StarrydataApiAxiosParamCreator(configuration)
+export const TagTreeApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = TagTreeApiAxiosParamCreator(configuration)
     return {
         /**
          * 
@@ -5083,11 +5083,11 @@ export const StarrydataApiFp = function(configuration?: Configuration) {
 };
 
 /**
- * StarrydataApi - factory interface
+ * TagTreeApi - factory interface
  * @export
  */
-export const StarrydataApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = StarrydataApiFp(configuration)
+export const TagTreeApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = TagTreeApiFp(configuration)
     return {
         /**
          * 
@@ -5263,21 +5263,21 @@ export const StarrydataApiFactory = function (configuration?: Configuration, bas
 };
 
 /**
- * StarrydataApi - object-oriented interface
+ * TagTreeApi - object-oriented interface
  * @export
- * @class StarrydataApi
+ * @class TagTreeApi
  * @extends {BaseAPI}
  */
-export class StarrydataApi extends BaseAPI {
+export class TagTreeApi extends BaseAPI {
     /**
      * 
      * @param {InlineObject2} [inlineObject2] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public createApiNodes(inlineObject2?: InlineObject2, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiNodes(inlineObject2, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).createApiNodes(inlineObject2, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5285,10 +5285,10 @@ export class StarrydataApi extends BaseAPI {
      * @param {InlineObject4} [inlineObject4] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public createApiTagTree(inlineObject4?: InlineObject4, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiTagTree(inlineObject4, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).createApiTagTree(inlineObject4, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5296,10 +5296,10 @@ export class StarrydataApi extends BaseAPI {
      * @param {InlineObject} [inlineObject] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public createApiTags(inlineObject?: InlineObject, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiTags(inlineObject, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).createApiTags(inlineObject, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5307,10 +5307,10 @@ export class StarrydataApi extends BaseAPI {
      * @param {InlineObject6} [inlineObject6] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public createApiToken(inlineObject6?: InlineObject6, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiToken(inlineObject6, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).createApiToken(inlineObject6, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5318,10 +5318,10 @@ export class StarrydataApi extends BaseAPI {
      * @param {InlineObject7} [inlineObject7] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public createApiTokenRefresh(inlineObject7?: InlineObject7, options?: any) {
-        return StarrydataApiFp(this.configuration).createApiTokenRefresh(inlineObject7, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).createApiTokenRefresh(inlineObject7, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5329,10 +5329,10 @@ export class StarrydataApi extends BaseAPI {
      * @param {string} id A unique integer value identifying this node.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public destroyApiNodesId(id: string, options?: any) {
-        return StarrydataApiFp(this.configuration).destroyApiNodesId(id, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).destroyApiNodesId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5340,10 +5340,10 @@ export class StarrydataApi extends BaseAPI {
      * @param {string} id A unique integer value identifying this node.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public destroyApiTagsId(id: string, options?: any) {
-        return StarrydataApiFp(this.configuration).destroyApiTagsId(id, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).destroyApiTagsId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5356,10 +5356,10 @@ export class StarrydataApi extends BaseAPI {
      * @param {string} [filterSearch] A search term.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public listApiNodes(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).listApiNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).listApiNodes(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5372,10 +5372,10 @@ export class StarrydataApi extends BaseAPI {
      * @param {string} [filterSearch] A search term.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public listApiTagTree(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).listApiTagTree(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).listApiTagTree(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5388,10 +5388,10 @@ export class StarrydataApi extends BaseAPI {
      * @param {string} [filterSearch] A search term.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public listApiTags(include?: string, fields?: string, pageNumber?: number, pageSize?: number, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).listApiTags(include, fields, pageNumber, pageSize, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5400,10 +5400,10 @@ export class StarrydataApi extends BaseAPI {
      * @param {InlineObject3} [inlineObject3] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public partialUpdateApiNodesId(id: string, inlineObject3?: InlineObject3, options?: any) {
-        return StarrydataApiFp(this.configuration).partialUpdateApiNodesId(id, inlineObject3, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).partialUpdateApiNodesId(id, inlineObject3, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5412,10 +5412,10 @@ export class StarrydataApi extends BaseAPI {
      * @param {InlineObject5} [inlineObject5] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public partialUpdateApiTagTreeId(id: string, inlineObject5?: InlineObject5, options?: any) {
-        return StarrydataApiFp(this.configuration).partialUpdateApiTagTreeId(id, inlineObject5, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).partialUpdateApiTagTreeId(id, inlineObject5, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5424,10 +5424,10 @@ export class StarrydataApi extends BaseAPI {
      * @param {InlineObject1} [inlineObject1] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public partialUpdateApiTagsId(id: string, inlineObject1?: InlineObject1, options?: any) {
-        return StarrydataApiFp(this.configuration).partialUpdateApiTagsId(id, inlineObject1, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).partialUpdateApiTagsId(id, inlineObject1, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5439,10 +5439,10 @@ export class StarrydataApi extends BaseAPI {
      * @param {string} [filterSearch] A search term.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public retrieveApiNodesId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).retrieveApiNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).retrieveApiNodesId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5450,10 +5450,10 @@ export class StarrydataApi extends BaseAPI {
      * @param {string} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public retrieveApiTagTreeId(id: string, options?: any) {
-        return StarrydataApiFp(this.configuration).retrieveApiTagTreeId(id, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).retrieveApiTagTreeId(id, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5465,10 +5465,10 @@ export class StarrydataApi extends BaseAPI {
      * @param {string} [filterSearch] A search term.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof StarrydataApi
+     * @memberof TagTreeApi
      */
     public retrieveApiTagsId(id: string, include?: string, fields?: string, sort?: string, filterSearch?: string, options?: any) {
-        return StarrydataApiFp(this.configuration).retrieveApiTagsId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
+        return TagTreeApiFp(this.configuration).retrieveApiTagsId(id, include, fields, sort, filterSearch, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
